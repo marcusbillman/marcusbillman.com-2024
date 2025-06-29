@@ -48,7 +48,7 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
           lang={project.language || 'en'}
           className="flex flex-col gap-2 lg:gap-6"
         >
-          <h3 className="font-serif text-xl font-medium text-primary lg:text-3xl">
+          <h3 className="font-serif text-xl font-medium italic text-primary lg:text-3xl">
             {project.name}
           </h3>
           <p className="text-balance text-3xl lg:text-4xl 2xl:text-6xl">

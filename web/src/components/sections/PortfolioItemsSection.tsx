@@ -284,7 +284,7 @@ function PortfolioItemCard({ portfolioItem }: PortfolioItemCardProps) {
           >
             <div className="flex flex-grow items-center gap-4">
               {name() && (
-                <h3 className="font-serif text-xl font-medium text-primary lg:text-2xl 2xl:text-3xl">
+                <h3 className="font-serif text-xl font-medium italic text-primary lg:text-2xl 2xl:text-3xl">
                   {name()}
                 </h3>
               )}

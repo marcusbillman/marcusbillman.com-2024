@@ -387,6 +387,7 @@ export default function HeroSection({ newsBanner }: HeroSectionProps) {
           autoPlay
           muted
           loop
+          playsInline
           className="h-full w-full object-cover motion-reduce:hidden"
           aria-hidden
         ></video>
