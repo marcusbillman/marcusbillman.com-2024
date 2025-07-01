@@ -1,6 +1,6 @@
 # marcusbillman.com (2024)
 
-![Cover image based on website hero](https://github.com/marcusbillman/marcusbillman.com-2024/blob/main/web/public/assets/images/social-embed-en.jpg?raw=true)
+![Cover image based on website hero](https://github.com/marcusbillman/marcusbillman.com-2024/blob/main/public/assets/images/social-embed-en.jpg?raw=true)
 
 My personal website and portfolio, hosted at [marcusbillman.com](https://marcusbillman.com). This monorepo contains both the front-end web application and the Sanity Studio application that I use to edit the website's cloud-hosted content.
 
@@ -10,10 +10,10 @@ The website is fully designed and built by me. Check out the [Figma design file]
 
 These are some of the technologies powering the site:
 
+- 🧑‍🚀 [Astro](https://astro.build/) for the web framework
 - ⚛️ [React](https://react.dev/) for the UI framework
-- 🧑‍🚀 [Astro](https://astro.build/) as the meta-framework
+- 🧠 [Tailwind CSS](https://tailwindcss.com/) for styling
 - 💫 [Framer Motion](https://www.framer.com/motion/) for animations
-- 🧠 [Sanity](https://www.sanity.io/) for content management
 - ▲ [Vercel](https://vercel.com/) for hosting
 
 ## Code style

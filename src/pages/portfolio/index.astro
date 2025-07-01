@@ -1,0 +1,25 @@
+---
+import ContactSection from '@/components/sections/ContactSection';
+import HeaderSection from '@/components/sections/HeaderSection';
+import PortfolioItemsSection from '@/components/sections/PortfolioItemsSection';
+import SeparatorSection from '@/components/sections/SeparatorSection';
+import Layout from '@/layouts/Layout.astro';
+import { getAllProjects, getDribbbleShots } from '@/utils/content';
+import t from '@/utils/i18n';
+
+const projects = await getAllProjects();
+const dribbbleShots = await getDribbbleShots();
+const portfolioItems = [...projects, ...dribbbleShots];
+---
+
+<Layout title={t('portfolio.title')}>
+  <HeaderSection
+    slot="header"
+    client:load
+    title={t('portfolio.heading')}
+    emoji={['✨', '🎨', '📄', '🖋️', '🗃️']}
+  />
+  <PortfolioItemsSection client:idle portfolioItems={portfolioItems} />
+  <SeparatorSection />
+  <ContactSection client:visible />
+</Layout>

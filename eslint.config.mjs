@@ -5,7 +5,6 @@ import reactPlugin from 'eslint-plugin-react';
 import tsEslint from 'typescript-eslint';
 
 export default [
-  { ignores: ['studio/.sanity/'] },
   {
     plugins: {
       reactPlugin,

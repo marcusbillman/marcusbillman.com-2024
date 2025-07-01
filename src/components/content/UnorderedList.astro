@@ -1,0 +1,10 @@
+---
+const props = Astro.props;
+---
+
+<ul
+  {...props}
+  class="mx-auto mt-[1em] max-w-4xl list-disc space-y-2 pl-12 text-xl marker:text-primary"
+>
+  <slot />
+</ul>

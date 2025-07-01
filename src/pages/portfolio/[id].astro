@@ -1,0 +1,85 @@
+---
+import { ArrowLeft, Info } from '@phosphor-icons/react/dist/ssr';
+import { getCollection, render } from 'astro:content';
+
+import Button from '@/components/Button';
+import Emphasis from '@/components/content/Emphasis.astro';
+import Heading1 from '@/components/content/Heading1.astro';
+import Heading2 from '@/components/content/Heading2.astro';
+import Paragraph from '@/components/content/Paragraph.astro';
+import RichImageBlock from '@/components/content/RichImageBlock.astro';
+import UnorderedList from '@/components/content/UnorderedList.astro';
+import CaseStudyHeaderSection from '@/components/sections/CaseStudyHeaderSection';
+import ContactSection from '@/components/sections/ContactSection';
+import SeparatorSection from '@/components/sections/SeparatorSection';
+import Layout from '@/layouts/Layout.astro';
+import t from '@/utils/i18n';
+
+const locale = import.meta.env.PUBLIC_LOCALE || 'en';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('caseStudies');
+
+  return caseStudies.map((caseStudy) => {
+    return {
+      params: {
+        id: caseStudy.id,
+      },
+      props: {
+        caseStudy: caseStudy,
+      },
+    };
+  });
+}
+
+const { caseStudy } = Astro.props;
+
+const { Content } = await render(caseStudy);
+---
+
+<Layout title={caseStudy.data.name}>
+  <CaseStudyHeaderSection client:load caseStudy={caseStudy} slot="header" />
+  <article lang={caseStudy.data.locale}>
+    <RichImageBlock
+      image={caseStudy.data.cover}
+      className="mt-0 lg:mt-0 lg:rounded-6xl"
+    />
+    <div class="px-4 lg:px-16">
+      {
+        caseStudy.data.locale !== locale && (
+          <div class="mb-6 px-4 lg:mb-8">
+            <div class="mx-auto flex max-w-4xl gap-2 rounded-2xl bg-subtle p-4">
+              <Info
+                size={20}
+                className="mt-[0.25em] flex-shrink-0 text-primary"
+              />
+              <p class="text-xl">{t('caseStudy.missingTranslation')}</p>
+            </div>
+          </div>
+        )
+      }
+      <Content
+        components={{
+          p: Paragraph,
+          ul: UnorderedList,
+          em: Emphasis,
+          h1: Heading1,
+          h2: Heading2,
+        }}
+      />
+    </div>
+    <div
+      lang={locale}
+      class="mt-16 flex flex-col items-center px-4 lg:mt-24 lg:px-16"
+    >
+      <Button
+        text={t('caseStudy.back')}
+        icon={ArrowLeft}
+        iconSide="left"
+        href="/portfolio"
+      />
+    </div>
+  </article>
+  <SeparatorSection />
+  <ContactSection client:visible />
+</Layout>

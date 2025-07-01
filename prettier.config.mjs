@@ -17,7 +17,7 @@ export default {
     },
   ],
   singleQuote: true,
-  tailwindConfig: './web/tailwind.config.mjs',
+  tailwindConfig: './tailwind.config.mjs',
   importOrder: [
     '<TYPES>', // Third-party types
     '<TYPES>^[.]', // Local types
@@ -25,7 +25,7 @@ export default {
     '^react$', // React imports
     '<THIRD_PARTY_MODULES>', // Third-party modules
     '',
-    '^(@|@studio)(/.*)$', // Aliased imports
+    '^@(/.*)$', // Aliased imports
     '^[.]', // Local imports
   ],
 };

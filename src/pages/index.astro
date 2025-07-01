@@ -1,0 +1,26 @@
+---
+import BioSection from '@/components/sections/BioSection';
+import ContactSection from '@/components/sections/ContactSection';
+import FeaturedProjectsSection from '@/components/sections/FeaturedProjectsSection';
+import HeroSection from '@/components/sections/HeroSection';
+import MoreThingsSection from '@/components/sections/MoreThingsSection';
+import SeparatorSection from '@/components/sections/SeparatorSection';
+import Layout from '@/layouts/Layout.astro';
+import { getEnabledHeroBanners, getFeaturedProjects } from '@/utils/content';
+import { fetchSoundcloudTracks } from '@/utils/soundcloud';
+
+const featuredProjects = await getFeaturedProjects();
+const enabledHeroBanners = await getEnabledHeroBanners();
+const soundcloudTracks = await fetchSoundcloudTracks(2);
+---
+
+<Layout>
+  <HeroSection slot="header" client:idle heroBanners={enabledHeroBanners} />
+  <BioSection />
+  <SeparatorSection />
+  <FeaturedProjectsSection projects={featuredProjects} />
+  <SeparatorSection />
+  <MoreThingsSection soundcloudTracks={soundcloudTracks} />
+  <SeparatorSection />
+  <ContactSection client:visible />
+</Layout>
