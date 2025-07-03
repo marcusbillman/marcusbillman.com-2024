@@ -10,21 +10,22 @@ const caseStudies = defineCollection({
     pattern: '**/*.{md,mdx}',
     base: `src/assets/content/${locale}/case-studies`,
   }),
-  schema: z.object({
-    name: z.string(),
-    headline: z.string(),
-    preamble: z.string().optional(),
-    date: z.string(),
-    cover: z.object({
-      // Mirrors the RichImage type
-      src: z.string(),
-      alt: z.string(),
-      caption: z.string().optional(),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      headline: z.string(),
+      preamble: z.string().optional(),
+      date: z.string(),
+      cover: z.object({
+        // Mirrors the RichImage type
+        astroImage: image(),
+        alt: z.string(),
+        caption: z.string().optional(),
+      }),
+      locale: z.enum(['en', 'sv']),
+      featured: z.boolean().optional(),
+      orderRank: z.number(),
     }),
-    locale: z.enum(['en', 'sv']),
-    featured: z.boolean().optional(),
-    orderRank: z.number(),
-  }),
 });
 
 const sideProjects = defineCollection({
@@ -32,21 +33,22 @@ const sideProjects = defineCollection({
     pattern: '**/*.yaml',
     base: `src/assets/content/${locale}/side-projects`,
   }),
-  schema: z.object({
-    name: z.string(),
-    headline: z.string(),
-    date: z.string(),
-    cover: z.object({
-      // Mirrors the RichImage type
-      src: z.string(),
-      alt: z.string(),
-      caption: z.string().optional(),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      headline: z.string(),
+      date: z.string(),
+      cover: z.object({
+        // Mirrors the RichImage type
+        astroImage: image(),
+        alt: z.string(),
+        caption: z.string().optional(),
+      }),
+      url: z.string().optional(),
+      locale: z.enum(['en', 'sv']),
+      featured: z.boolean().optional(),
+      orderRank: z.number(),
     }),
-    url: z.string().optional(),
-    locale: z.enum(['en', 'sv']),
-    featured: z.boolean().optional(),
-    orderRank: z.number(),
-  }),
 });
 
 const dribbbleShots = defineCollection({

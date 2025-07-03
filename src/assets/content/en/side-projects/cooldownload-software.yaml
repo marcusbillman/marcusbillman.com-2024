@@ -1,0 +1,9 @@
+name: cooldownload.software
+headline: A really sketchy link shortener
+date: '2022'
+cover:
+  astroImage: '@/assets/images/content/cooldownload-software/cover.png'
+  alt: Screenshot of link shortener form
+url: https://cooldownload.marcusbillman.com
+locale: en
+orderRank: 60

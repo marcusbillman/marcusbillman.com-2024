@@ -1,8 +1,11 @@
 ---
+import type { ImageMetadata } from 'astro';
+
+import { Image } from 'astro:assets';
 import { twMerge } from 'tailwind-merge';
 
 export type RichImage = {
-  src: string;
+  astroImage: ImageMetadata;
   alt: string;
   caption?: string;
 };
@@ -21,8 +24,8 @@ const { image, className = '' } = Astro.props as RichImageBlockProps;
     className,
   )}
 >
-  <img
-    src={image.src}
+  <Image
+    src={image.astroImage}
     alt={image.alt}
     loading="lazy"
     class="h-full w-full object-cover"

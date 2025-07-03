@@ -159,7 +159,7 @@ function PortfolioItemCard({ portfolioItem }: PortfolioItemCardProps) {
     switch (portfolioItem.collection) {
       case 'caseStudies':
       case 'sideProjects':
-        return (portfolioItem as Project).data.cover.src;
+        return (portfolioItem as Project).data.cover.astroImage.src;
       case 'dribbbleShots':
         return (portfolioItem as DribbbleShot).data.images.hidpi;
       default:

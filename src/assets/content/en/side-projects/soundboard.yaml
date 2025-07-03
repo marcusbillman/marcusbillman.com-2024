@@ -1,0 +1,9 @@
+name: Soundboard
+headline: Live, multiplayer soundboard
+date: '2023'
+cover:
+  astroImage: '@/assets/images/content/soundboard/cover.png'
+  alt: Screenshot of soundboard playing sounds
+url: https://soundboard.marcusbillman.com/
+locale: en
+orderRank: 30

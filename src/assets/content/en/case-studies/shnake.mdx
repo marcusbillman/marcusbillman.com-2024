@@ -1,0 +1,51 @@
+---
+name: Shnake
+headline: Cozy, smooth, customizable snake game
+date: '2020'
+cover:
+  astroImage: '@/assets/images/content/shnake/cover.png'
+  alt: Showcase of various UI elements and the game in a green, bubbly theme
+locale: en
+orderRank: 70
+---
+
+import themesImage from '@/assets/images/content/shnake/themes.png';
+import uiImage from '@/assets/images/content/shnake/ui.gif';
+import GalleryBlock from '@/components/content/GalleryBlock';
+import MetadataBlock from '@/components/content/MetadataBlock';
+
+Shnake started as a side project with another developer. The goal was to execute the simple concept of Snake in a way that feels smooth, unique and awesome. We wanted the game to be customizable, including the game board size, movement speed and colour theme. My main task was designing and implementing the game's visuals and UI.
+
+<GalleryBlock
+  images={[
+    {
+      astroImage: uiImage,
+      alt: 'Menu UI, button animation and snake movement.',
+    },
+  ]}
+/>
+
+The green reminds you of snakes (what a coincidence) and the monochrome backlights of old phones. Everything from the fonts and UI animations to the gameplay itself is playful and silly. The smooth movement of the snake feels almost like pieces of paper being moved by hand.
+
+The game adapts its board size to the screen and can be played on mobile using swipe gestures. I also made sure that the entire UI can also be navigated using just the keyboard. Also, the entire game is rendered using pure HTML.
+
+<GalleryBlock
+  images={[
+    {
+      astroImage: themesImage,
+      alt: 'Light and dark themes side by side',
+    },
+  ]}
+/>
+
+Working on this playful project felt freeing and was a great learning experience when matching the visual design with the gameplay feel. It was also an exploration of web technologies that once again made me appreciate how much can be achieved with HTML and CSS. An early version of the game is available to play below.
+
+<MetadataBlock
+  date={frontmatter.date}
+  links={[
+    {
+      text: 'Play game (early version)',
+      url: 'https://elloot.github.io/Shnake',
+    },
+  ]}
+/>
