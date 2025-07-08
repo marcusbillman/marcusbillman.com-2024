@@ -1,5 +1,5 @@
-import en from '@/locales/en.json';
-import sv from '@/locales/sv.json';
+import en from '@/strings/en.json';
+import sv from '@/strings/sv.json';
 
 type Locale = 'en' | 'sv';
 
