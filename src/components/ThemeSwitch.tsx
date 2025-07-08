@@ -1,4 +1,5 @@
 import type { Icon } from '@phosphor-icons/react';
+import type { ExternalToast } from 'sonner';
 
 import { useEffect } from 'react';
 import {
@@ -8,14 +9,16 @@ import {
 } from '@phosphor-icons/react/ssr';
 import { toast } from 'sonner';
 import { twJoin } from 'tailwind-merge';
-import { useLocalStorage } from 'usehooks-ts';
+import { useLocalStorage, useMediaQuery } from 'usehooks-ts';
 
 import { t } from '@/utils/i18n';
+import { useTailwindConfig } from '@/utils/tailwind';
 
 export type Theme = 'light' | 'dark' | 'system';
 
 export default function ThemeSwitch() {
   const [value, setValue] = useLocalStorage<Theme>('theme', 'system');
+  const resolvedTailwindConfig = useTailwindConfig();
 
   useEffect(() => {
     if (value === 'light') {
@@ -29,6 +32,14 @@ export default function ThemeSwitch() {
     }
   }, [value]);
 
+  const isDesktop = useMediaQuery(
+    `(min-width: ${resolvedTailwindConfig.theme.screens.lg})`,
+  );
+
+  const toastOptions: ExternalToast = isDesktop
+    ? {}
+    : { position: 'top-center' };
+
   return (
     <div
       role="radiogroup"
@@ -41,7 +52,7 @@ export default function ThemeSwitch() {
         isSelected={value === 'light'}
         onChange={() => {
           setValue('light');
-          toast.success(t('navigation.themeSwitch.toastLight'));
+          toast.success(t('navigation.themeSwitch.toastLight'), toastOptions);
         }}
       />
       <SwitchSegment
@@ -50,7 +61,7 @@ export default function ThemeSwitch() {
         isSelected={value === 'dark'}
         onChange={() => {
           setValue('dark');
-          toast.success(t('navigation.themeSwitch.toastDark'));
+          toast.success(t('navigation.themeSwitch.toastDark'), toastOptions);
         }}
       />
       <SwitchSegment
@@ -59,7 +70,7 @@ export default function ThemeSwitch() {
         isSelected={value === 'system'}
         onChange={() => {
           setValue('system');
-          toast.success(t('navigation.themeSwitch.toastSystem'));
+          toast.success(t('navigation.themeSwitch.toastSystem'), toastOptions);
         }}
       />
     </div>
