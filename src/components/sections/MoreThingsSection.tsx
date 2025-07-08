@@ -23,7 +23,7 @@ import musicBg from '@/images/music-flatlay.jpg';
 import sideProjectsScreen2 from '@/images/screenshot-cooldownload.jpg';
 import sideProjectsScreen1 from '@/images/screenshot-soundboard.jpg';
 import { isExternalUrl } from '@/utils';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 const optimizedDesignBg = await getImage({ src: designBg });
 const optimizedMusicBg = await getImage({ src: musicBg });

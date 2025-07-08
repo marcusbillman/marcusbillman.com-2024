@@ -11,7 +11,7 @@ import ContactFormModal from '@/components/ContactFormModal';
 import CopyToClipboard from '@/components/CopyToClipboard';
 import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);

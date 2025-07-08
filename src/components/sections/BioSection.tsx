@@ -1,5 +1,5 @@
 import Button from '@/components/Button';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 export default function BioSection() {
   return (

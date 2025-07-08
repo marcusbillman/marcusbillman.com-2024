@@ -13,9 +13,9 @@ import CaseStudyHeaderSection from '@/components/sections/CaseStudyHeaderSection
 import ContactSection from '@/components/sections/ContactSection';
 import SeparatorSection from '@/components/sections/SeparatorSection';
 import Layout from '@/layouts/Layout.astro';
-import t from '@/utils/i18n';
+import { getLocale, t } from '@/utils/i18n';
 
-const locale = import.meta.env.PUBLIC_LOCALE || 'en';
+const locale = getLocale();
 
 export async function getStaticPaths() {
   const caseStudies = await getCollection('caseStudies');

@@ -14,8 +14,8 @@ const strings = { en, sv };
  * @param key Keypath in dot notation, e.g. `contact.emailAddress`
  * @returns The translated string, or the key if no translation was found
  */
-export default function t(key: string): string {
-  const locale = (import.meta.env.PUBLIC_LOCALE as Locale) || 'en';
+export function t(key: string): string {
+  const locale = getLocale();
   const keypath = key.split('.');
   let result: TranslationObject | string = strings[locale];
 
@@ -34,4 +34,12 @@ export default function t(key: string): string {
   }
 
   return result;
+}
+
+/**
+ * Get the current locale from environment variables
+ * @returns The current locale, either 'en' or 'sv'
+ */
+export function getLocale(): Locale {
+  return import.meta.env.PUBLIC_LOCALE as Locale;
 }

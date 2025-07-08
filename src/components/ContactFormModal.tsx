@@ -8,7 +8,7 @@ import { toast } from 'sonner';
 
 import Button from '@/components/Button';
 import Modal from '@/components/Modal';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 interface Props {
   onClose: () => void;

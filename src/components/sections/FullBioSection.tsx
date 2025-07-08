@@ -4,7 +4,7 @@ import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
 import portrait1 from '@/images/portrait-1.png';
 import portrait2 from '@/images/portrait-2.png';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 const optimizedPortrait1 = await getImage({ src: portrait1 });
 const optimizedPortrait2 = await getImage({ src: portrait2 });

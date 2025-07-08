@@ -9,7 +9,7 @@ import { getImage } from 'astro:assets';
 import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
 import techLogos from '@/images/tech-logos.png';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 const optimizedTechLogos = await getImage({ src: techLogos });
 

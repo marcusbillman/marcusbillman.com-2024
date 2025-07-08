@@ -6,7 +6,7 @@ import { FocusOn } from 'react-focus-on';
 import { useMediaQuery } from 'usehooks-ts';
 
 import Button from '@/components/Button';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 import { TIMING_FUNCTIONS, useTailwindConfig } from '@/utils/tailwind';
 
 interface Props {

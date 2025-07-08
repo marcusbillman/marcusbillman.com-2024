@@ -5,7 +5,7 @@ import { ArrowLeft } from '@phosphor-icons/react/dist/ssr';
 import Button from '@/components/Button';
 import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 interface Props {
   caseStudy: CaseStudy;

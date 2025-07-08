@@ -30,7 +30,7 @@ import homeBg from '@/images/hero-bg-still.jpg';
 import portfolioPhone1 from '@/images/phone-iphone-15-plus.png';
 import portfolioPhone2 from '@/images/phone-pixel-8.png';
 import aboutPortrait from '@/images/portrait-1.png';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 import { TIMING_FUNCTIONS, useTailwindConfig } from '@/utils/tailwind';
 
 interface MenuProps {

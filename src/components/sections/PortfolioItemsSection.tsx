@@ -18,7 +18,7 @@ import { twJoin, twMerge } from 'tailwind-merge';
 
 import Switch from '@/components/Switch';
 import { isExternalUrl } from '@/utils';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 import { TIMING_FUNCTIONS } from '@/utils/tailwind';
 
 interface PortfolioItemsSectionProps {

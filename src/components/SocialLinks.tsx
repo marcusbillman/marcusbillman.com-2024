@@ -2,7 +2,7 @@ import { ArrowUpRight, Copy } from '@phosphor-icons/react/dist/ssr';
 import { twJoin } from 'tailwind-merge';
 
 import CopyToClipboard from '@/components/CopyToClipboard';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 interface Props {
   /** Make the component always look like dark theme instead of using dynamic colour tokens */

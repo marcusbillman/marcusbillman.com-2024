@@ -1,12 +1,12 @@
 ---
-import t from '@/utils/i18n';
+import { getLocale, t } from '@/utils/i18n';
 
 interface Props {
   title?: string;
 }
 
 const { title } = Astro.props;
-const locale = import.meta.env.PUBLIC_LOCALE || 'en';
+const locale = getLocale();
 ---
 
 <!doctype html>

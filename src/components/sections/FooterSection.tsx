@@ -4,7 +4,7 @@ import { getImage } from 'astro:assets';
 import DotGrid from '@/components/DotGrid';
 import SocialLinks from '@/components/SocialLinks';
 import toyboxBg from '@/images/footer-toybox-bg.jpg';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 const optimizedToyboxBg = await getImage({ src: toyboxBg });
 

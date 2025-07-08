@@ -2,8 +2,9 @@ import { defineCollection, z } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 
 import { fetchDribbbleShots } from './utils/dribbble';
+import { getLocale } from './utils/i18n';
 
-const locale = import.meta.env.PUBLIC_LOCALE || 'en';
+const locale = getLocale();
 
 const caseStudies = defineCollection({
   loader: glob({

@@ -13,7 +13,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 
 import Button from '@/components/Button';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 import { TIMING_FUNCTIONS } from '@/utils/tailwind';
 
 interface NavbarProps {

@@ -1,9 +1,9 @@
 import { twJoin } from 'tailwind-merge';
 
-import t from '@/utils/i18n';
+import { getLocale, t } from '@/utils/i18n';
 
 export default function ThemeSwitch() {
-  const locale = import.meta.env.PUBLIC_LOCALE || 'en';
+  const locale = getLocale();
 
   function hrefWithBaseUrl(newBaseUrl: string) {
     return window.location.href.replace(window.location.origin, newBaseUrl);

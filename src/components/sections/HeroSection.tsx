@@ -32,7 +32,7 @@ import { useIntersectionObserverSelector } from '@/hooks';
 import bg from '@/images/hero-bg-still.jpg';
 import profilePicture from '@/images/profile-picture.jpg';
 import { isExternalUrl } from '@/utils';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 import { TIMING_FUNCTIONS } from '@/utils/tailwind';
 
 const optimizedBg = await getImage({ src: bg });

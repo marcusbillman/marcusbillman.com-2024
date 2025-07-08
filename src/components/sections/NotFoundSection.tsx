@@ -6,7 +6,7 @@ import Button from '@/components/Button';
 import DotGrid from '@/components/DotGrid';
 import Sandbox from '@/components/Sandbox';
 import bg from '@/images/hero-bg-still.jpg';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 const optimizedBg = await getImage({ src: bg });
 

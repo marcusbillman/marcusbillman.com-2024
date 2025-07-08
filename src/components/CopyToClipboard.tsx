@@ -2,7 +2,7 @@ import confetti from 'canvas-confetti';
 import { toast } from 'sonner';
 import { useCopyToClipboard } from 'usehooks-ts';
 
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 interface Props {
   /** The text to copy to the clipboard. */

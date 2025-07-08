@@ -1,7 +1,7 @@
 import type { Project } from '@/utils/content';
 
 import Button from '@/components/Button';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 interface FeaturedProjectsSectionProps {
   projects: Project[];

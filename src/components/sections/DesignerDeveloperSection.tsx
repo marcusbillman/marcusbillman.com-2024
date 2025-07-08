@@ -16,7 +16,7 @@ import colourCardSalmon from '@/images/colour-card-salmon.png';
 import figmaTools from '@/images/figma-tools.png';
 import techLogos from '@/images/tech-logos.png';
 import designerBg from '@/images/wireframe-sketch.jpg';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 const optimizedDesignerBg = await getImage({ src: designerBg });
 const optimizedDeveloperBg = await getImage({ src: developerBg });

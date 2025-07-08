@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 import { twJoin } from 'tailwind-merge';
 import { useLocalStorage } from 'usehooks-ts';
 
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 export type Theme = 'light' | 'dark' | 'system';
 

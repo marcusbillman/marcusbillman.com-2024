@@ -35,7 +35,7 @@ import SelectField from '@/components/SelectField';
 import SliderField from '@/components/SliderField';
 import Switch from '@/components/Switch';
 import Tooltip from '@/components/Tooltip';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 const SCALE_ROOT_OPTIONS = [
   { value: 'C4', label: 'C' },

@@ -12,7 +12,7 @@ import CopyToClipboard from '@/components/CopyToClipboard';
 import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
 import { LinkedIn } from '@/components/icons';
-import t from '@/utils/i18n';
+import { t } from '@/utils/i18n';
 
 export default function FullContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
