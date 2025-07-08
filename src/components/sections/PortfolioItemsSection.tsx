@@ -4,15 +4,15 @@ import type {
   Project,
   SideProject,
 } from '@/utils/content';
-import type { Icon } from '@phosphor-icons/react/dist/lib/types';
+import type { Icon } from '@phosphor-icons/react';
 
 import { useEffect, useState } from 'react';
 import {
-  DribbbleLogo,
-  EyeClosed,
-  Flask,
-  Images,
-} from '@phosphor-icons/react/dist/ssr';
+  DribbbleLogoIcon,
+  EyeClosedIcon,
+  FlaskIcon,
+  ImagesIcon,
+} from '@phosphor-icons/react/ssr';
 import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin, twMerge } from 'tailwind-merge';
 
@@ -71,7 +71,7 @@ export default function PortfolioItemsSection({
         <div className="flex flex-col gap-4 overflow-hidden rounded-2xl lg:flex-row lg:gap-0 lg:divide-x lg:border">
           <FilterOption
             label={t('portfolio.caseStudies')}
-            icon={Images}
+            icon={ImagesIcon}
             isEnabled={filterOptions.caseStudies}
             onChange={() => {
               setFilterOptions((prevOptions) => ({
@@ -83,7 +83,7 @@ export default function PortfolioItemsSection({
           />
           <FilterOption
             label={t('portfolio.sideProjects')}
-            icon={Flask}
+            icon={FlaskIcon}
             isEnabled={filterOptions.sideProjects}
             onChange={() => {
               setFilterOptions((prevOptions) => ({
@@ -95,7 +95,7 @@ export default function PortfolioItemsSection({
           />
           <FilterOption
             label={t('portfolio.dribbbleShots')}
-            icon={DribbbleLogo}
+            icon={DribbbleLogoIcon}
             isEnabled={filterOptions.dribbbleShots}
             onChange={() => {
               setFilterOptions((prevOptions) => ({
@@ -120,8 +120,8 @@ export default function PortfolioItemsSection({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            <EyeClosed size={32} className="text-subtle lg:hidden" />
-            <EyeClosed size={64} className="hidden text-subtle lg:block" />
+            <EyeClosedIcon size={32} className="text-subtle lg:hidden" />
+            <EyeClosedIcon size={64} className="hidden text-subtle lg:block" />
             <div className="flex flex-col gap-2 lg:gap-4">
               <p className="text-center text-xl font-medium lg:text-3xl">
                 {t('portfolio.emptyState.heading')}
@@ -222,17 +222,23 @@ function PortfolioItemCard({ portfolioItem }: PortfolioItemCardProps) {
     switch (portfolioItem.collection) {
       case 'caseStudies':
         return (
-          <PortfolioItemTag label={t('portfolio.caseStudy')} icon={Images} />
+          <PortfolioItemTag
+            label={t('portfolio.caseStudy')}
+            icon={ImagesIcon}
+          />
         );
       case 'sideProjects':
         return (
-          <PortfolioItemTag label={t('portfolio.sideProject')} icon={Flask} />
+          <PortfolioItemTag
+            label={t('portfolio.sideProject')}
+            icon={FlaskIcon}
+          />
         );
       case 'dribbbleShots':
         return (
           <PortfolioItemTag
             label={t('portfolio.dribbbleShot')}
-            icon={DribbbleLogo}
+            icon={DribbbleLogoIcon}
           />
         );
       default:

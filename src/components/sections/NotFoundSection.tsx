@@ -1,4 +1,4 @@
-import { House } from '@phosphor-icons/react/dist/ssr';
+import { HouseIcon } from '@phosphor-icons/react/ssr';
 import { getImage } from 'astro:assets';
 import { motion } from 'framer-motion';
 
@@ -78,7 +78,7 @@ export default function NotFoundSection() {
             <p className="text-xl md:text-balance">{t('404.text')}</p>
             <Button
               text={t('404.cta')}
-              icon={House}
+              icon={HouseIcon}
               iconSide="left"
               href="/"
               className="flex-shrink-0"

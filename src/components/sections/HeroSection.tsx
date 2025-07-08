@@ -3,10 +3,10 @@ import type { AnimationProps } from 'framer-motion';
 
 import { useEffect, useRef } from 'react';
 import {
-  ArrowRight,
-  ArrowUpRight,
-  BellRinging,
-} from '@phosphor-icons/react/dist/ssr';
+  ArrowRightIcon,
+  ArrowUpRightIcon,
+  BellRingingIcon,
+} from '@phosphor-icons/react/ssr';
 import { getImage } from 'astro:assets';
 import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
@@ -409,7 +409,9 @@ function HeroBanner({ text, href }: HeroBannerProps) {
   let ArrowIconComponent;
 
   if (href) {
-    ArrowIconComponent = isExternalUrl(href) ? ArrowUpRight : ArrowRight;
+    ArrowIconComponent = isExternalUrl(href)
+      ? ArrowUpRightIcon
+      : ArrowRightIcon;
   }
 
   return (
@@ -422,11 +424,11 @@ function HeroBanner({ text, href }: HeroBannerProps) {
         !href && 'pointer-events-none',
       )}
     >
-      <BellRinging
+      <BellRingingIcon
         size={16}
         className="flex-shrink-0 text-primary transition-colors group-hover:text-on-primary lg:hidden"
       />
-      <BellRinging
+      <BellRingingIcon
         size={20}
         className="hidden flex-shrink-0 text-primary transition-colors group-hover:text-on-primary lg:inline"
       />

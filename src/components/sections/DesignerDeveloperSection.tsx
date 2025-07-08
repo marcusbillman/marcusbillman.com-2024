@@ -1,5 +1,10 @@
 import { useRef } from 'react';
-import { CodeBlock, Eye, Graph, PenNib } from '@phosphor-icons/react/dist/ssr';
+import {
+  CodeBlockIcon,
+  EyeIcon,
+  GraphIcon,
+  PenNibIcon,
+} from '@phosphor-icons/react/ssr';
 import { getImage } from 'astro:assets';
 import {
   motion,
@@ -66,9 +71,9 @@ export default function DesignerDeveloperSection() {
         <div className="flex flex-wrap justify-center lg:absolute lg:inset-16 lg:top-32 lg:w-auto">
           <span className="inline-flex items-center text-primary lg:absolute lg:left-0 lg:top-0">
             {t('about.designerDeveloper.designer.word1')}&nbsp;
-            <PenNib size={32} className="lg:hidden" />
-            <PenNib size={64} className="hidden lg:inline 2xl:hidden" />
-            <PenNib size={128} className="hidden 2xl:inline" />
+            <PenNibIcon size={32} className="lg:hidden" />
+            <PenNibIcon size={64} className="hidden lg:inline 2xl:hidden" />
+            <PenNibIcon size={128} className="hidden 2xl:inline" />
             &nbsp;
           </span>
           <span className="lg:absolute lg:left-0 lg:top-1/3">
@@ -78,9 +83,9 @@ export default function DesignerDeveloperSection() {
             {t('about.designerDeveloper.designer.word3')}&nbsp;
             <span className="inline-flex items-center">
               {t('about.designerDeveloper.designer.word4')}&nbsp;
-              <Graph size={32} className="lg:hidden" />
-              <Graph size={64} className="hidden lg:inline 2xl:hidden" />
-              <Graph size={128} className="hidden 2xl:inline" />
+              <GraphIcon size={32} className="lg:hidden" />
+              <GraphIcon size={64} className="hidden lg:inline 2xl:hidden" />
+              <GraphIcon size={128} className="hidden 2xl:inline" />
             </span>
           </span>
         </div>
@@ -123,9 +128,9 @@ export default function DesignerDeveloperSection() {
         <div className="flex flex-wrap justify-center lg:absolute lg:inset-16 lg:top-32 lg:w-auto">
           <span className="inline-flex items-center text-blueberry-300 lg:absolute lg:right-0 lg:top-0">
             {t('about.designerDeveloper.developer.word1')}&nbsp;
-            <CodeBlock size={32} className="lg:hidden" />
-            <CodeBlock size={64} className="hidden lg:inline 2xl:hidden" />
-            <CodeBlock size={128} className="hidden 2xl:inline" />
+            <CodeBlockIcon size={32} className="lg:hidden" />
+            <CodeBlockIcon size={64} className="hidden lg:inline 2xl:hidden" />
+            <CodeBlockIcon size={128} className="hidden 2xl:inline" />
             &nbsp;
           </span>
           <span className="lg:absolute lg:right-0 lg:top-1/3">
@@ -135,9 +140,9 @@ export default function DesignerDeveloperSection() {
             {t('about.designerDeveloper.developer.word3')}&nbsp;
             <span className="inline-flex items-center">
               {t('about.designerDeveloper.developer.word4')}&nbsp;
-              <Eye size={32} className="lg:hidden" />
-              <Eye size={64} className="hidden lg:inline 2xl:hidden" />
-              <Eye size={128} className="hidden 2xl:inline" />
+              <EyeIcon size={32} className="lg:hidden" />
+              <EyeIcon size={64} className="hidden lg:inline 2xl:hidden" />
+              <EyeIcon size={128} className="hidden 2xl:inline" />
             </span>
           </span>
         </div>

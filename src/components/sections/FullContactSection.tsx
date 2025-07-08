@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import {
-  ChatsCircle,
-  Copy,
-  EnvelopeSimple,
-} from '@phosphor-icons/react/dist/ssr';
+  ChatsCircleIcon,
+  CopyIcon,
+  EnvelopeSimpleIcon,
+} from '@phosphor-icons/react/ssr';
 import { AnimatePresence } from 'framer-motion';
 
 import Button from '@/components/Button';
@@ -24,7 +24,7 @@ export default function FullContactSection() {
       </h1>
       <Button
         text={t('contact.openForm')}
-        icon={ChatsCircle}
+        icon={ChatsCircleIcon}
         style="primary"
         className="mt-16"
         onClick={() => setIsModalOpen(true)}
@@ -38,8 +38,8 @@ export default function FullContactSection() {
       <div className="mt-6 flex w-full max-w-5xl flex-col gap-4 md:flex-row lg:gap-8">
         <div className="flex flex-col gap-4 rounded-2xl border bg-default p-4 md:flex-1 lg:p-6">
           <div className="flex items-center gap-2">
-            <EnvelopeSimple size={24} className="lg:hidden" />
-            <EnvelopeSimple size={32} className="hidden lg:block" />
+            <EnvelopeSimpleIcon size={24} className="lg:hidden" />
+            <EnvelopeSimpleIcon size={32} className="hidden lg:block" />
             <span className="text-xl font-medium lg:text-2xl">
               {t('common.socials.emailAddress')}
             </span>
@@ -48,13 +48,13 @@ export default function FullContactSection() {
             <CopyToClipboard text={t('common.socials.emailAddress')}>
               <Button
                 text={t('contact.emailCopy')}
-                icon={Copy}
+                icon={CopyIcon}
                 size="small"
                 className="lg:hidden"
               />
               <Button
                 text={t('contact.emailCopy')}
-                icon={Copy}
+                icon={CopyIcon}
                 size="medium"
                 className="hidden lg:block"
               />

@@ -1,13 +1,13 @@
 import type { CustomIcon } from '@/components/icons';
 import type { SoundcloudTrack } from '@/utils/soundcloud';
-import type { Icon as PhosphorIcon } from '@phosphor-icons/react/dist/lib/types';
+import type { Icon as PhosphorIcon } from '@phosphor-icons/react';
 import type React from 'react';
 
 import {
-  ArrowRight,
-  ArrowUpRight,
-  Flask,
-} from '@phosphor-icons/react/dist/ssr';
+  ArrowRightIcon,
+  ArrowUpRightIcon,
+  FlaskIcon,
+} from '@phosphor-icons/react/ssr';
 import { getImage } from 'astro:assets';
 import { twMerge } from 'tailwind-merge';
 
@@ -50,7 +50,7 @@ export default function MoreThingsSection({
         <BentoCard
           title={t('home.moreThings.sideProjects')}
           description={t('home.moreThings.sideProjectsDescription')}
-          icon={Flask}
+          icon={FlaskIcon}
           href="portfolio?type=SIDE_PROJECT"
           className="h-[50vh] bg-gradient-to-b from-[#bfcaf1] to-[#889ef1] text-black md:col-span-3 md:row-span-2 md:h-auto xl:col-span-4"
         >
@@ -150,7 +150,9 @@ function BentoCard({
   ...props
 }: BentoCardProps) {
   const LeftIconComponent = icon;
-  const RightIconComponent = isExternalUrl(href) ? ArrowUpRight : ArrowRight;
+  const RightIconComponent = isExternalUrl(href)
+    ? ArrowUpRightIcon
+    : ArrowRightIcon;
 
   return (
     <li

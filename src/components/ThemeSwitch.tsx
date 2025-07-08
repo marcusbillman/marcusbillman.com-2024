@@ -1,7 +1,11 @@
-import type { Icon } from '@phosphor-icons/react/dist/lib/types';
+import type { Icon } from '@phosphor-icons/react';
 
 import { useEffect } from 'react';
-import { ArrowsClockwise, Moon, Sun } from '@phosphor-icons/react/dist/ssr';
+import {
+  ArrowsClockwiseIcon,
+  MoonIcon,
+  SunIcon,
+} from '@phosphor-icons/react/ssr';
 import { toast } from 'sonner';
 import { twJoin } from 'tailwind-merge';
 import { useLocalStorage } from 'usehooks-ts';
@@ -32,7 +36,7 @@ export default function ThemeSwitch() {
       className="flex items-center rounded-full bg-subtle p-2"
     >
       <SwitchSegment
-        icon={Sun}
+        icon={SunIcon}
         label={t('navigation.themeSwitch.light')}
         isSelected={value === 'light'}
         onChange={() => {
@@ -41,7 +45,7 @@ export default function ThemeSwitch() {
         }}
       />
       <SwitchSegment
-        icon={Moon}
+        icon={MoonIcon}
         label={t('navigation.themeSwitch.dark')}
         isSelected={value === 'dark'}
         onChange={() => {
@@ -50,7 +54,7 @@ export default function ThemeSwitch() {
         }}
       />
       <SwitchSegment
-        icon={ArrowsClockwise}
+        icon={ArrowsClockwiseIcon}
         label={t('navigation.themeSwitch.system')}
         isSelected={value === 'system'}
         onChange={() => {

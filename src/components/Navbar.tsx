@@ -1,14 +1,14 @@
-import type { Icon } from '@phosphor-icons/react/dist/lib/types';
+import type { Icon } from '@phosphor-icons/react';
 
 import { useEffect, useState } from 'react';
 import {
-  ChatsCircle,
-  House,
-  Images,
-  List,
-  User,
-  X,
-} from '@phosphor-icons/react/dist/ssr';
+  ChatsCircleIcon,
+  HouseIcon,
+  ImagesIcon,
+  ListIcon,
+  UserIcon,
+  XIcon,
+} from '@phosphor-icons/react/ssr';
 import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 
@@ -57,23 +57,27 @@ export default function Navbar({ isMenuOpen, onClickMenuButton }: NavbarProps) {
       >
         {!isMenuOpen && (
           <motion.ul className={`hidden gap-6 lg:flex lg:items-center`}>
-            <NavbarLink text={t('navigation.home')} url="/" icon={House} />
+            <NavbarLink text={t('navigation.home')} url="/" icon={HouseIcon} />
             <NavbarLink
               text={t('navigation.portfolio')}
               url="/portfolio"
-              icon={Images}
+              icon={ImagesIcon}
             />
-            <NavbarLink text={t('navigation.about')} url="/about" icon={User} />
+            <NavbarLink
+              text={t('navigation.about')}
+              url="/about"
+              icon={UserIcon}
+            />
             <NavbarLink
               text={t('navigation.contact')}
               url="/contact"
-              icon={ChatsCircle}
+              icon={ChatsCircleIcon}
             />
           </motion.ul>
         )}
         <Button
           text={isMenuOpen ? t('common.close') : t('navigation.menu')}
-          icon={isMenuOpen ? X : List}
+          icon={isMenuOpen ? XIcon : ListIcon}
           style={isMenuOpen ? 'subtle' : 'default'}
           iconSide="right"
           size="small"

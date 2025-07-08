@@ -1,4 +1,8 @@
-import { Link, MusicNotes, Shapes } from '@phosphor-icons/react/dist/ssr';
+import {
+  LinkIcon,
+  MusicNotesIcon,
+  ShapesIcon,
+} from '@phosphor-icons/react/ssr';
 import { getImage } from 'astro:assets';
 
 import DotGrid from '@/components/DotGrid';
@@ -23,27 +27,27 @@ export default function FooterSection() {
             {t('footer.slogan.word1') + ' '}
             <span className="font-serif italic text-white lg:group-hover:text-[inherit]">
               {t('footer.slogan.word2') + ' '}
-              <Link size={32} className="inline 2xl:hidden" />
-              <Link size={64} className="hidden 2xl:inline" />{' '}
+              <LinkIcon size={32} className="inline 2xl:hidden" />
+              <LinkIcon size={64} className="hidden 2xl:inline" />{' '}
             </span>
           </span>
           <span className="block translate-x-[25%] transition-colors lg:group-hover:text-white/20">
             {t('footer.slogan.word3') + ' '}
             <span className="font-serif italic text-white lg:group-hover:text-[inherit]">
               {t('footer.slogan.word4') + ' '}
-              <Shapes size={32} className="inline 2xl:hidden" />
-              <Shapes size={64} className="hidden 2xl:inline" />{' '}
+              <ShapesIcon size={32} className="inline 2xl:hidden" />
+              <ShapesIcon size={64} className="hidden 2xl:inline" />{' '}
             </span>
           </span>
           <span className="block transition-colors lg:group-hover:text-white/20">
             {t('footer.slogan.word5') + ' '}
             <span className="font-serif italic text-white">
               {t('footer.slogan.word6') + ' '}
-              <MusicNotes
+              <MusicNotesIcon
                 size={32}
                 className="inline lg:group-hover:animate-wiggle 2xl:hidden"
               />
-              <MusicNotes
+              <MusicNotesIcon
                 size={64}
                 className="hidden lg:group-hover:animate-wiggle 2xl:inline"
               />

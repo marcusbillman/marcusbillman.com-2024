@@ -1,9 +1,9 @@
 import {
-  CheckCircle,
-  Info,
-  Warning,
-  WarningDiamond,
-} from '@phosphor-icons/react/dist/ssr';
+  CheckCircleIcon,
+  InfoIcon,
+  WarningDiamondIcon,
+  WarningIcon,
+} from '@phosphor-icons/react/ssr';
 import { Toaster } from 'sonner';
 
 export default function ToasterWrapper() {
@@ -27,10 +27,10 @@ export default function ToasterWrapper() {
         },
       }}
       icons={{
-        success: <CheckCircle weight="fill" />,
-        info: <Info weight="fill" />,
-        warning: <Warning weight="fill" />,
-        error: <WarningDiamond weight="fill" />,
+        success: <CheckCircleIcon weight="fill" />,
+        info: <InfoIcon weight="fill" />,
+        warning: <WarningIcon weight="fill" />,
+        error: <WarningDiamondIcon weight="fill" />,
       }}
     />
   );

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Copy } from '@phosphor-icons/react/dist/ssr';
+import { ArrowUpRightIcon, CopyIcon } from '@phosphor-icons/react/ssr';
 import { twJoin } from 'tailwind-merge';
 
 import CopyToClipboard from '@/components/CopyToClipboard';
@@ -65,7 +65,7 @@ export default function SocialLinks({
             <span className={compactOnMobile ? 'lg:text-xl' : 'text-xl'}>
               {t('common.socials.emailAddress')}
             </span>
-            <Copy
+            <CopyIcon
               size={16}
               className={twJoin(
                 'transition-all duration-500 ease-smooth group-hover:rotate-180',
@@ -75,7 +75,7 @@ export default function SocialLinks({
                   : 'text-subtle group-hover:text-default',
               )}
             />
-            <Copy
+            <CopyIcon
               size={24}
               className={twJoin(
                 'transition-all duration-500 ease-smooth group-hover:rotate-180',
@@ -128,7 +128,7 @@ function SocialLink({
         <span className={compactOnMobile ? 'lg:text-xl' : 'text-xl'}>
           {primaryText}
         </span>
-        <ArrowUpRight
+        <ArrowUpRightIcon
           size={16}
           className={twJoin(
             'transition-all duration-500 ease-smooth group-hover:-translate-y-[20%] group-hover:translate-x-[20%]',
@@ -138,7 +138,7 @@ function SocialLink({
               : 'text-subtle group-hover:text-default',
           )}
         />
-        <ArrowUpRight
+        <ArrowUpRightIcon
           size={24}
           className={twJoin(
             'transition-all duration-500 ease-smooth group-hover:-translate-y-[20%] group-hover:translate-x-[20%]',

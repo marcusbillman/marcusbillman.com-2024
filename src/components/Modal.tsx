@@ -1,5 +1,5 @@
 import { createRef } from 'react';
-import { X } from '@phosphor-icons/react/dist/ssr';
+import { XIcon } from '@phosphor-icons/react/ssr';
 import { motion, useReducedMotion } from 'framer-motion';
 import { createPortal } from 'react-dom';
 import { FocusOn } from 'react-focus-on';
@@ -55,7 +55,7 @@ export default function Modal({ title, onClose, children }: Props) {
               <h2 className="font-serif text-xl font-medium italic">{title}</h2>
               <Button
                 text={t('common.close')}
-                icon={X}
+                icon={XIcon}
                 iconSide="right"
                 size="small"
                 style="subtle"

@@ -1,9 +1,9 @@
 import {
-  ChatsCircle,
-  CubeFocus,
-  Heart,
-  Lightning,
-} from '@phosphor-icons/react/dist/ssr';
+  ChatsCircleIcon,
+  CubeFocusIcon,
+  HeartIcon,
+  LightningIcon,
+} from '@phosphor-icons/react/ssr';
 import { getImage } from 'astro:assets';
 
 import DotGrid from '@/components/DotGrid';
@@ -23,8 +23,8 @@ export default function SkillsSection() {
       <ul className="grid gap-6 lg:grid-cols-2 lg:gap-8 2xl:grid-cols-4">
         <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
-            <CubeFocus size={24} className="lg:hidden" />
-            <CubeFocus size={32} className="hidden lg:inline" />
+            <CubeFocusIcon size={24} className="lg:hidden" />
+            <CubeFocusIcon size={32} className="hidden lg:inline" />
           </div>
           <p className="text-xl font-medium lg:text-2xl">
             {t('about.skills.systemicThinker.part1')}
@@ -40,8 +40,8 @@ export default function SkillsSection() {
         </li>
         <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
-            <Lightning size={24} className="lg:hidden" />
-            <Lightning size={32} className="hidden lg:inline" />
+            <LightningIcon size={24} className="lg:hidden" />
+            <LightningIcon size={32} className="hidden lg:inline" />
           </div>
           <p className="text-xl font-medium lg:text-2xl">
             <span className="font-serif italic text-primary">
@@ -57,8 +57,8 @@ export default function SkillsSection() {
         </li>
         <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
-            <ChatsCircle size={24} className="lg:hidden" />
-            <ChatsCircle size={32} className="hidden lg:inline" />
+            <ChatsCircleIcon size={24} className="lg:hidden" />
+            <ChatsCircleIcon size={32} className="hidden lg:inline" />
           </div>
           <p className="text-xl font-medium lg:text-2xl">
             {t('about.skills.openMinded.part1')}
@@ -74,8 +74,8 @@ export default function SkillsSection() {
         </li>
         <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
-            <Heart size={24} className="lg:hidden" />
-            <Heart size={32} className="hidden lg:inline" />
+            <HeartIcon size={24} className="lg:hidden" />
+            <HeartIcon size={32} className="hidden lg:inline" />
           </div>
           <p className="text-xl font-medium lg:text-2xl">
             {t('about.skills.eagerToShare.part1')}

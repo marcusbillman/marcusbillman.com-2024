@@ -1,13 +1,13 @@
-import type { Icon } from '@phosphor-icons/react/dist/lib/types';
+import type { Icon } from '@phosphor-icons/react';
 
 import { useEffect, useState } from 'react';
 import {
-  ChatsCircle,
-  House,
-  Images,
-  User,
-  X,
-} from '@phosphor-icons/react/dist/ssr';
+  ChatsCircleIcon,
+  HouseIcon,
+  ImagesIcon,
+  UserIcon,
+  XIcon,
+} from '@phosphor-icons/react/ssr';
 import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 import { useMediaQuery } from 'usehooks-ts';
@@ -65,7 +65,7 @@ export default function Menu({ onClose }: MenuProps) {
           </h2>
           <Button
             text={t('common.close')}
-            icon={X}
+            icon={XIcon}
             style="subtle"
             iconSide="right"
             size="small"
@@ -74,7 +74,7 @@ export default function Menu({ onClose }: MenuProps) {
         </div>
         <div className="flex flex-grow flex-col gap-4 overflow-y-auto lg:flex-row lg:gap-8">
           <ul className="flex flex-col flex-wrap gap-2 lg:flex-[1] lg:flex-row lg:gap-4 2xl:flex-[3]">
-            <MenuLink text={t('navigation.home')} url="/" icon={House}>
+            <MenuLink text={t('navigation.home')} url="/" icon={HouseIcon}>
               <div
                 className="absolute inset-0 -z-10 bg-cover bg-center"
                 style={{ backgroundImage: `url(${homeBg.src})` }}
@@ -88,7 +88,7 @@ export default function Menu({ onClose }: MenuProps) {
             <MenuLink
               text={t('navigation.portfolio')}
               url="/portfolio"
-              icon={Images}
+              icon={ImagesIcon}
             >
               <div className="absolute inset-0 -z-10 bg-subtle" />
               <DotGrid dim="default" />
@@ -107,7 +107,7 @@ export default function Menu({ onClose }: MenuProps) {
                 className="absolute right-[30%] top-[30%] h-[80%] min-h-64 translate-x-[50%] translate-y-[20%] rotate-[5deg]"
               />
             </MenuLink>
-            <MenuLink text={t('navigation.about')} url="/about" icon={User}>
+            <MenuLink text={t('navigation.about')} url="/about" icon={UserIcon}>
               <div className="absolute inset-0 -z-10 bg-subtle" />
               <DotGrid dim="default" />
               <Glow color="orange" className="bottom-[20%] left-[30%] w-full" />
@@ -120,7 +120,7 @@ export default function Menu({ onClose }: MenuProps) {
             <MenuLink
               text={t('navigation.contact')}
               url="/contact"
-              icon={ChatsCircle}
+              icon={ChatsCircleIcon}
             >
               <div className="absolute inset-0 -z-10 bg-subtle" />
               <DotGrid dim="default" />

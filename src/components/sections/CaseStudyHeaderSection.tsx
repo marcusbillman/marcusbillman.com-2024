@@ -1,6 +1,6 @@
 import type { CaseStudy } from '@/utils/content';
 
-import { ArrowLeft } from '@phosphor-icons/react/dist/ssr';
+import { ArrowLeftIcon } from '@phosphor-icons/react/ssr';
 
 import Button from '@/components/Button';
 import DotGrid from '@/components/DotGrid';
@@ -18,7 +18,7 @@ export default function CaseStudyHeaderSection({ caseStudy }: Props) {
         <div className="flex items-center gap-4">
           <Button
             text={t('caseStudy.back')}
-            icon={ArrowLeft}
+            icon={ArrowLeftIcon}
             iconSide="left"
             size="small"
             href="/portfolio"

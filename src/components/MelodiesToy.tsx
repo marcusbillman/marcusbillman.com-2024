@@ -2,29 +2,29 @@ import type { OmniOscillatorType } from 'tone/build/esm/source/oscillator/Oscill
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  AirplaneTakeoff,
-  ArrowsCounterClockwise,
-  ArrowsDownUp,
-  ArrowsLeftRight,
-  CarProfile,
-  MagicWand,
-  Metronome,
-  MusicNote,
-  PersonSimpleBike,
-  PersonSimpleRun,
-  PianoKeys,
-  Play,
-  Question,
-  RocketLaunch,
-  Scooter,
-  Stop,
-  Trash,
-  WaveSawtooth,
-  WaveSine,
-  WaveSquare,
-  WaveTriangle,
-  X,
-} from '@phosphor-icons/react/dist/ssr';
+  AirplaneTakeoffIcon,
+  ArrowsCounterClockwiseIcon,
+  ArrowsDownUpIcon,
+  ArrowsLeftRightIcon,
+  CarProfileIcon,
+  MagicWandIcon,
+  MetronomeIcon,
+  MusicNoteIcon,
+  PersonSimpleBikeIcon,
+  PersonSimpleRunIcon,
+  PianoKeysIcon,
+  PlayIcon,
+  QuestionIcon,
+  RocketLaunchIcon,
+  ScooterIcon,
+  StopIcon,
+  TrashIcon,
+  WaveSawtoothIcon,
+  WaveSineIcon,
+  WaveSquareIcon,
+  WaveTriangleIcon,
+  XIcon,
+} from '@phosphor-icons/react/ssr';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 import { twJoin } from 'tailwind-merge';
 import * as Tone from 'tone';
@@ -419,15 +419,15 @@ export default function MelodiesToy() {
   }, [tempo]);
 
   const tempoIcon = useMemo(() => {
-    if (tempo < 80) return PersonSimpleRun;
-    if (tempo < 100) return PersonSimpleBike;
-    if (tempo < 120) return Scooter;
-    if (tempo < 140) return CarProfile;
-    if (tempo < 160) return AirplaneTakeoff;
-    return RocketLaunch;
+    if (tempo < 80) return PersonSimpleRunIcon;
+    if (tempo < 100) return PersonSimpleBikeIcon;
+    if (tempo < 120) return ScooterIcon;
+    if (tempo < 140) return CarProfileIcon;
+    if (tempo < 160) return AirplaneTakeoffIcon;
+    return RocketLaunchIcon;
   }, [tempo]);
 
-  // Metronome on/off
+  // MetronomeIcon on/off
   useEffect(() => {
     if (isMetronomeEnabled) {
       metronomeSampler.current?.connect(Tone.getDestination());
@@ -517,17 +517,17 @@ export default function MelodiesToy() {
     switch (waveform) {
       case 'sine':
       case 'amsine':
-        return WaveSine;
+        return WaveSineIcon;
       case 'triangle':
       case 'fattriangle':
       case 'fmsine':
       case 'fmtriangle':
-        return WaveTriangle;
+        return WaveTriangleIcon;
       case 'sawtooth':
       case 'fatsawtooth':
-        return WaveSawtooth;
+        return WaveSawtoothIcon;
       default:
-        return WaveSquare;
+        return WaveSquareIcon;
     }
   }, [waveform]);
 
@@ -545,7 +545,7 @@ export default function MelodiesToy() {
                 aria-label="About"
                 className="rounded-full bg-white/20 p-2"
               >
-                <Question size={24} />
+                <QuestionIcon size={24} />
               </button>
             }
             collisionBoundary={boundaryRef}
@@ -574,7 +574,7 @@ export default function MelodiesToy() {
               )}
               onClick={() => setActiveTab('melody')}
             >
-              <PianoKeys size={24} />
+              <PianoKeysIcon size={24} />
               {t('melodiesToy.tab.melody')}
             </button>
             <button
@@ -598,7 +598,7 @@ export default function MelodiesToy() {
             aria-label={t('common.close')}
             className="hidden rounded-full bg-white/20 p-2 sm:block"
           >
-            <X size={24} />
+            <XIcon size={24} />
           </a>
         </div>
 
@@ -708,7 +708,7 @@ export default function MelodiesToy() {
               collisionBoundary={boundaryRef}
               trigger={
                 <button className="flex flex-shrink-0 items-center gap-1 rounded-full bg-white/20 p-4">
-                  <Metronome
+                  <MetronomeIcon
                     size={24}
                     className={
                       isMetronomeEnabled ? 'opacity-100' : 'opacity-50'
@@ -762,7 +762,7 @@ export default function MelodiesToy() {
                 collisionBoundary={boundaryRef}
                 trigger={
                   <button className="flex flex-shrink-0 items-center gap-1 rounded-full bg-white/20 p-4">
-                    <MusicNote size={24} className="opacity-50" />
+                    <MusicNoteIcon size={24} className="opacity-50" />
                     <span className="hidden font-serif italic xl:block">{`${scaleRoot.label} ${scaleType.shortLabel}`}</span>
                   </button>
                 }
@@ -832,7 +832,7 @@ export default function MelodiesToy() {
                   : t('melodiesToy.toolbar.play')
               }
             >
-              {isPlaying ? <Stop size={24} /> : <Play size={24} />}
+              {isPlaying ? <StopIcon size={24} /> : <PlayIcon size={24} />}
             </button>
             {/* Effect slider */}
             {activeTab === 'melody' && (
@@ -844,7 +844,7 @@ export default function MelodiesToy() {
                     max={1}
                     step={0.01}
                     value={effectAmount}
-                    icon={MagicWand}
+                    icon={MagicWandIcon}
                     onChange={(value) => setEffectAmount(value)}
                     aria-label={t('melodiesToy.toolbar.effect')}
                   />
@@ -860,7 +860,7 @@ export default function MelodiesToy() {
                   onClick={() => scrambleMelody('pitch')}
                   aria-label={t('melodiesToy.toolbar.scramblePitch')}
                 >
-                  <ArrowsDownUp size={24} />
+                  <ArrowsDownUpIcon size={24} />
                 </button>
               </Tooltip>
             )}
@@ -871,7 +871,7 @@ export default function MelodiesToy() {
                   onClick={() => scrambleMelody('rhythm')}
                   aria-label={t('melodiesToy.toolbar.scrambleRhythm')}
                 >
-                  <ArrowsLeftRight size={24} />
+                  <ArrowsLeftRightIcon size={24} />
                 </button>
               </Tooltip>
             )}
@@ -883,7 +883,7 @@ export default function MelodiesToy() {
                 }
                 aria-label={t('melodiesToy.toolbar.generate')}
               >
-                <ArrowsCounterClockwise size={24} />
+                <ArrowsCounterClockwiseIcon size={24} />
               </button>
             </Tooltip>
             <Tooltip text={t('melodiesToy.toolbar.clear')}>
@@ -892,7 +892,7 @@ export default function MelodiesToy() {
                 onClick={activeTab === 'melody' ? clearMelody : clearDrums}
                 aria-label={t('melodiesToy.toolbar.clear')}
               >
-                <Trash size={24} />
+                <TrashIcon size={24} />
               </button>
             </Tooltip>
           </div>

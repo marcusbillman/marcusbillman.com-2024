@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from '@formspree/react';
-import { CircleNotch, PaperPlaneTilt } from '@phosphor-icons/react/dist/ssr';
+import { CircleNotchIcon, PaperPlaneTiltIcon } from '@phosphor-icons/react/ssr';
 import confetti from 'canvas-confetti';
 import { motion, useAnimate } from 'framer-motion';
 import { AutoFocusInside } from 'react-focus-on';
@@ -72,7 +72,7 @@ export default function ContactFormModal({ onClose }: Props) {
             animate={{ opacity: 1 }}
             className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 bg-default text-subtle"
           >
-            <CircleNotch size={32} className="animate-spin" />
+            <CircleNotchIcon size={32} className="animate-spin" />
             <p>{t('contact.form.sending')}</p>
           </motion.div>
         )}
@@ -131,7 +131,7 @@ export default function ContactFormModal({ onClose }: Props) {
         </div>
         <Button
           text={t('contact.form.send')}
-          icon={PaperPlaneTilt}
+          icon={PaperPlaneTiltIcon}
           iconSide="right"
           style="primary"
           type="submit"

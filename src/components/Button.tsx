@@ -1,8 +1,8 @@
 import type { CustomIcon } from '@/components/icons';
-import type { Icon as PhosphorIcon } from '@phosphor-icons/react/dist/lib/types';
+import type { Icon as PhosphorIcon } from '@phosphor-icons/react';
 import type React from 'react';
 
-import { ArrowRight, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
+import { ArrowRightIcon, ArrowUpRightIcon } from '@phosphor-icons/react/ssr';
 import { twJoin, twMerge } from 'tailwind-merge';
 
 import { isExternalUrl } from '@/utils';
@@ -36,7 +36,7 @@ export default function Button({
   if (icon) {
     IconComponent = icon;
   } else if (href) {
-    IconComponent = isExternalUrl(href) ? ArrowUpRight : ArrowRight;
+    IconComponent = isExternalUrl(href) ? ArrowUpRightIcon : ArrowRightIcon;
   } else {
     iconSide = 'none';
   }

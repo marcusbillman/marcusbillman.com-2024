@@ -1,5 +1,5 @@
 import type { CustomIcon } from '@/components/icons';
-import type { Icon as PhosphorIcon } from '@phosphor-icons/react/dist/lib/types';
+import type { Icon as PhosphorIcon } from '@phosphor-icons/react';
 
 import * as Slider from '@radix-ui/react-slider';
 import { twMerge } from 'tailwind-merge';

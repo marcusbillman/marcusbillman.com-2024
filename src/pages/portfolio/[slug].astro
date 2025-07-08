@@ -1,5 +1,5 @@
 ---
-import { ArrowLeft, Info } from '@phosphor-icons/react/dist/ssr';
+import { ArrowLeftIcon, InfoIcon } from '@phosphor-icons/react/ssr';
 import { getCollection, render } from 'astro:content';
 
 import Button from '@/components/Button';
@@ -49,7 +49,7 @@ const { Content } = await render(caseStudy);
         caseStudy.data.locale !== locale && (
           <div class="mb-6 px-4 lg:mb-8">
             <div class="mx-auto flex max-w-4xl gap-2 rounded-2xl bg-subtle p-4">
-              <Info
+              <InfoIcon
                 size={20}
                 className="mt-[0.25em] flex-shrink-0 text-primary"
               />
@@ -74,7 +74,7 @@ const { Content } = await render(caseStudy);
     >
       <Button
         text={t('caseStudy.back')}
-        icon={ArrowLeft}
+        icon={ArrowLeftIcon}
         iconSide="left"
         href="/portfolio"
       />
