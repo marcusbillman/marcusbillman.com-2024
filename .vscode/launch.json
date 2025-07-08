@@ -3,15 +3,8 @@
   "configurations": [
     {
       "command": "./node_modules/.bin/astro dev",
-      "cwd": "${workspaceFolder}/web",
+      "cwd": "${workspaceFolder}",
       "name": "Astro: Dev",
-      "request": "launch",
-      "type": "node-terminal"
-    },
-    {
-      "command": "./node_modules/.bin/sanity dev",
-      "cwd": "${workspaceFolder}/studio",
-      "name": "Sanity: Dev",
       "request": "launch",
       "type": "node-terminal"
     }
