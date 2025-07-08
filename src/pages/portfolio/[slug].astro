@@ -23,7 +23,7 @@ export async function getStaticPaths() {
   return caseStudies.map((caseStudy) => {
     return {
       params: {
-        id: caseStudy.id,
+        slug: caseStudy.id,
       },
       props: {
         caseStudy: caseStudy,

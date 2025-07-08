@@ -1,8 +1,8 @@
 import { twMerge } from 'tailwind-merge';
 
 // These images are not optimized because optimization caused problems with loading in the Menu component.
-import blueberry from '@/assets/images/glow-blueberry.webp';
-import orange from '@/assets/images/glow-orange.webp';
+import blueberry from '@/images/glow-blueberry.webp';
+import orange from '@/images/glow-orange.webp';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   color: 'blueberry' | 'orange';

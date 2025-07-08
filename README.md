@@ -1,6 +1,6 @@
 # marcusbillman.com (2024)
 
-![Cover image based on website hero](https://github.com/marcusbillman/marcusbillman.com-2024/blob/main/public/assets/images/social-embed-en.jpg?raw=true)
+![Cover image based on website hero](https://github.com/marcusbillman/marcusbillman.com-2024/blob/main/public/images/social-embed-en.jpg?raw=true)
 
 My personal website and portfolio, hosted at [marcusbillman.com](https://marcusbillman.com). This monorepo contains both the front-end web application and the Sanity Studio application that I use to edit the website's cloud-hosted content.
 

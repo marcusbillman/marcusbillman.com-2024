@@ -2,10 +2,10 @@ import { House } from '@phosphor-icons/react/dist/ssr';
 import { getImage } from 'astro:assets';
 import { motion } from 'framer-motion';
 
-import bg from '@/assets/images/hero-bg-still.jpg';
 import Button from '@/components/Button';
 import DotGrid from '@/components/DotGrid';
 import Sandbox from '@/components/Sandbox';
+import bg from '@/images/hero-bg-still.jpg';
 import t from '@/utils/i18n';
 
 const optimizedBg = await getImage({ src: bg });

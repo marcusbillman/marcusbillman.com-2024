@@ -1,9 +1,9 @@
 import { Link, MusicNotes, Shapes } from '@phosphor-icons/react/dist/ssr';
 import { getImage } from 'astro:assets';
 
-import toyboxBg from '@/assets/images/footer-toybox-bg.jpg';
 import DotGrid from '@/components/DotGrid';
 import SocialLinks from '@/components/SocialLinks';
+import toyboxBg from '@/images/footer-toybox-bg.jpg';
 import t from '@/utils/i18n';
 
 const optimizedToyboxBg = await getImage({ src: toyboxBg });

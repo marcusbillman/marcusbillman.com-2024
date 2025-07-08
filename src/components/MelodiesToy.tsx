@@ -89,32 +89,32 @@ const DRUM_SAMPLES = [
   {
     tone: 'C1',
     name: t('melodiesToy.drumSample.kick'),
-    url: 'assets/audio/kick.mp3',
+    url: 'audio/kick.mp3',
   },
   {
     tone: 'D1',
     name: t('melodiesToy.drumSample.snare'),
-    url: 'assets/audio/snare.mp3',
+    url: 'audio/snare.mp3',
   },
   {
     tone: 'D#1',
     name: t('melodiesToy.drumSample.clap'),
-    url: 'assets/audio/clap.mp3',
+    url: 'audio/clap.mp3',
   },
   {
     tone: 'F#1',
     name: t('melodiesToy.drumSample.hatClosed'),
-    url: 'assets/audio/hat-closed.mp3',
+    url: 'audio/hat-closed.mp3',
   },
   {
     tone: 'A#1',
     name: t('melodiesToy.drumSample.hatOpen'),
-    url: 'assets/audio/hat-open.mp3',
+    url: 'audio/hat-open.mp3',
   },
   {
     tone: 'C#2',
     name: t('melodiesToy.drumSample.crash'),
-    url: 'assets/audio/crash.mp3',
+    url: 'audio/crash.mp3',
   },
 ];
 
@@ -367,7 +367,7 @@ export default function MelodiesToy() {
 
     metronomeSampler.current = new Tone.Sampler({
       urls: {
-        D4: 'assets/audio/metronome.mp3',
+        D4: 'audio/metronome.mp3',
       },
       volume: -12,
     });

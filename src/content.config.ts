@@ -7,11 +7,11 @@ const locale = import.meta.env.PUBLIC_LOCALE || 'en';
 
 const caseStudies = defineCollection({
   loader: glob({
-    pattern: '**/*.{md,mdx}',
-    base: `src/assets/content/${locale}/case-studies`,
+    pattern: `src/content/case-studies/**/${locale}.{md,mdx}`,
   }),
   schema: ({ image }) =>
     z.object({
+      slug: z.string(),
       name: z.string(),
       headline: z.string(),
       preamble: z.string().optional(),
@@ -30,11 +30,11 @@ const caseStudies = defineCollection({
 
 const sideProjects = defineCollection({
   loader: glob({
-    pattern: '**/*.yaml',
-    base: `src/assets/content/${locale}/side-projects`,
+    pattern: `src/content/side-projects/**/${locale}.yaml`,
   }),
   schema: ({ image }) =>
     z.object({
+      slug: z.string(),
       name: z.string(),
       headline: z.string(),
       date: z.string(),
@@ -71,7 +71,7 @@ const dribbbleShots = defineCollection({
 });
 
 const heroBanners = defineCollection({
-  loader: file(`./src/assets/content/${locale}/hero-banners.json`),
+  loader: file(`src/content/hero-banners/${locale}.json`),
   schema: z.object({
     enabled: z.boolean(),
     text: z.string(),

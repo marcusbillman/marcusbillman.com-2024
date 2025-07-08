@@ -60,7 +60,7 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
         />
       </div>
       <img
-        src={project.data.cover.src}
+        src={project.data.cover.astroImage.src}
         alt={project.data.name}
         loading="lazy"
         lang={project.data.locale}

@@ -1,9 +1,9 @@
 import { getImage } from 'astro:assets';
 
-import portrait1 from '@/assets/images/portrait-1.png';
-import portrait2 from '@/assets/images/portrait-2.png';
 import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
+import portrait1 from '@/images/portrait-1.png';
+import portrait2 from '@/images/portrait-2.png';
 import t from '@/utils/i18n';
 
 const optimizedPortrait1 = await getImage({ src: portrait1 });

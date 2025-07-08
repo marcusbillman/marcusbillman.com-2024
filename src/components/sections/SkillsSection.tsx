@@ -6,9 +6,9 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 import { getImage } from 'astro:assets';
 
-import techLogos from '@/assets/images/tech-logos.png';
 import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
+import techLogos from '@/images/tech-logos.png';
 import t from '@/utils/i18n';
 
 const optimizedTechLogos = await getImage({ src: techLogos });

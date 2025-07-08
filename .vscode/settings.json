@@ -8,7 +8,7 @@
     "hidpi"
   ],
   "css.lint.unknownAtRules": "ignore",
-  "i18n-ally.localesPaths": ["src/assets/locales"],
+  "i18n-ally.localesPaths": ["src/locales"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localeCountryMap": {
     "en": "gb", // show UK flag for 'en' locale

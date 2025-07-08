@@ -12,7 +12,7 @@ export default function DotGrid({ dim = 'none' }: Props) {
   return (
     <div
       className={twJoin(
-        "absolute inset-0 -z-10 bg-[url('/assets/images/dot-tile-light.svg')] bg-center dark:bg-[url('/assets/images/dot-tile-dark.svg')]",
+        "absolute inset-0 -z-10 bg-[url('/images/dot-tile-light.svg')] bg-center dark:bg-[url('/images/dot-tile-dark.svg')]",
         dim === 'default' && 'bg-overlay-dim-default',
         dim === 'strong' && 'bg-overlay-dim-strong',
       )}

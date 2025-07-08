@@ -12,11 +12,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 import { useMediaQuery } from 'usehooks-ts';
 
-// These images are not optimized because optimization caused problems with loading.
-import homeBg from '@/assets/images/hero-bg-still.jpg';
-import portfolioPhone1 from '@/assets/images/phone-iphone-15-plus.png';
-import portfolioPhone2 from '@/assets/images/phone-pixel-8.png';
-import aboutPortrait from '@/assets/images/portrait-1.png';
 import Button from '@/components/Button';
 import DotGrid from '@/components/DotGrid';
 import Glow from '@/components/Glow';
@@ -30,6 +25,11 @@ import {
 import LanguageSwitch from '@/components/LanguageSwitch';
 import SocialLinks from '@/components/SocialLinks';
 import ThemeSwitch from '@/components/ThemeSwitch';
+// These images are not optimized because optimization caused problems with loading.
+import homeBg from '@/images/hero-bg-still.jpg';
+import portfolioPhone1 from '@/images/phone-iphone-15-plus.png';
+import portfolioPhone2 from '@/images/phone-pixel-8.png';
+import aboutPortrait from '@/images/portrait-1.png';
 import t from '@/utils/i18n';
 import { TIMING_FUNCTIONS, useTailwindConfig } from '@/utils/tailwind';
 

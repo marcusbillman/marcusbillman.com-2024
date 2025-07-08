@@ -8,14 +8,14 @@ import {
   useTransform,
 } from 'framer-motion';
 
-import developerBg from '@/assets/images/code-dim.jpg';
-import codeEasterEgg from '@/assets/images/code-easter-egg.png';
-import colourCardBlueberry from '@/assets/images/colour-card-blueberry.png';
-import colourCardSalmon from '@/assets/images/colour-card-salmon.png';
-import figmaTools from '@/assets/images/figma-tools.png';
-import techLogos from '@/assets/images/tech-logos.png';
-import designerBg from '@/assets/images/wireframe-sketch.jpg';
 import DotGrid from '@/components/DotGrid';
+import developerBg from '@/images/code-dim.jpg';
+import codeEasterEgg from '@/images/code-easter-egg.png';
+import colourCardBlueberry from '@/images/colour-card-blueberry.png';
+import colourCardSalmon from '@/images/colour-card-salmon.png';
+import figmaTools from '@/images/figma-tools.png';
+import techLogos from '@/images/tech-logos.png';
+import designerBg from '@/images/wireframe-sketch.jpg';
 import t from '@/utils/i18n';
 
 const optimizedDesignerBg = await getImage({ src: designerBg });

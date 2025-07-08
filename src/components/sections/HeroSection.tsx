@@ -11,8 +11,6 @@ import { getImage } from 'astro:assets';
 import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 
-import bg from '@/assets/images/hero-bg-still.jpg';
-import profilePicture from '@/assets/images/profile-picture.jpg';
 import DotGrid from '@/components/DotGrid';
 import {
   AudioFileIllustration,
@@ -31,6 +29,8 @@ import {
 } from '@/components/illustrations';
 import WaveLine from '@/components/WaveLine.tsx';
 import { useIntersectionObserverSelector } from '@/hooks';
+import bg from '@/images/hero-bg-still.jpg';
+import profilePicture from '@/images/profile-picture.jpg';
 import { isExternalUrl } from '@/utils';
 import t from '@/utils/i18n';
 import { TIMING_FUNCTIONS } from '@/utils/tailwind';
@@ -387,7 +387,7 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
       >
         <video
           ref={videoRef}
-          src="/assets/videos/hero-bg.mp4"
+          src="/videos/hero-bg.mp4"
           autoPlay
           muted
           loop

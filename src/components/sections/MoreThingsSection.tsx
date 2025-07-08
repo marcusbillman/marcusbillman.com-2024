@@ -11,10 +11,6 @@ import {
 import { getImage } from 'astro:assets';
 import { twMerge } from 'tailwind-merge';
 
-import designBg from '@/assets/images/designer-desk.jpg';
-import musicBg from '@/assets/images/music-flatlay.jpg';
-import sideProjectsScreen2 from '@/assets/images/screenshot-cooldownload.jpg';
-import sideProjectsScreen1 from '@/assets/images/screenshot-soundboard.jpg';
 import DotGrid from '@/components/DotGrid';
 import { Dribbble, GitHub, LinkedIn, SoundCloud } from '@/components/icons';
 import {
@@ -22,6 +18,10 @@ import {
   CodeBlockIllustration,
   PhoneIllustration,
 } from '@/components/illustrations';
+import designBg from '@/images/designer-desk.jpg';
+import musicBg from '@/images/music-flatlay.jpg';
+import sideProjectsScreen2 from '@/images/screenshot-cooldownload.jpg';
+import sideProjectsScreen1 from '@/images/screenshot-soundboard.jpg';
 import { isExternalUrl } from '@/utils';
 import t from '@/utils/i18n';
 
