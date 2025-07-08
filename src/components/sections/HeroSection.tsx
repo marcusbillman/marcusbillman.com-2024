@@ -84,21 +84,21 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
   }
 
   return (
-    <header className="sticky top-0 h-[90vh] overflow-hidden px-4 pt-[15vh] lg:h-screen lg:px-16 lg:pt-32">
+    <header className="sticky top-0 min-h-screen overflow-hidden px-4 pt-32 lg:px-16">
       {/* Content */}
       <div className="z-10 max-w-7xl">
         <h1 className="flex flex-wrap justify-center gap-x-[0.33ch] text-5xl md:text-7xl lg:justify-start lg:text-left lg:text-9xl">
           <motion.span {...cropSlideWithDelay(0)}>
             {t('home.hero.word1')}
           </motion.span>
-          <motion.span {...cropSlideWithDelay(0.5)}>
+          <motion.span {...cropSlideWithDelay(0.2)}>
             {t('home.hero.word2')}
           </motion.span>
-          <motion.span {...cropSlideWithDelay(1)}>
+          <motion.span {...cropSlideWithDelay(0.4)}>
             {t('home.hero.word3')}
           </motion.span>
           <span className="relative flex flex-col gap-1 lg:gap-2">
-            <motion.span {...cropSlideWithDelay(1.2)}>
+            <motion.span {...cropSlideWithDelay(0.6)}>
               {t('home.hero.word4')}
             </motion.span>
             <motion.span
@@ -112,8 +112,8 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
                 width: '100%',
               }}
               transition={{
-                delay: 1.4,
-                duration: 1,
+                delay: 1,
+                duration: 0.75,
                 ease: TIMING_FUNCTIONS.SMOOTH,
               }}
             >
@@ -135,7 +135,7 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
               alt={t('home.alt.profilePicture')}
               className="size-12 rounded-full md:size-20 lg:size-32"
               aria-hidden
-              {...cropSlideWithDelay(1.6)}
+              {...cropSlideWithDelay(1)}
             />
           </span>
         </h1>
@@ -148,8 +148,8 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
           initial={{ opacity: 0, y: shouldReduceMotion ? 0 : '50%' }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 1.6,
-            duration: 2,
+            delay: 1,
+            duration: 1,
             ease: TIMING_FUNCTIONS.SMOOTH,
           }}
         >
@@ -364,8 +364,8 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
             y: 0,
           }}
           transition={{
-            delay: 2.5,
-            duration: 0.75,
+            delay: 1.5,
+            duration: 0.5,
             ease: TIMING_FUNCTIONS.SMOOTH,
           }}
         >
@@ -383,7 +383,7 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
         style={{ backgroundImage: `url(${optimizedBg.src})` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1, ease: 'linear' }}
+        transition={{ delay: 1, duration: 1 }}
       >
         <video
           ref={videoRef}
