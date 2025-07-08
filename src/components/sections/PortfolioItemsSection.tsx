@@ -78,7 +78,6 @@ export default function PortfolioItemsSection({
                 ...prevOptions,
                 caseStudies: !prevOptions.caseStudies,
               }));
-              navigator.vibrate(100);
             }}
           />
           <FilterOption
@@ -90,7 +89,6 @@ export default function PortfolioItemsSection({
                 ...prevOptions,
                 sideProjects: !prevOptions.sideProjects,
               }));
-              navigator.vibrate(100);
             }}
           />
           <FilterOption
@@ -102,7 +100,6 @@ export default function PortfolioItemsSection({
                 ...prevOptions,
                 dribbbleShots: !prevOptions.dribbbleShots,
               }));
-              navigator.vibrate(100);
             }}
           />
         </div>

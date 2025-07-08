@@ -28,7 +28,6 @@ export default function ContactFormModal({ onClose }: Props) {
 
     shakeForm();
     toast.warning(t('contact.form.toastWarning'));
-    navigator.vibrate(200);
     setHasWarned(true);
   }
 

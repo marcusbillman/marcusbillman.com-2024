@@ -18,7 +18,6 @@ export default function ContactSection() {
 
   function toggleMenu() {
     setIsModalOpen(!isModalOpen);
-    navigator.vibrate(100);
   }
 
   return (

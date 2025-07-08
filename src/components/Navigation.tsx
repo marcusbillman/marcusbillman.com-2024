@@ -16,7 +16,6 @@ export default function Navigation() {
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
-    navigator.vibrate(100);
   }
 
   const isDesktop = useMediaQuery(
