@@ -3,6 +3,7 @@ name: cooldownload.software
 headline: A really sketchy link shortener
 date: '2022'
 cover:
+  type: image
   astroImage: './images/cover.png'
   alt: Screenshot of link shortener form
 url: https://cooldownload.marcusbillman.com

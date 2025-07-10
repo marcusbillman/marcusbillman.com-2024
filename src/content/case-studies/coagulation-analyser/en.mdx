@@ -5,7 +5,7 @@ headline: Using UI to help more hospital labs save lives
 preamble: At a Swedish life science company, I led the UI/UX design process for a disruptive laboratory device during its research phase.
 date: Dec 2021–Apr 2022
 cover:
-  astroImage: './images/cover.png'
+  type: image
   alt: Showcase featuring various screens in a grid
 locale: en
 featured: true
@@ -51,9 +51,9 @@ A sample of the patient's blood is mixed with a liquid called a reagent, which t
 One common use of coagulation testing is measuring blood clots. If you get one (or are about to), your body releases a substance called D-dimer into your bloodstream. At the hospital, a coagulation analyser measures how long it takes for your plasma to coagulate. This time shows the amount of D--dimer in your blood, which reveals the size and timeline of the blood clot—invaluable information to your doctor when deciding on treatment.
 
 <GalleryBlock
-  images={[
+  items={[
     {
-      astroImage: stepsImage,
+      type: 'image',
       alt: 'Three illustrated steps of a coagulation test',
       caption:
         'Three basic steps of a coagulation test: (1) Get a patient sample, (2) add a reagent and (3) measure changes in light.',
@@ -66,9 +66,9 @@ One common use of coagulation testing is measuring blood clots. If you get one (
 There are two kinds of coagulation analysers, one takes up half a room, and the other fits on a table. The latter kind (the semi-automatic coagulation analyser) is in dire need of innovation.
 
 <GalleryBlock
-  images={[
+  items={[
     {
-      astroImage: analysersImage,
+      type: 'image',
       alt: '4 automatic and 4 semi-automatic coagulation analysers.',
       caption: 'The two major types of coagulation analysers.',
     },
@@ -96,8 +96,9 @@ The project began with learning the basics of coagulation testing and the analys
 This gave me a feel for how these devices are used and which features, screens and UI patterns are most important—and what I could do better.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: competingUiImage,
       alt: 'Four photos of UI from competing coagulation analysers.',
       caption:
@@ -129,28 +130,22 @@ Based on the briefing and the new analyser's feature list, I created an informat
 A coagulation analyser is a complex device with many features that need to be quickly accessible. It needs to account for every situation to prevent errors that affect the patient. After seeing architectural issues with competing analysers, I wanted to reduce the amount of rarely used buttons in the main navigation, and create distinct flows and screens for routine tasks, such as calibration and inserting patient samples.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: informationArchitectureImage,
       alt: 'Diagram showing the structural relationship between UI screens.',
       caption: 'Part of my information architecture diagram.',
     },
     {
+      type: 'image',
       astroImage: paperSketchesImage,
       alt: 'A grid of paper sketches.',
       caption:
         'At the sketching stage, I drew several variations of each element.',
     },
-  ]}
-/>
-
-My paper wireframes were turned into low-fidelity mockups early, once again for quick feedback and iteration.
-
-I decided to use a left sidebar for the main navigation, as this is the most efficient use of screen space on a landscape-oriented screen, provides quick access, and is commonly seen in modern web apps. The bottom status bar displays the analyser's status and **currently inserted patient samples, which visually line up with the four physical slots on the analyser.**
-
-<GalleryBlock
-  images={[
     {
+      type: 'image',
       astroImage: earlyDesignImage,
       alt: 'Screenshot of design software during early mockups.',
       caption:
@@ -168,8 +163,9 @@ In front of the test subjects was a realistic interactive prototype on a touch s
 **From the user tests, I collected over 100 points of feedback that I ranked by impact and suggested solutions for.** I implemented around 60% of these fixes, while the rest was left for future designers to evaluate as these needed more judgment and testing than I had the time or resources for.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: userTestsImage,
       alt: 'Physical analyser prototype, lab equipment and laptop on a table.',
       caption: 'The desk setup during user tests.',
@@ -184,25 +180,14 @@ The result is a well-structured, straight-to-the-point UI that guides lab staff 
 Interactive charts and clear graphics take advantage of the large touch screen for quick scannability in the lab. Step-by-step instructions, video guides and clear warnings help prevent mistakes, and the status indicator in the bottom left always shows what the analyser is doing.
 
 <GalleryBlock
-  images={[
+  items={[
     {
       astroImage: showcase1Image,
       alt: 'Animated GIF showing interaction with three UI screens.',
     },
-    {
-      astroImage: showcase2Image,
-      alt: 'Animated GIF showing interaction with three UI screens.',
-    },
-    {
-      astroImage: showcase3Image,
-      alt: 'Animated GIF showing interaction with three UI screens.',
-    },
-    {
-      astroImage: showcase4Image,
-      alt: 'Various UI elements scattered on a canvas.',
-      caption: 'Medical UI can be beautiful!',
-    },
-  ]}
+    { type: 'image', astroImage: showcaseResultsImage, alt: '' },
+    { type: 'image', astroImage: showcaseQueueImage, alt: '' },
+    { type: 'image', astroImage: showcaseSmartphoneImage, alt: '' },
 />
 
 # Conclusion

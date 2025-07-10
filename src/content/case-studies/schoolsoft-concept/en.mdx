@@ -5,6 +5,7 @@ headline: Reimagining Sweden's largest learning management system
 preamble: As an exercise, I redesigned a platform I've used for a decade.
 date: '2020'
 cover:
+  type: image
   astroImage: './images/cover.png'
   alt: SchoolSoft concept marketing art
 locale: en
@@ -36,8 +37,9 @@ I created this unofficial redesign of SchoolSoft's mobile app to explore how I c
 Improving the flexibility of the Home screen, I added customizable shortcuts to quickly jump to parts of the app. Because SchoolSoft houses so much information, different schools and users use different sets of features, so customizability makes sense. I also improved colour contrast and made elements stand out more using colour and spacing, making the Home screen easier to skim through.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: homeImage,
       alt: 'Home screen, before and after',
     },
@@ -49,8 +51,9 @@ Improving the flexibility of the Home screen, I added customizable shortcuts to 
 Currently, you access SchoolSoft's settings by going to the empty-looking Account tab and then tapping the cog icon in the top-right corner. I combined the two screens into one simplified layout, and prepared for future sub-menus.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: settingsImage,
       alt: 'Settings screen, before and after',
     },
@@ -64,8 +67,9 @@ Another major problem was how the app displayed assignment feedback from teacher
 To combat this clunkiness, I designed a new screen for notifications like assignment feedback. Everything is instantly visible, including grading and assessed criteria (an important part of the Swedish school system). I also improved text readability and colour contrast, especially for the yellow “Feedback” tag.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: feedbackImage,
       alt: 'Assignment feedback screens, before and after',
     },
@@ -79,8 +83,9 @@ Another major problem was how the app displayed assignment feedback from teacher
 To combat this clunkiness, I designed a new screen for notifications like assignment feedback. Everything is instantly visible, including grading and assessed criteria (an important part of the Swedish school system). I also improved text readability and colour contrast, especially for the yellow “Feedback” tag.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: attendanceImage,
       alt: 'Attendance screen, before and after',
     },

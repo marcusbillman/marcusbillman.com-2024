@@ -6,8 +6,8 @@ import Button from '@/components/Button';
 import Emphasis from '@/components/content/Emphasis.astro';
 import Heading1 from '@/components/content/Heading1.astro';
 import Heading2 from '@/components/content/Heading2.astro';
+import MediaBlock from '@/components/content/MediaBlock.astro';
 import Paragraph from '@/components/content/Paragraph.astro';
-import RichImageBlock from '@/components/content/RichImageBlock.astro';
 import UnorderedList from '@/components/content/UnorderedList.astro';
 import CaseStudyHeaderSection from '@/components/sections/CaseStudyHeaderSection';
 import ContactSection from '@/components/sections/ContactSection';
@@ -40,8 +40,8 @@ const { Content } = await render(caseStudy);
 <Layout title={caseStudy.data.name}>
   <CaseStudyHeaderSection client:load caseStudy={caseStudy} slot="header" />
   <article lang={caseStudy.data.locale}>
-    <RichImageBlock
-      image={caseStudy.data.cover}
+    <MediaBlock
+      media={caseStudy.data.cover}
       className="mt-0 lg:mt-0 lg:rounded-6xl"
     />
     <div class="px-4 lg:px-16">

@@ -17,8 +17,9 @@ const caseStudies = defineCollection({
       headline: z.string(),
       preamble: z.string().optional(),
       date: z.string(),
+      // cover mirrors the ImageMedia type
       cover: z.object({
-        // Mirrors the RichImage type
+        type: z.literal('image'),
         astroImage: image(),
         alt: z.string(),
         caption: z.string().optional(),
@@ -39,8 +40,9 @@ const sideProjects = defineCollection({
       name: z.string(),
       headline: z.string(),
       date: z.string(),
+      // cover mirrors the ImageMedia type
       cover: z.object({
-        // Mirrors the RichImage type
+        type: z.literal('image'),
         astroImage: image(),
         alt: z.string(),
         caption: z.string().optional(),

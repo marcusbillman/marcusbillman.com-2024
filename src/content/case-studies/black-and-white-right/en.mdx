@@ -5,6 +5,7 @@ headline: A study on the usability of light and dark themes
 preamble: This is a summary of my upper secondary school graduation project. The full report in Swedish is available at the bottom of this page.
 date: 2020–2021
 cover:
+  type: image
   astroImage: './images/cover.png'
   alt: Phone showing both light and dark versions of the Facebook app
 locale: en
@@ -22,8 +23,9 @@ import websiteImage from './images/website.png';
 Whether for social media, banking or streaming video, we use screens a lot. Different apps and websites can look quite different, but one idea that's stuck around in recent years is dark theme. Instead of the traditional black text on a white background, the opposite is used. According to some, this is more comfortable to read, but what usability difference does the colour theme make for high school students on the web?
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: websiteImage,
       alt: 'Mockup of test website in both light and dark versions',
     },
@@ -35,8 +37,9 @@ Whether for social media, banking or streaming video, we use screens a lot. Diff
 A test website with a light and dark variant was created. Half of the participants were presented the light version and the other half saw the dark one. The participants answered a survey collecting thoughts about their variant of the website. Some also participated in interview-like user tests that involved tasks such as reading, finding links and filling forms. The two colour themes were then compared to find patterns and a possible winner.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: surveyImage,
       alt: "Survey questions regarding the respondent's environment and experience with the test website",
       caption: 'Excerpt from the survey used in the study',
@@ -51,8 +54,9 @@ The survey found that the dark website was perceived as slightly more appealing 
 In the interviews, though, light theme users read on average 21% faster than the dark theme users, and light theme users also performed better when recalling what they'd read. However, reading speed also differed significantly between the users of the same color theme, which is likely due to varying reading habits rather than the color theme itself. The remaining tasks, such as finding links or filling a contact form, were done equally well on both themes.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: reportImage,
       alt: 'Pages from the report laid out in a grid',
     },

@@ -3,6 +3,7 @@ name: Soundboard
 headline: Live, multiplayer soundboard
 date: '2023'
 cover:
+  type: image
   astroImage: './images/cover.png'
   alt: Screenshot of soundboard playing sounds
 url: https://soundboard.marcusbillman.com/

@@ -4,6 +4,7 @@ name: Stadia+
 headline: Elevating the experience of Google's cloud gaming platform
 date: 2020–2021
 cover:
+  type: image
   astroImage: './images/cover.png'
   alt: Marketing art showcasing UI overlayed on gameplay footage
 locale: en
@@ -24,8 +25,9 @@ Stadia+ is an open source browser extension for Stadia, Google's cloud gaming pl
 I designed the UI for the original browser extension and web app in 2020. However, after user feedback and changes to Stadia's functionality, Stadia+ needed an overhaul that focused more on progress syncing and online user profiles. To drive home this mindset shift, the creator of Stadia+ asked me to design a new visual identity and rethink the UI.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: iterationsImage,
       alt: 'Timeline of design iterations for browser extension popup',
     },
@@ -39,8 +41,9 @@ The pop-up for the browser extension is what greets the user after they've insta
 While working on the browser extension's UI, I was also piecing together a coherent design system. Aside from the extension itself, Stadia+ also has the Stadia+ DB web app, a landing page and some parts that are integrated into Stadia. In other words, the design language needed to fit with Stadia while still being uniquely identifiable standalone and across the four environments.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: designSystemImage,
       alt: 'Various scattered UI elements showcasing the visual design language',
     },
@@ -54,8 +57,9 @@ The final visual design is futuristic and focused, yet friendly and fun. Front a
 The next main focus was Stadia+ DB, a web app where gamers get a profile that shows what they've been playing, which in-game achievements they've unlocked and more. Profile data is automatically kept updated by the browser extension after every play session. Friends can find each other's profiles via search or by sharing links, which is great for showing off.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: profileImage,
       alt: 'Screenshots of a player profile on the Stadia+ DB website',
     },
@@ -69,8 +73,9 @@ Links to a player's profile are also integrated into the friends list in Stadia,
 Features like profile linking and video quality settings need to be accessible from within Stadia and are therefore seamlessly snuck in by the Stadia+ browser extension. There were many challenges when it came to designing around Stadia's existing UI and working new elements into it. For instance, the video settings were neatly tucked into a Stadia+ icon in Stadia's top toolbar, and the Game Monitor could be minimised into a gentle floating icon in Stadia's in-game overlay.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: overlaysImage,
       alt: 'Screenshots of UI overlayed in the corners of the Stadia app',
     },
@@ -84,8 +89,9 @@ Overall, the Stadia+ developer had planned the feature set, but I had to decide 
 This project served as a great exercise in making creative design decisions while still respecting the expectations of the target audience, who is already used to other gaming platforms.
 
 <GalleryBlock
-  images={[
+  items={[
     {
+      type: 'image',
       astroImage: websiteImage,
       alt: 'GIF scrolling through the marketing website of Stadia+',
     },
