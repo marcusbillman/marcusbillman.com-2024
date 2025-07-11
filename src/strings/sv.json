@@ -222,7 +222,8 @@
   },
   "caseStudy": {
     "back": "Alla projekt",
-    "missingTranslation": "Detta case är tyvärr inte tillgängligt på svenska. Det kommer att visas på engelska istället."
+    "missingTranslation": "Detta case är tyvärr inte tillgängligt på svenska. Det kommer att visas på engelska istället.",
+    "date": "Datum"
   },
   "melodiesToy": {
     "tab": {

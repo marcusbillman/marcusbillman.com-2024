@@ -1,4 +1,5 @@
 ---
+import { t } from '@/utils/i18n';
 import Button from '../Button';
 import DotGrid from '../DotGrid';
 
@@ -17,7 +18,7 @@ const { date, fields, links } = Astro.props as MetadataBlockProps;
       date && (
         <div class="flex gap-4 p-4">
           <dt class="block w-32 max-w-[25vw] flex-shrink-0 font-serif font-medium italic text-subtle">
-            Date
+            {t('caseStudy.date')}
           </dt>
           <dd class="flex-grow">{date}</dd>
         </div>

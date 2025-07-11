@@ -222,7 +222,8 @@
   },
   "caseStudy": {
     "back": "All projects",
-    "missingTranslation": "This case study is unfortunately not available in English. It will be displayed in Swedish instead."
+    "missingTranslation": "This case study is unfortunately not available in English. It will be displayed in Swedish instead.",
+    "date": "Date"
   },
   "melodiesToy": {
     "tab": {
