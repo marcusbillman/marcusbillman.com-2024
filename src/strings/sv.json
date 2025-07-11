@@ -12,7 +12,7 @@
     "baseUrl": "https://marcusbillman.se",
     "domain": "marcusbillman.se",
     "close": "Stäng",
-    "toastCopySuccess": "Kopierat! 📋",
+    "toastCopySuccess": "Kopierat!",
     "toastCopyError": "Kunde inte kopiera 😢",
     "socials": {
       "linkedin": "LinkedIn",
@@ -41,10 +41,10 @@
       "label": "Färgtema",
       "light": "Ljust tema",
       "dark": "Mörkt tema",
-      "system": "Synka med enhet",
+      "system": "Följ enhetens tema",
       "toastLight": "Bytte till ljust tema",
       "toastDark": "Bytte till mörkt tema",
-      "toastSystem": "Synkar med enhetens tema"
+      "toastSystem": "Följer enhetens tema"
     },
     "languageSwitch": {
       "label": "Språk",
@@ -207,11 +207,11 @@
     "form": {
       "heading": "Kontaktformulär",
       "name": "Ditt namn",
-      "namePlaceholder": "Supercool Persson",
+      "namePlaceholder": "Barcus Millman",
       "email": "Din e-post",
-      "emailPlaceholder": "supercool@epost.se",
+      "emailPlaceholder": "hej@barcusmillman.se",
       "message": "Meddelande",
-      "messagePlaceholder": "Hej! Jag har en cool idé...",
+      "messagePlaceholder": "Hej! Nu ska du få höra...",
       "send": "Skicka",
       "sending": "Skickar...",
       "toastSuccess": "Meddelande skickat! 🚀",
@@ -222,7 +222,7 @@
   },
   "caseStudy": {
     "back": "Alla projekt",
-    "missingTranslation": "Detta case är tyvärr inte tillgängligt på svenska. Det kommer att visas på engelska istället.",
+    "missingTranslation": "Detta case finns tyvärr bara på engelska.",
     "date": "Datum"
   },
   "melodiesToy": {

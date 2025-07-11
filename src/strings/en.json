@@ -12,7 +12,7 @@
     "baseUrl": "https://marcusbillman.com",
     "domain": "marcusbillman.com",
     "close": "Close",
-    "toastCopySuccess": "Copied! 📋",
+    "toastCopySuccess": "Copied!",
     "toastCopyError": "Failed to copy 😢",
     "socials": {
       "linkedin": "LinkedIn",
@@ -41,10 +41,10 @@
       "label": "Colour theme",
       "light": "Light theme",
       "dark": "Dark theme",
-      "system": "Sync with device",
+      "system": "Follow device theme",
       "toastLight": "Switched to light theme",
       "toastDark": "Switched to dark theme",
-      "toastSystem": "Syncing with device theme"
+      "toastSystem": "Following device theme"
     },
     "languageSwitch": {
       "label": "Language",
@@ -207,11 +207,11 @@
     "form": {
       "heading": "Contact form",
       "name": "Your name",
-      "namePlaceholder": "Super Cool Person",
+      "namePlaceholder": "Barcus Millman",
       "email": "Your email",
-      "emailPlaceholder": "super.cool@email.com",
+      "emailPlaceholder": "hello@barcusmillman.com",
       "message": "Message",
-      "messagePlaceholder": "Hi! I've got this cool idea...",
+      "messagePlaceholder": "Hi! Now listen to this...",
       "send": "Send",
       "sending": "Sending...",
       "toastSuccess": "Message sent! 🚀",
@@ -222,7 +222,7 @@
   },
   "caseStudy": {
     "back": "All projects",
-    "missingTranslation": "This case study is unfortunately not available in English. It will be displayed in Swedish instead.",
+    "missingTranslation": "This case study is unfortunately only available in Swedish.",
     "date": "Date"
   },
   "melodiesToy": {
