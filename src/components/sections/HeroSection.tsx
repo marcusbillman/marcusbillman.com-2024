@@ -39,10 +39,10 @@ const optimizedBg = await getImage({ src: bg });
 const optimizedProfilePicture = await getImage({ src: profilePicture });
 
 interface HeroSectionProps {
-  heroBanners?: HeroBanner[];
+  heroBanner?: HeroBanner;
 }
 
-export default function HeroSection({ heroBanners }: HeroSectionProps) {
+export default function HeroSection({ heroBanner }: HeroSectionProps) {
   // Observe when the hero has been covered by the main container being scrolled to the top of the viewport
   const isCovered = useIntersectionObserverSelector('#main', {
     rootMargin: '0% 0% -100% 0%',
@@ -351,8 +351,7 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
       </div>
 
       {/* Hero banner */}
-      {/* TODO: Add support for multiple banners */}
-      {heroBanners && heroBanners.length > 0 && (
+      {heroBanner && (
         <motion.div
           className="absolute bottom-32 left-0 right-0 z-50 flex justify-center px-4 lg:bottom-32"
           initial={{
@@ -369,10 +368,7 @@ export default function HeroSection({ heroBanners }: HeroSectionProps) {
             ease: TIMING_FUNCTIONS.SMOOTH,
           }}
         >
-          <HeroBanner
-            text={heroBanners[0].data.text}
-            href={heroBanners[0].data.url}
-          />
+          <HeroBanner text={heroBanner.data.text} href={heroBanner.data.url} />
         </motion.div>
       )}
 

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "en",
+    "locale": "en",
+    "enabled": false,
+    "text": "Lorem ipsum dolor sit amet.",
+    "url": "https://example.com"
+  },
+  {
+    "id": "sv",
+    "locale": "sv",
+    "enabled": false,
+    "text": "Lorem ipsum dolor sit amet.",
+    "url": "https://example.com"
+  }
+]

@@ -74,8 +74,10 @@ const dribbbleShots = defineCollection({
 });
 
 const heroBanners = defineCollection({
-  loader: file(`src/content/hero-banners/${locale}.json`),
+  loader: file(`src/content/hero-banners.json`),
   schema: z.object({
+    id: z.string(),
+    locale: z.enum(['en', 'sv']),
     enabled: z.boolean(),
     text: z.string(),
     url: z.string().optional(),

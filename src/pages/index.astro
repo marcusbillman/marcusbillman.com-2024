@@ -6,16 +6,16 @@ import HeroSection from '@/components/sections/HeroSection';
 import MoreThingsSection from '@/components/sections/MoreThingsSection';
 import SeparatorSection from '@/components/sections/SeparatorSection';
 import Layout from '@/layouts/Layout.astro';
-import { getEnabledHeroBanners, getFeaturedProjects } from '@/utils/content';
+import { getFeaturedProjects, getHeroBanner } from '@/utils/content';
 import { fetchSoundcloudTracks } from '@/utils/soundcloud';
 
 const featuredProjects = await getFeaturedProjects();
-const enabledHeroBanners = await getEnabledHeroBanners();
+const heroBanner = await getHeroBanner();
 const soundcloudTracks = await fetchSoundcloudTracks(2);
 ---
 
 <Layout>
-  <HeroSection slot="header" client:idle heroBanners={enabledHeroBanners} />
+  <HeroSection slot="header" heroBanner={heroBanner} client:idle />
   <BioSection />
   <SeparatorSection />
   <FeaturedProjectsSection projects={featuredProjects} />

@@ -2,6 +2,8 @@ import type { CollectionEntry } from 'astro:content';
 
 import { getCollection } from 'astro:content';
 
+import { getLocale } from './i18n';
+
 export type CaseStudy = CollectionEntry<'caseStudies'>;
 export type SideProject = CollectionEntry<'sideProjects'>;
 export type DribbbleShot = CollectionEntry<'dribbbleShots'>;
@@ -27,8 +29,11 @@ export async function getDribbbleShots() {
   return await getCollection('dribbbleShots');
 }
 
-export async function getEnabledHeroBanners() {
-  return await getCollection('heroBanners', ({ data }) => {
-    return data.enabled === true;
+export async function getHeroBanner() {
+  const banners = await getCollection('heroBanners', ({ data }) => {
+    return data.enabled === true && data.locale === getLocale();
   });
+
+  if (banners.length === 0) return undefined;
+  return banners[0];
 }
