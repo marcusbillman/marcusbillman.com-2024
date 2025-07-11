@@ -1,0 +1,106 @@
+---
+slug: stadiaplus
+name: Stadia+
+headline: Googles molnbaserade spelplattform får ett lyft
+date: 2020–2021
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: Marknadsföringsbilder med gränssnitt ovanpå gameplay
+locale: sv
+featured: true
+orderRank: 20
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import designSystemImage from './images/design-system.jpg';
+import iterationsImage from './images/iterations.jpg';
+import overlaysImage from './images/overlays.jpg';
+import profileImage from './images/profile.jpg';
+
+Stadia+ är ett webbläsartillägg med öppen källkod för Stadia, Googles molnbaserade spelplattform, som lägger till saknade funktioner som uppskattas av spelare. Funktionerna innefattar övervakning av datorresurser i spelet, fin kontroll över videokvaliteten och automatisk synkronisering av sparfiler. Stadia+ har tagits emot varmt av Stadia-användarna och har laddats ner över 20 000 gånger i Chrome Web Store.
+
+Jag designade användargränssnittet för den första versionen av webbläsartillägget och webbappen under 2020. Men efter feedback från användare och ändringar av Stadias funktionalitet behövde Stadia+ en uppdatering som fokuserade mer på synkronisering och publika användarprofiler. För att signalera ett nytt tankesätt bad skaparen av Stadia+ mig att designa en ny visuell identitet och omarbeta gränssnittet.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: iterationsImage,
+      alt: 'Olika versioner av tilläggets popup',
+    },
+  ]}
+/>
+
+# Webbläsartillägg och designsystem
+
+Popup-fönstret är det som välkomnar användaren efter att de har installerat tillägget. Det är där de kan se om deras senaste spelsession har synkroniserats till Stadia+ DB och det är där Stadia+ inställningar finns.
+
+Medan jag arbetade med tilläggets nya gränssnitt satte jag också ihop ett konsekvent designsystem. Förutom själva tillägget har Stadia+ också webbappen Stadia+ DB, en hemsida och några delar som är integrerade i Stadia. Med andra ord behövde designspråket passa ihop med Stadia men samtidigt vara distinkt genom de fyra miljöerna.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: designSystemImage,
+      alt: 'Utspridda gränssnittselement som visar det visuella formpråket',
+    },
+  ]}
+/>
+
+Det slutliga formspråket är futuristiskt och fokuserat, men samtidigt vänligt och roligt. I centrum står det som spelarna bryr sig om – spelen och statistiken – men i slutändan spelar vi för att det är kul, så varför inte uttrycka det med lite varm glöd? Designen lånar idéer från Stadia, till exempel gradienterna och mörkret, men har en stark egen personlighet.
+
+# Stadia+ DB
+
+Nästa fokus var Stadia+ DB, en webbapp där spelarna får en profil som visar vad de har spelat, vilka prestationer de har låst upp i spelen och mycket mer. Profildata uppdateras automatiskt av webbläsartillägget efter varje spelsession. Vänner kan hitta varandras profiler genom att söka eller dela länkar, perfekt för att skryta.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: profileImage,
+      alt: 'Skärmdumpar av en spelarprofil på Stadia+ DB',
+    },
+  ]}
+/>
+
+# Integrerat UI
+
+Funktioner som att koppla profiler och ändra videokvalitet behöver vara tillgängliga från Stadia och sätts därför in sömlöst av Stadia+. Det fanns många utmaningar i att designa kring Stadias befintliga gränssnitt och arbeta in nya element i det. Till exempel satte vi in videoinställningarna bakom en Stadia+-ikon i Stadias övre verktygsfält, och resursövervakaren kunde minimeras till en svävande ikon ovanpå spelet.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: overlaysImage,
+      alt: 'Skärmdumpar av gränssnitt ovanpå Stadia',
+    },
+  ]}
+/>
+
+# Slutsats
+
+Utvecklaren bakom Stadia+ hade planerat alla funktioner, men jag behövde bestämma hur de skulle fungera och se ut i verkligheten. Jag behövde hela tiden lösa designproblem. Hur gör vi det tydligt vilka funktioner som kommer från Stadia+ och vilka som hör till Stadia? Hur gör vi det möjligt att anpassa resursövervakaren utan att avbryta spelet? Idéerna studsade fram och tillbaka. Iterationerna var täta och många.
+
+Det här projektet var en bra övning i att fatta kreativa designbeslut och samtidigt respektera förväntningarna hos målgruppen som redan är van vid andra spelplattformar.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'video',
+      src: '/videos/stadiaplus/website.mp4',
+      caption: 'Den nya marknadsföringssidan',
+    },
+  ]}
+/>
+
+<MetadataBlock
+  date={frontmatter.date}
+  fields={[
+    {
+      key: 'Färdigheter',
+      values: ['Webbdesign', 'UX/UI-design', 'Visuell identitet'],
+    },
+  ]}
+/>

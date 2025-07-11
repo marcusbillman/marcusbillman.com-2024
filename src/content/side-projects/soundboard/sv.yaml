@@ -1,0 +1,11 @@
+slug: soundboard
+name: Soundboard
+headline: Live-soundboard för flera personer
+date: '2023'
+cover:
+  type: image
+  astroImage: './images/cover.png'
+  alt: Skärmdump av soundboard som spelar upp ljud
+url: https://soundboard.marcusbillman.com/
+locale: sv
+orderRank: 30

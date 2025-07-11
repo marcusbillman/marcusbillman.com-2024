@@ -2,11 +2,10 @@
 slug: black-and-white-right
 name: Black and white, right?
 headline: A study on the usability of light and dark themes
-preamble: This is a summary of my upper secondary school graduation project. The full report in Swedish is available at the bottom of this page.
 date: 2020–2021
 cover:
   type: image
-  astroImage: './images/cover.png'
+  astroImage: './images/cover.jpg'
   alt: Phone showing both light and dark versions of the Facebook app
 locale: en
 orderRank: 50
@@ -14,13 +13,15 @@ orderRank: 50
 
 import GalleryBlock from '@/components/content/GalleryBlock.astro';
 import MetadataBlock from '@/components/content/MetadataBlock.astro';
-import reportImage from './images/report.png';
-import surveyImage from './images/survey.png';
-import websiteImage from './images/website.png';
+import reportImage from './images/report.jpg';
+import surveyImage from './images/survey.jpg';
+import websiteImage from './images/website.jpg';
+
+_This is a summary of my upper secondary school graduation project. The full report in Swedish is available at the bottom of this page._
 
 # Introduction
 
-Whether for social media, banking or streaming video, we use screens a lot. Different apps and websites can look quite different, but one idea that's stuck around in recent years is dark theme. Instead of the traditional black text on a white background, the opposite is used. According to some, this is more comfortable to read, but what usability difference does the colour theme make for high school students on the web?
+More and more modern user interfaces feature a dark theme with dark text on a light background, opposite of the traditional approach. Many people find this more comfortable to use and it also brings practical benefits such as lower power consumption on OLED displays. Among my generation, it is even common for dark theme users to actively dislike light themes. Being in upper secondary school at the time, this got me thinking—can I measure a difference in usability due to the colour theme among my fellow students?
 
 <GalleryBlock
   items={[
@@ -32,9 +33,9 @@ Whether for social media, banking or streaming video, we use screens a lot. Diff
   ]}
 />
 
-# Methods: Website and survey
+# Methods
 
-A test website with a light and dark variant was created. Half of the participants were presented the light version and the other half saw the dark one. The participants answered a survey collecting thoughts about their variant of the website. Some also participated in interview-like user tests that involved tasks such as reading, finding links and filling forms. The two colour themes were then compared to find patterns and a possible winner.
+For this study, I created a test website with a light and dark variant. Half of my participants were shown the light version and the other half saw the dark one. The participants answered a survey about their opinion and experience of the site and its usability. Some also participated in user tests with tasks such as reading, finding links and filling forms. This way, I hoped to compare the two colour themes in a measurable way.
 
 <GalleryBlock
   items={[
@@ -47,11 +48,11 @@ A test website with a light and dark variant was created. Half of the participan
   ]}
 />
 
-# Results: Everyone wins!
+# Results
 
-The survey found that the dark website was perceived as slightly more appealing among the participants and the majority generally prefered dark apps and websites, which may be related to the fact that most were in dark rooms when answering. The website's light and dark variants were both perceived as clearly structured, comfortable to read and non-distracting, but dark theme had the edge in certain aspects.
+The survey found that the dark website was perceived as slightly more appealing among the participants and the majority generally preferred dark apps and websites, which may be related to the fact that most were in dark rooms when answering. The website's light and dark variants were both perceived as clearly structured, comfortable to read and free of distractions, but dark theme had the edge in certain aspects.
 
-In the interviews, though, light theme users read on average 21% faster than the dark theme users, and light theme users also performed better when recalling what they'd read. However, reading speed also differed significantly between the users of the same color theme, which is likely due to varying reading habits rather than the color theme itself. The remaining tasks, such as finding links or filling a contact form, were done equally well on both themes.
+Meanwhile in the interviews, the light theme users read on average 21% faster and performed better when recalling what they'd read. However, reading speed varied significantly between users of the same color theme, suggesting that reading habits have a larger impact than the color theme. The remaining tasks, such as finding links or filling a contact form, were done equally well on both themes.
 
 <GalleryBlock
   items={[
@@ -63,9 +64,9 @@ In the interviews, though, light theme users read on average 21% faster than the
   ]}
 />
 
-# Discussion/conclusion
+# Conclusion
 
-Participants of the survey did lean towards the dark theme, but not enough to mark it as a clear winner. My conclusion is that a website's readability and usability are significantly more affected by the user's literacy, habits and environment than by the color theme of the website, assuming the website is usable overall. People's preferences differ and therefore no single color theme wins over the other, but instead user choice takes the cake.
+Participants of the survey did lean towards the dark theme, but not enough to crown it a clear winner. A website's readability and usability are significantly more affected by the user's literacy, habits and environment than by the color theme, assuming the website follows basic usability practices. This may be a disappointing conclusion, but because people have different preferences, the winner is the ability to choose.
 
 <MetadataBlock
   date={frontmatter.date}
@@ -84,7 +85,7 @@ Participants of the survey did lean towards the dark theme, but not enough to ma
   links={[
     {
       text: 'Read report (Swedish)',
-      url: 'https://drive.google.com/file/d/1M-q_2rXtJssGHJD5JQaiHM8Q2GU61Xe7/view',
+      url: 'https://cloud.marcusbillman.com/s/zdq677w9FZM3dYj',
     },
   ]}
 />

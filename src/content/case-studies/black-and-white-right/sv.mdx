@@ -1,0 +1,91 @@
+---
+slug: black-and-white-right
+name: Svart på vitt, eller?
+headline: En studie om användbarheten hos ljust och mörkt färgtema
+date: 2020–2021
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: Mobil som visar både ljusa och mörka versioner av Facebook-appen
+locale: sv
+orderRank: 50
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import reportImage from './images/report.jpg';
+import surveyImage from './images/survey.jpg';
+import websiteImage from './images/website.jpg';
+
+_Det här är en sammanfattning av mitt gymnasiearbete. Den fullständiga rapporten finns längst ner på sidan._
+
+# Inledning
+
+Allt fler moderna användargränssnitt erbjuder ett mörkt tema med mörk text på ljus bakgrund, tvärtemot det traditionella. Många tycker att det är bekvämare att använda och det ger också praktiska fördelar som lägre strömförbrukning på OLED-skärmar. Bland min generation är det till och med vanligt att användare av mörka teman aktivt ogillar ljusa teman. Eftersom jag gick på gymnasiet vid den här tiden fick det mig att fundera – kan jag mäta en skillnad i användbarhet mellan färgteman bland mina studiekamrater?
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: websiteImage,
+      alt: 'Mockup av testwebbplats i både ljus och mörk version',
+    },
+  ]}
+/>
+
+# Metod
+
+För studien skapade jag en testwebbplats med en ljus och en mörk variant. Hälften av mina deltagare fick se den ljusa versionen och den andra hälften fick se den mörka. Deltagarna besvarade en enkät om sina åsikter och upplevelser av webbplatsen och dess användbarhet. Några deltog också i användartester med uppgifter som att läsa, hitta länkar och fylla i formulär. På så sätt hoppades jag kunna jämföra de två färgtemana på ett mätbart sätt.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: surveyImage,
+      alt: 'Enkätfrågor om respondentens miljö och erfarenhet av testwebbplatsen',
+      caption: 'Utdrag ur enkäten som användes i studien',
+    },
+  ]}
+/>
+
+# Resultat
+
+Studien visade att den mörka webbplatsen uppfattades som något mer tilltalande bland deltagarna och att majoriteten i allmänhet föredrog mörka appar och webbplatser, vilket kan bero på att de flesta befann sig i mörka rum när de svarade. Webbplatsens ljusa och mörka varianter uppfattades båda som tydligt strukturerade, bekväma att läsa och fria från distraktioner, men det mörka temat hade övertaget i vissa avseenden.
+
+Under intervjuerna läste användarna texten med det ljusa temat i genomsnitt 21 % snabbare och kom bättre ihåg vad de hade läst. Läshastigheten varierade dock betydligt mellan användare med samma färgtema, vilket tyder på att läsvana har större inverkan än färgtema. De övriga uppgifterna, som att hitta länkar eller fylla i ett kontaktformulär, utfördes lika väl på båda temana.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: reportImage,
+      alt: 'Sidor från rapporten placerade i ett rutnät',
+    },
+  ]}
+/>
+
+# Slutsats
+
+Deltagarna lutade åt det mörka temat, men inte tillräckligt för att utse det till en klar vinnare. En webbplats läsbarhet och användbarhet påverkas betydligt mer av användarens läskunnighet, vanor och miljö än av färgtema, förutsatt att webbplatsen följer grundläggande användbarhetspraxis. Det kanske är en tråkig slutsats, men eftersom människor har olika preferenser är det bäst att kunna välja själv.
+
+<MetadataBlock
+  date={frontmatter.date}
+  fields={[
+    {
+      key: 'Färdigheter',
+      values: [
+        'UX-research',
+        'Webbdesign',
+        'Frontend-utveckling',
+        'Talande inför publik',
+        'Vetenskapligt skrivande',
+      ],
+    },
+  ]}
+  links={[
+    {
+      text: 'Läs rapporten',
+      url: 'https://cloud.marcusbillman.com/s/zdq677w9FZM3dYj',
+    },
+  ]}
+/>

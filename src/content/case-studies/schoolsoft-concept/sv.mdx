@@ -1,0 +1,105 @@
+---
+slug: schoolsoft-concept
+name: SchoolSoft concept
+headline: Återuppfinner Sveriges största skolplattform
+date: '2020'
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: Mockups av olika UI-skärmar på mobiler
+locale: sv
+featured: true
+orderRank: 40
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import attendanceImage from './images/attendance.jpg';
+import feedbackImage from './images/feedback.jpg';
+import homeImage from './images/home.jpg';
+import marketingImage from './images/marketing.jpg';
+import settingsImage from './images/settings.jpg';
+
+SchoolSoft är Sveriges mest använda skolplattform och tillhandahåller scheman, matsedlar, betyg och mycket mer. Jag, och många andra elever och lärare som jag har pratat med, har dock upplevt flera problem med användarupplevelsen.
+
+Jag tog fram en inofficiell redesign av SchoolSofts mobilapp för att undersöka hur jag kunde förbättra dess användbarhet och utseende. Det här är några av de viktigaste problemen jag tog itu med:
+
+- Start- och inställningsskärmarna utnyttjas inte tillräckligt och hade kunnat förenkla åtkomsten till relevant information.
+
+- Skärmen för att rapportera frånvaro är otydlig för elever under 18 år _(jag ska förklara varför)._
+
+- Skärmen för feedback på uppgifter är väldigt tom och kräver att man öppnar en webbplats för att se betyg och annan viktig information.
+
+- Appen ser utdaterad ut och brister i färgkontrast och teckenstorlek, vilket gör vissa delar svåra att se eller läsa.
+
+# Start
+
+För att förbättra startskärmens flexibilitet lade jag till anpassningsbara genvägar till olika delar av appen. SchoolSofts stora utbud gör att olika skolor och användare utnyttjar olika uppsättningar funktioner, och därför är det hjälpsamt att kunna anpassa appen. Jag har också förbättrat färgkontrasten och fått element att sticka ut mer med hjälp av färg och mellanrum, vilket gör startskärmen lättare att skumma igenom.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: homeImage,
+      alt: 'Startskärm, före och efter',
+    },
+  ]}
+/>
+
+# Inställningar
+
+I nuläget kommer du åt SchoolSofts inställningar genom att gå till den förvånansvärt tomma skärmen Konto och sedan trycka på kugghjulsikonen i det övre högra hörnet. Jag kombinerade de två skärmarna till en förenklad layout som är redo för framtida undermenyer.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: settingsImage,
+      alt: 'Inställningar, före och efter',
+    },
+  ]}
+/>
+
+# Feedback på uppgifter
+
+Ett annat stort problem är hur appen visar lärarens feedback på uppgifter. Allt som syns är lärarens meddelande, och man behöver trycka på en ikon längst upp till höger för att se resten (inklusive betyg) i en webbläsare. Detta gjorde det lätt att missa viktig information från lärarna.
+
+För att förbättra detta designade jag en ny skärm för meddelanden, inklusive feedback på uppgifter. Allt är synligt direkt, inklusive betyg och bedömda kunskapskrav. Jag har också förbättrat textens läsbarhet och kontrast, särskilt på den gula "Feedback"-etiketten.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: feedbackImage,
+      alt: 'Skärmar för feedback, före och efter',
+    },
+  ]}
+/>
+
+# Närvaro/frånvaro
+
+Slutligen omarbetade jag skärmen för frånvaroanmälan. Det stora problemet var att appen inte förklarade att elever under 18 år måste be en förälder eller vårdnadshavare att anmäla frånvaro åt dem. När man tryckte på en lektion för att anmäla frånvaro hände ingenting, vilket var förvirrande. Jag lade till en "Fråga vårdnadshavare"-knapp för att förtydliga detta, samt ett sammanfattande diagram som visar en överblick av den senaste veckans närvaro.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: attendanceImage,
+      alt: 'Skärm för närvaro, före och efter',
+    },
+  ]}
+/>
+
+# Slutsats
+
+I min redesign lyfte jag fram den viktigaste informationen och funktionerna. Jag tog med designelement som typsnitt och färger från företagets webbsida, och pyntade samtidigt formspråket på ett smakfullt sätt. Resultatet är en mer strukturerad, användbar och tillgänglig upplevelse som känns mer modern. Det här konceptet är en del av hur jag tycker att en riktigt bra skolplattform kan vara.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: marketingImage,
+      alt: 'Marknadsföringsmaterial med sloganen "Your whole school in your pocket"',
+    },
+  ]}
+/>

@@ -1,0 +1,11 @@
+slug: cooldownload-software
+name: cooldownload.software
+headline: En riktigt suspekt länkförkortare
+date: '2022'
+cover:
+  type: image
+  astroImage: './images/cover.png'
+  alt: Skärmdump av formulär för att förkorta länkar
+url: https://cooldownload.marcusbillman.com
+locale: sv
+orderRank: 60

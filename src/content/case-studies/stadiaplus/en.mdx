@@ -1,12 +1,12 @@
 ---
 slug: stadiaplus
 name: Stadia+
-headline: Elevating the experience of Google's cloud gaming platform
+headline: Elevating Google's cloud gaming platform
 date: 2020–2021
 cover:
   type: image
-  astroImage: './images/cover.png'
-  alt: Marketing art showcasing UI overlayed on gameplay footage
+  astroImage: './images/cover.jpg'
+  alt: Marketing art showcasing UI overlaid on gameplay footage
 locale: en
 featured: true
 orderRank: 20
@@ -14,13 +14,12 @@ orderRank: 20
 
 import GalleryBlock from '@/components/content/GalleryBlock.astro';
 import MetadataBlock from '@/components/content/MetadataBlock.astro';
-import designSystemImage from './images/design-system.png';
-import iterationsImage from './images/iterations.png';
-import overlaysImage from './images/overlays.png';
-import profileImage from './images/profile.png';
-import websiteImage from './images/website.gif';
+import designSystemImage from './images/design-system.jpg';
+import iterationsImage from './images/iterations.jpg';
+import overlaysImage from './images/overlays.jpg';
+import profileImage from './images/profile.jpg';
 
-Stadia+ is an open source browser extension for Stadia, Google's cloud gaming platform, that adds missing features that gamers want. This includes in-game resource monitoring, fine control over video quality, and automatic syncing of game progress to the cloud. Stadia+ has been well-received by Stadia users, reaching over 20 000 downloads on the Chrome Web Store.
+Stadia+ is an open source browser extension for Stadia, Google's cloud gaming platform, that adds missing features that gamers want. This includes in-game resource monitoring, fine control over video quality, and automatic syncing of game progress to the cloud. Stadia+ has been well-received by Stadia users, reaching over 20,000 downloads on the Chrome Web Store.
 
 I designed the UI for the original browser extension and web app in 2020. However, after user feedback and changes to Stadia's functionality, Stadia+ needed an overhaul that focused more on progress syncing and online user profiles. To drive home this mindset shift, the creator of Stadia+ asked me to design a new visual identity and rethink the UI.
 
@@ -29,7 +28,7 @@ I designed the UI for the original browser extension and web app in 2020. Howeve
     {
       type: 'image',
       astroImage: iterationsImage,
-      alt: 'Timeline of design iterations for browser extension popup',
+      alt: 'Design iterations for browser extension popup',
     },
   ]}
 />
@@ -38,7 +37,7 @@ I designed the UI for the original browser extension and web app in 2020. Howeve
 
 The pop-up for the browser extension is what greets the user after they've installed the extension, it's where they can see whether their latest gaming session has been synced to Stadia+ DB, and it's where Stadia+'s settings live.
 
-While working on the browser extension's UI, I was also piecing together a coherent design system. Aside from the extension itself, Stadia+ also has the Stadia+ DB web app, a landing page and some parts that are integrated into Stadia. In other words, the design language needed to fit with Stadia while still being uniquely identifiable standalone and across the four environments.
+While working on the browser extension's UI, I was also piecing together a coherent design system. Aside from the extension itself, Stadia+ also has the Stadia+ DB web app, a landing page and some parts that are integrated into Stadia. In other words, the design language needed to fit with Stadia while still being distinct across the four environments.
 
 <GalleryBlock
   items={[
@@ -50,7 +49,7 @@ While working on the browser extension's UI, I was also piecing together a coher
   ]}
 />
 
-The final visual design is futuristic and focused, yet friendly and fun. Front and center is what the gamers care about—the games and the data—but in the end we're all playing because it's fun, so why not throw in some exciting warm glow and make it feel cool to use? It borrows ideas from Stadia, such as the gradients and stealthy darkness, but has a bunch of unique personality.
+The final visual design is futuristic and focused, yet friendly and fun. Front and center is what the gamers care about—the games and the data—but in the end we play because it's fun, so why not show that with some cool warm glow? The design borrows ideas from Stadia, such as the gradients and stealthy darkness, but has a bunch of unique personality.
 
 # Stadia+ DB
 
@@ -66,8 +65,6 @@ The next main focus was Stadia+ DB, a web app where gamers get a profile that sh
   ]}
 />
 
-Links to a player's profile are also integrated into the friends list in Stadia, which brings me to the next point...
-
 # Integrated UI
 
 Features like profile linking and video quality settings need to be accessible from within Stadia and are therefore seamlessly snuck in by the Stadia+ browser extension. There were many challenges when it came to designing around Stadia's existing UI and working new elements into it. For instance, the video settings were neatly tucked into a Stadia+ icon in Stadia's top toolbar, and the Game Monitor could be minimised into a gentle floating icon in Stadia's in-game overlay.
@@ -77,7 +74,7 @@ Features like profile linking and video quality settings need to be accessible f
     {
       type: 'image',
       astroImage: overlaysImage,
-      alt: 'Screenshots of UI overlayed in the corners of the Stadia app',
+      alt: 'Screenshots of UI overlays on top of Stadia',
     },
   ]}
 />
@@ -91,9 +88,9 @@ This project served as a great exercise in making creative design decisions whil
 <GalleryBlock
   items={[
     {
-      type: 'image',
-      astroImage: websiteImage,
-      alt: 'GIF scrolling through the marketing website of Stadia+',
+      type: 'video',
+      src: '/videos/stadiaplus/website.mp4',
+      caption: 'The new marketing website',
     },
   ]}
 />
@@ -103,7 +100,7 @@ This project served as a great exercise in making creative design decisions whil
   fields={[
     {
       key: 'Skills used',
-      values: ['Web design', 'Mobile design', 'Visual identity'],
+      values: ['Web design', 'UX/UI design', 'Visual identity'],
     },
   ]}
 />

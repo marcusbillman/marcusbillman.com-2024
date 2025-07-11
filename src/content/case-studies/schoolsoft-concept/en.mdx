@@ -1,13 +1,12 @@
 ---
 slug: schoolsoft-concept
 name: SchoolSoft concept
-headline: Reimagining Sweden's largest learning management system
-preamble: As an exercise, I redesigned a platform I've used for a decade.
+headline: Reimagining Sweden's largest school platform
 date: '2020'
 cover:
   type: image
-  astroImage: './images/cover.png'
-  alt: SchoolSoft concept marketing art
+  astroImage: './images/cover.jpg'
+  alt: Phone mockups of UI screens
 locale: en
 featured: true
 orderRank: 40
@@ -15,12 +14,13 @@ orderRank: 40
 
 import GalleryBlock from '@/components/content/GalleryBlock.astro';
 import MetadataBlock from '@/components/content/MetadataBlock.astro';
-import attendanceImage from './images/attendance.png';
-import feedbackImage from './images/feedback.png';
-import homeImage from './images/home.png';
-import settingsImage from './images/settings.png';
+import attendanceImage from './images/attendance.jpg';
+import feedbackImage from './images/feedback.jpg';
+import homeImage from './images/home.jpg';
+import marketingImage from './images/marketing.jpg';
+import settingsImage from './images/settings.jpg';
 
-**SchoolSoft is Sweden's most widely used online school platform, providing timetables, lunch menus, grades and a lot more. However, I, and many other students and teachers that I've talked with, have noticed several problems with its user experience.**
+SchoolSoft is Sweden's most widely used online school platform, providing timetables, lunch menus, grades and a lot more. However, I, and many other students and teachers that I've talked with, have noticed several problems with its user experience.
 
 I created this unofficial redesign of SchoolSoft's mobile app to explore how I could improve its usability and aesthetics. These are some of the main problems I addressed:
 
@@ -78,9 +78,7 @@ To combat this clunkiness, I designed a new screen for notifications like assign
 
 # Attendance/absence
 
-Another major problem was how the app displayed assignment feedback from teachers. The app only shows the raw message and requires tapping an icon in the top-right to view the rest (including grading) in a browser. This made it easy to miss important information from teachers.
-
-To combat this clunkiness, I designed a new screen for notifications like assignment feedback. Everything is instantly visible, including grading and assessed criteria (an important part of the Swedish school system). I also improved text readability and colour contrast, especially for the yellow “Feedback” tag.
+Finally, I reworked the screen for reporting absence. The main problem was that the app didn't explain that students under 18 years of age need to ask a parent or guardian to report absence for them. When tapping a lesson to report absence, nothing would happen, which was confusing. I added an "Ask guardian" button to clarify this, as well as a summary diagram that shows an overview of the last week's attendance.
 
 <GalleryBlock
   items={[
@@ -94,4 +92,14 @@ To combat this clunkiness, I designed a new screen for notifications like assign
 
 # Conclusion
 
-For my redesign, I brought the most important information and features to the forefront. I incorporated design elements like fonts and colours from the company's official landing page, but added some modern flair to the visual style. The result is a more structured, usable and accessible experience that feels more modern. This concept is part of what I think a great school platform could be.
+For my redesign, I brought the most important information and features to the forefront. I incorporated design elements like fonts and colours from the company's landing page, while adding some tasteful flair to the visual style. The result is a more structured, usable and accessible experience that feels more modern. This concept is part of what I think a great school platform could be.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: marketingImage,
+      alt: 'Marketing art with the tagline "Your whole school in your pocket"',
+    },
+  ]}
+/>

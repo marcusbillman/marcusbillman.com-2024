@@ -1,0 +1,54 @@
+---
+slug: shnake
+name: Shnake
+headline: Mysigt, mjukt, anpassningsbart Snake-spel
+date: '2020'
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: Kollage med UI-element och spelet i ett grönt, mjukt tema
+locale: sv
+orderRank: 70
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import themesImage from './images/themes.jpg';
+
+Shnake var ett sidoprojekt med en annan utvecklare. Målet var en snygg, rolig och unik tolkning av det klassiska spelet Snake. Vi ville att spelet skulle vara anpassningsbart, inklusive spelplanens storlek, hastighet och färgtema. Min huvuduppgift var att designa och implementera spelets grafik och användargränssnitt.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'video',
+      src: '/videos/shnake/animation.mp4',
+      alt: 'Huvudmeny, animerad knapp och ormens rörelse.',
+    },
+  ]}
+/>
+
+Den gröna färgen påminner om djungeln och den monokroma bakgrundsbelysningen på gamla knapptelefoner. Allt från typsnitten och animationerna i gränssnittet till själva spelet är lekfullt och roligt. Ormens mjuka rörelser känns nästan som pappersbitar som flyttas för hand.
+
+Spelet anpassar sin brädstorlek till skärmen och kan spelas på mobilen med hjälp av svepgester. Jag såg också till att hela användargränssnittet kan navigeras med bara tangentbordet. Dessutom renderas hela spelet med ren HTML.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: themesImage,
+      alt: 'Ljust och mörkt tema sida vid sida',
+    },
+  ]}
+/>
+
+Det här lekfulla projektet kändes befriande och var en lärorik övning i att matcha ett formspråk efter känslan hos ett spel. Det var också en möjlighet att utforska webbteknik och fick mig att uppskatta hur mycket som kan åstadkommas med HTML och CSS. En tidig version av spelet finns att spela nedan.
+
+<MetadataBlock
+  date={frontmatter.date}
+  links={[
+    {
+      text: 'Spela spelet (tidig version)',
+      url: 'https://elloot.github.io/Shnake',
+    },
+  ]}
+/>

@@ -1,0 +1,237 @@
+---
+slug: coagulation-analyser
+name: Koagulationsanalysator
+headline: En ny era av koagulationsanalys för sjukhuslabb
+date: 2022–2023
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: Showcase med olika skärmar i ett rutnät
+locale: sv
+featured: true
+orderRank: 10
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import competingUiImage from './images/competing-ui.jpg';
+import informationArchitectureImage from './images/information-architecture.jpg';
+import lofiDesignImage from './images/lofi-design.jpg';
+import paperWireframesImage from './images/paper-wireframes.jpg';
+import semiAutomaticImage from './images/semi-automatic.jpg';
+import showcaseDesignSystemImage from './images/showcase-design-system.jpg';
+import showcaseGraphicsImage from './images/showcase-graphics.jpg';
+import showcaseQueueImage from './images/showcase-queue.jpg';
+import showcaseResultsImage from './images/showcase-results.jpg';
+import showcaseSmartphoneImage from './images/showcase-smartphone.jpg';
+import testStepsImage from './images/test-steps.jpg';
+import userTestsImage from './images/user-tests.jpg';
+
+<MetadataBlock
+  date={frontmatter.date}
+  fields={[
+    {
+      key: 'Färdigheter',
+      values: [
+        'UX-research',
+        'UI-design',
+        'Designsystem',
+        'Talande inför publik',
+      ],
+    },
+  ]}
+/>
+
+Under 2022 och 2023 var jag involverad i forskning och utveckling av ett nytt mätinstrument för koagulationsanalys. Sådan utrustning används i sjukhuslabb för att analysera patienters blodprover, och den nya enheten hade en uppsättning funktioner och användarupplevelse som inte tidigare skådats i sin klass.
+
+Mitt arbete började som en 14-veckors praktik och fortsatte senare med en 7-månaders projektanställning. Under projektet ledde jag UX/UI-processen och gick från en funktionsspecifikation till en realistisk, interaktiv UI-prototyp och ett detaljerat designsystem med komponenter och riktlinjer.
+
+_Obs: Detta case är censurerat på grund av ett sekretessavtal. Mer information finns på begäran._
+
+# Vad är koagulationsanalys?
+
+När du får ett sår bildar blodet en propp för att stoppa blödningen i en process som kallas _koagulation_. På sjukhuset kan de mäta hur väl din kropp gör detta genom _koagulationsanalys_.
+
+Ditt blodprov blandas med ett _reagens_ som sätter igång koaguleringen. En koagulationsanalysator mäter hur lång tid detta tar, ofta genom att känna av förändringar i ljuset som passerar genom provet. För långsam koagulering innebär högre blödningsrisk, medan för snabb koagulering innebär högre risk för farliga blodproppar.
+
+Det finns olika sorters tester som används för att dra olika slutsatser. Ett D-dimer-test kan till exempel hjälpa till att avgöra om du har en allvarlig blodpropp, och ett PT-test används för att övervaka blodförtunnande läkemedel som warfarin.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: testStepsImage,
+      alt: 'Tre illustrerade steg i ett koagulationstest',
+      caption:
+        'För att utföra ett koagulationstest: (1) ta ett blodprov, (2) tillsätt reagens och (3) mät koagulationstiden.',
+    },
+  ]}
+/>
+
+# Uppdraget
+
+Apparaten i fråga är en semiautomatisk koagulationsanalysator. Den står på ett bord och används manuellt, till skillnad från stora, automatiska analysatorer som bearbetar prover robotiserat.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: semiAutomaticImage,
+      alt: 'Automatiska och semiautomatiska koagulationsanalysatorer.',
+    },
+  ]}
+/>
+
+Tyvärr är de semiautomatiska analysatorerna inte i fokus vad gäller innovation. De flesta av dem har begränsad funktionalitet, föråldrade användargränssnitt och dålig byggkvalitet. Den här nya analysatorn vill ändra på detta genom funktioner och prestanda som närmar sig den automatiska världen, samtidigt som den är enklare att använda och känns premium.
+
+Mitt uppdrag var att utforma ett användargränssnitt från grunden som fångar den visionen. Både nybörjare och erfaren labbpersonal ska kunna köra analyser, följa dem i realtid, kontrollera resultat, se instruktioner, kalibrera enheten, hålla koll på reagens och mycket mer.
+
+# Konkurrensanalys
+
+Projektet började med att lära mig hur tester utförs på de analysatorer som finns tillgängliga idag. Jag fick praktiska demonstrationer i företagets privata labb och genomgångar av analysatorer från olika tillverkare. Det gav mig en känsla för arbetsflöden, funktioner och UI-mönster.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: competingUiImage,
+      alt: 'Fyra bilder av UI från konkurrerande koagulationsanalysatorer.',
+      caption:
+        'Många konkurrerande gränssnitt var svårlästa, föråldrade och underligt strukturerade.',
+    },
+  ]}
+/>
+
+Jag hittade de här centrala problemen hos de semiautomatiska analysatorerna:
+
+- **Det finns många manuella moment,** t.ex. exakt pipettering, memorering av procedurer och hantering av patientprover. Varje steg ökar risken för fel.
+
+- **Gränssnitten är inte särskilt intuitiva,** med dåligt märkta knappar och utan vägledning till nästa steg. Det ökar den mentala belastningen och gör enheten svårare att lära sig.
+
+- **Funktionalitet saknas,** t.ex. reaktionskurvor och feldetektering under analysen.
+
+Utifrån dem fastställde jag tre designprinciper:
+
+- **Klarhet och trygghet:** Enheten ska tydligt visa status och hjälpa till att lösa problem. Användaren ska vägledas före, under och efter analysen för att förhindra misstag.
+
+- **Enkelhet i moderna tankar:** Gränssnittet ska ta inspiration från smartphones och andra enheter för att göra navigeringen intuitiv. Användaren ska inte bli överväldigad av information.
+
+- **Fräsch känsla:** En känsla av kvalitet och innovation ska förmedlas genom ett rent, kontrastrikt och trovärdigt formspråk baserat på företagets visuella identitet.
+
+# Skisser och koncept
+
+Baserat på briefingen och funktionsspecifikationen skapade jag en informationsarkitektur och wireframes för de viktigaste skärmarna. Jag omvandlade sedan dessa till skissartade mockups och bad regelbundet om feedback från företagets laboratorieingenjörer.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: informationArchitectureImage,
+      alt: 'Diagram som visar det hierarkin mellan skärmarna.',
+      caption: 'Diagram av informationsarkitekturen',
+    },
+    {
+      type: 'image',
+      astroImage: paperWireframesImage,
+      alt: 'Pappersskisser i ett rutnät.',
+      caption: 'Wireframes på papper',
+    },
+    {
+      type: 'image',
+      astroImage: lofiDesignImage,
+      alt: 'Skärmdump av low-fidelity-design i Figma.',
+      caption: 'Low-fidelity-design',
+    },
+  ]}
+/>
+
+Efter att ha provat olika layouter landade jag i en huvudnavigation till vänster för att utnyttja den liggande skärmen. Statusfältet placerade jag först längst ned, men genom testning insåg jag att det passade bättre högst upp. På så sätt är det inte i vägen för de fyra provplatserna under skärmen.
+
+Jämfört med konkurrenterna ville jag minska antalet sällan använda knappar i navigationen och skapa tydliga flöden och skärmar för rutinuppgifter, t.ex. kalibrering och inmatning av patientprover.
+
+Jag utformade många centrala arbetsflöden och interaktioner från grunden, inklusive parallella analyser, interaktiva reaktionskurvor, köhantering för prover, notiser och inventering av förbrukningsvaror.
+
+# Användartester
+
+Jag planerade och genomförde flera omgångar användartester med labbpersonal. Flöden och scenarier utvärderades genom realistiska labbuppgifter och notering av hur de löstes naturligt. För extra realism och sammanhang kördes de interaktiva prototyperna på en pekskärm som var monterad på en enhetsprototyp, tillsammans med riktig labbutrustning som pipetter och provrör.
+
+Från de två första omgångarna samlade jag in över 100 punkter med feedback, rangordnade dem efter grad och använde dem för att iterera vidare på designen.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: userTestsImage,
+      alt: 'Fysisk enhetsprototyp, labbutrustning och laptop på ett bord.',
+    },
+  ]}
+/>
+
+# Resultatet
+
+Resultatet är ett välstrukturerat och konkret gränssnitt som hjälper labbpersonal med en mängd rutinuppgifter. Grafiken är enkel, skarp och kommunicerar tydligt genom konsekvent användning av färg. Det är en noggrann blandning av data, pedagogik och estetik.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: showcaseGraphicsImage,
+      alt: 'UI-skärmar som visar pågående analys, kalibrering och historik',
+    },
+  ]}
+/>
+
+Interaktiva grafer och tydlig grafik utnyttjar den stora pekskärmen för snabb avläsning i labbet. Under analysen är elementen på skärmen visuellt kopplade till de fysiska provplatserna för ett intuitivt arbetsflöde. Steg-för-steg-instruktioner, visuella signaler och varningar hjälper till att förhindra misstag, och statusindikatorn uppe till vänster visar alltid vad som händer.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'video',
+      src: '/videos/coagulation-analyser/showcase-animations.mp4',
+    },
+    {
+      type: 'image',
+      astroImage: showcaseResultsImage,
+      alt: 'UI-skärmar som visar analysresultat och inventering av förbrukningsvaror.',
+    },
+    {
+      type: 'image',
+      astroImage: showcaseQueueImage,
+      alt: 'UI-skärmar som visar köade prover som listas och väljs för analys.',
+      caption:
+        'Köade prover kan nås från ett sidofält eller ett svävande tråg.',
+    },
+    {
+      type: 'image',
+      astroImage: showcaseSmartphoneImage,
+      alt: 'UI-skärmar som visar inställningar, ett smartphone-inspirerat kontrollcenter och en PIN-knappsats.',
+      caption:
+        'Jag lånade interaktion från smartphones, till exempel notisbanderoller och snabbinställningar när man sveper på statusfältet.',
+    },
+  ]}
+/>
+
+Tillsammans med mjukvaruingenjörerna skapade vi ett omfattande designsystem som specificerade typografi, färg, mellanrum, komponenters struktur och mycket mer med hjälp av _design tokens_. Detta utgjorde ett ramverk för att förena design och kod, med Figma som huvudkälla.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: showcaseDesignSystemImage,
+      alt: 'Utdrag ur designsystemets dokumentation, inklusive färg, typografi och komponenters användning.',
+    },
+  ]}
+/>
+
+# Slutsats
+
+Teamet och beslutsfattarna var nöjda med gränssnittet, men den tydligaste bekräftelsen kom från labbpersonalen jag testade med. Även de som hade en bakgrund i sjukhuslabb påstod ofta att gränssnittet var långt före något annat semiautomatiskt koagulationsinstrument de hade använt.
+
+Det här var hittills mitt största designprojekt. Jag samarbetade med mjukvaruingenjörer och labbpersonal, med externa industridesigners, elektronikingenjörer och varumärkesdesigners. Utöver det grundläggande UX/UI-arbetet fick jag öva på färdigheter som att
+
+- kommunicera designbeslut med ingenjörer och andra intressenter
+- planera och genomföra användartester och sammanställa data
+- skapa och dokumentera designsystem i Figma
+- planera och presentera min designprocess.
+
+Det här projektet var otroligt givande. Jag uppskattade särskilt att arbeta med inspirerande kollegor och samtidigt få bidra till en produkt som kan komma att rädda liv. Den här enheten har potential att förbättra sjukvården, särskilt i resursbegränsade regioner, och det ska bli spännande att se hur den utvecklas vidare.

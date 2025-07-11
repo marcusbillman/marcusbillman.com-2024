@@ -1,11 +1,11 @@
 ---
 slug: coagulation-analyser
 name: Coagulation analyser
-headline: Using UI to help more hospital labs save lives
-preamble: At a Swedish life science company, I led the UI/UX design process for a disruptive laboratory device during its research phase.
-date: Dec 2021–Apr 2022
+headline: A new era of coagulation testing for hospital labs
+date: 2022–2023
 cover:
   type: image
+  astroImage: './images/cover.jpg'
   alt: Showcase featuring various screens in a grid
 locale: en
 featured: true
@@ -14,19 +14,18 @@ orderRank: 10
 
 import GalleryBlock from '@/components/content/GalleryBlock.astro';
 import MetadataBlock from '@/components/content/MetadataBlock.astro';
-import RichImageBlock from '@/components/content/RichImageBlock.astro';
-import analysersImage from './images/analysers.png';
-import competingUiImage from './images/competing-ui.png';
-import earlyDesignImage from './images/early-design.png';
-import informationArchitectureImage from './images/information-architecture.png';
-import paperSketchesImage from './images/paper-sketches.png';
-import showcase1Image from './images/showcase-1.gif';
-import showcase2Image from './images/showcase-2.gif';
-import showcase3Image from './images/showcase-3.gif';
-import showcase4Image from './images/showcase-4.png';
-import stepsImage from './images/steps.png';
-import timelineImage from './images/timeline.png';
-import userTestsImage from './images/user-tests.png';
+import competingUiImage from './images/competing-ui.jpg';
+import informationArchitectureImage from './images/information-architecture.jpg';
+import lofiDesignImage from './images/lofi-design.jpg';
+import paperWireframesImage from './images/paper-wireframes.jpg';
+import semiAutomaticImage from './images/semi-automatic.jpg';
+import showcaseDesignSystemImage from './images/showcase-design-system.jpg';
+import showcaseGraphicsImage from './images/showcase-graphics.jpg';
+import showcaseQueueImage from './images/showcase-queue.jpg';
+import showcaseResultsImage from './images/showcase-results.jpg';
+import showcaseSmartphoneImage from './images/showcase-smartphone.jpg';
+import testStepsImage from './images/test-steps.jpg';
+import userTestsImage from './images/user-tests.jpg';
 
 <MetadataBlock
   date={frontmatter.date}
@@ -38,62 +37,53 @@ import userTestsImage from './images/user-tests.png';
   ]}
 />
 
-During my internship at a biotech company from December 2021 to April 2022, I was tasked to design the UI for an upcoming medical analysis device. This semi-automatic coagulation analyser features unmatched performance, a disruptive feature set, and an intuitive touch screen experience. The 14-week project involved competitive analysis, information architecture, UI/UX design, user testing and presentation.
+In 2022 and 2023, I was involved with the research and development of a new analysis device for coagulation testing. Such equipment is used in hospital labs to analyse patient blood samples, and this new device brought a feature set and user experience not seen before in its category.
 
-_Note: This case study has been redacted to not contain classified information, including names of products and affiliated companies. More details and reference is available upon request._
+My work began as a 14-week internship and was later extended with a 7-month project employment. During the project, I led the UX/UI process, going from a feature spec to a high-fidelity interactive UI prototype and a detailed design system of components and guidelines.
 
-# A coagula-what?
+_Note: This case study has been redacted due to a non-disclosure agreement. More details are available upon request._
 
-**Coagulation testing is a way to diagnose a patient by measuring substances in their blood as it coagulates.**
+# What is coagulation testing?
 
-A sample of the patient's blood is mixed with a liquid called a reagent, which triggers chemical reactions that make the blood plasma thicker (it coagulates). The coagulation analyser shines a beam of light through the plasma to measure how it's affected by the reagent over time. As the plasma thickens, less and less light passes through.
+When you get a cut, your blood forms a clot to stop the bleeding—a process called _coagulation_. At a hospital, they can measure how well your body does this through _coagulation testing_.
 
-One common use of coagulation testing is measuring blood clots. If you get one (or are about to), your body releases a substance called D-dimer into your bloodstream. At the hospital, a coagulation analyser measures how long it takes for your plasma to coagulate. This time shows the amount of D--dimer in your blood, which reveals the size and timeline of the blood clot—invaluable information to your doctor when deciding on treatment.
+A sample of your blood is mixed with a _reagent_ that triggers clotting. A coagulation analyser measures how long this takes, often by sensing changes in light passing through the sample. Too slow clotting means higher bleeding risk, while too fast clotting means higher risk of dangerous blood clots.
+
+There are different kinds of tests used to draw different conclusions. For example, a D-dimer test can help determine whether you have a serious blood clot, and a PT test is used to monitor blood-thinning medications like warfarin.
 
 <GalleryBlock
   items={[
     {
       type: 'image',
+      astroImage: testStepsImage,
       alt: 'Three illustrated steps of a coagulation test',
       caption:
-        'Three basic steps of a coagulation test: (1) Get a patient sample, (2) add a reagent and (3) measure changes in light.',
+        'To perform a coagulation test: (1) get a blood sample, (2) add a reagent, and (3) measure the coagulation time.',
     },
   ]}
 />
 
 # The mission
 
-There are two kinds of coagulation analysers, one takes up half a room, and the other fits on a table. The latter kind (the semi-automatic coagulation analyser) is in dire need of innovation.
+The device in question is a semi-automatic coagulation analyser. It sits on a desk and is operated manually, as opposed to large, automatic analysers that process samples robotically.
 
 <GalleryBlock
   items={[
     {
       type: 'image',
-      alt: '4 automatic and 4 semi-automatic coagulation analysers.',
-      caption: 'The two major types of coagulation analysers.',
+      astroImage: semiAutomaticImage,
+      alt: 'Automatic and semi-automatic coagulation analysers.',
     },
   ]}
 />
 
-Most existing semi-automatic coagulation analysers are either lacking in functionality or look and function like a TI-82 graphing calculator from 1993. This new analyser can run more types of analyses with higher accuracy while being easier to use, safer, and less expensive. And it feels like a device from the current decade.
+Unfortunately, semi-automatic analysers are not where the innovation happens. Most of them have limited functionality, outdated user interfaces, and poor build quality. This new analyser aims to change that, bringing features and performance closer to the automatic realm, while being easier to use and feeling premium.
 
-**My mission was to design a UI from the ground up that captures this vision.** Both novice and seasoned lab staff should be able to run analyses, follow them in real-time, check results, view instructions, calibrate the device, track reagent stock, and more.
+My mission was to design a UI from the ground up that captures this vision. Both novice and seasoned lab staff should be able to run analyses, follow them in real-time, check results, view instructions, calibrate the device, track reagent stock, and more.
 
-<GalleryBlock
-  images={[
-    {
-      astroImage: timelineImage,
-      alt: 'Timeline from January to April 2022, with the milestones Briefing, Concept, Draft, Test round 1, Test round 2 and Presentation.',
-      caption: 'Overall timeline of the project.',
-    },
-  ]}
-/>
+# Competitive analysis
 
-# Briefing
-
-The project began with learning the basics of coagulation testing and the analysers available on the market. This included hands-on demonstrations of the analysis process in the company's private labs, as well as walkthroughs of analysers from different manufacturers.
-
-This gave me a feel for how these devices are used and which features, screens and UI patterns are most important—and what I could do better.
+The project began with learning how coagulation testing is performed on currently available analysers. This included hands-on demonstrations in the company's private labs, as well as walkthroughs of analysers from different manufacturers. This gave me a feel for the workflows, features and UI patterns.
 
 <GalleryBlock
   items={[
@@ -102,32 +92,30 @@ This gave me a feel for how these devices are used and which features, screens a
       astroImage: competingUiImage,
       alt: 'Four photos of UI from competing coagulation analysers.',
       caption:
-        'Many competing UIs were overwhelming, looked dated and had strange structure, such as "Calibration Setup" being separated from "Calibration".',
+        'Many competing UIs were hard to read, looked dated and had strange structure.',
     },
   ]}
 />
 
-I noticed these core pain points in competing semi-automatic analysers:
+I noticed these core pain points in the semi-automatic analysers:
 
-- **Usage involves many manual steps,** such as precise pipetting, memorising instructions and handling patient samples. The human factor brings safety risks for both the patient and staff.
+- **There are many manual steps,** such as precise pipetting, memorising procedures and handling patient samples. Each step increases the risk for error.
 
-- **They lack intuitiveness,** for example by needing to memorise sequences of poorly labelled buttons and menu options. This distracts from the already risk-filled analysis process and requires unnecessary training.
+- **UIs are not very intuitive,** with poorly labelled buttons and lack of guidance to the next step. This increases mental load and makes the analyser harder to learn.
 
-- **Functionality is lacking,** such as reaction curves and warnings in the event of measurement errors.
+- **Functionality is lacking,** such as reaction curves and error detection during analysis.
 
-Based on those problems, I established three principles for my design decisions:
+Based on those, I established three design principles:
 
-- **Clarity and safety:** The analyser should clearly communicate status and show the user how to fix issues when they occur. Users should be guided before, during and after analysis to prevent mistakes.
+- **Clarity and safety:** The analyser should clearly communicate status and help fix issues. Users should be guided before, during and after analysis to prevent mistakes.
 
-- **Simplicity and modern concepts:** The UI should take cues from smartphones and other everyday devices to make navigation intuitive. The user shouldn't be overwhelmed with information.
+- **Simplicity and modern patterns:** The UI should take cues from smartphones and other devices to make navigation intuitive. The user shouldn't be overwhelmed with information.
 
-- **Fresh look and feel:** A sense of quality and innovation should be reflected in the UI through a modern, contrast-rich and trustworthy design language based on the company's brand identity.
+- **Fresh look and feel:** A sense of quality and innovation should be reflected through a clean, contrast-rich and trustworthy design language based on the company's brand identity.
 
-# Concept and draft
+# Sketching and concept
 
-Based on the briefing and the new analyser's feature list, I created an information architecture to structure the menu hierarchy. In parallel, I started wireframing the most important screens, asking for feedback and iterating.
-
-A coagulation analyser is a complex device with many features that need to be quickly accessible. It needs to account for every situation to prevent errors that affect the patient. After seeing architectural issues with competing analysers, I wanted to reduce the amount of rarely used buttons in the main navigation, and create distinct flows and screens for routine tasks, such as calibration and inserting patient samples.
+Based on the briefing and feature specification, I created an information architecture and wireframes for core screens. I then turned these into low-fidelity mockups, regularly asking for feedback from lab technicians at the company.
 
 <GalleryBlock
   items={[
@@ -135,32 +123,34 @@ A coagulation analyser is a complex device with many features that need to be qu
       type: 'image',
       astroImage: informationArchitectureImage,
       alt: 'Diagram showing the structural relationship between UI screens.',
-      caption: 'Part of my information architecture diagram.',
+      caption: 'Information architecture diagram',
     },
     {
       type: 'image',
-      astroImage: paperSketchesImage,
+      astroImage: paperWireframesImage,
       alt: 'A grid of paper sketches.',
-      caption:
-        'At the sketching stage, I drew several variations of each element.',
+      caption: 'Paper wireframes',
     },
     {
       type: 'image',
-      astroImage: earlyDesignImage,
-      alt: 'Screenshot of design software during early mockups.',
-      caption:
-        'I considered several layouts, including the use of two status bars to separate patient samples from instrument status.',
+      astroImage: lofiDesignImage,
+      alt: 'Screenshot of low-fidelity design in Figma.',
+      caption: 'Low-fidelity design',
     },
   ]}
 />
 
+After exploring several layouts, I settled on a left main navigation to efficiently use the landscape screen. Originally I placed the status bar at the bottom, but through testing found it better suited at the top. This way, it's out of the way of the four sample slots below the screen.
+
+Compared to competing analysers, I wanted to reduce the amount of rarely used buttons cluttering the navigation, and create distinct flows and screens for routine tasks, such as calibration and inserting patient samples.
+
+I designed numerous core workflows and interaction patterns from the ground up, including parallel analyses, expandable live sensor graphs, sample queue management, notification systems, and consumable inventory tracking.
+
 # User tests
 
-Towards the end of the project, I planned and performed two rounds of user tests with two groups of lab staff. My scripts covered all core functionality with focused yet open-ended tasks that encouraged natural usage rather than leading the test subjects to the answer.
+Throughout the project, I planned and conducted multiple rounds of observational user tests with lab technicians. I evaluated different flows and scenarios by assigning realistic laboratory tasks and observing natural behaviour. For realism and context, the interactive prototypes ran on a touch screen mounted on a device prototype, accompanied by real lab equipment such as pipettes and test tubes.
 
-In front of the test subjects was a realistic interactive prototype on a touch screen identical to the one on the future production unit. A physical prototype of the analyser and real lab equipment was used for extra realism and context when simulating lab tasks.
-
-**From the user tests, I collected over 100 points of feedback that I ranked by impact and suggested solutions for.** I implemented around 60% of these fixes, while the rest was left for future designers to evaluate as these needed more judgment and testing than I had the time or resources for.
+From the first two rounds, I collected over 100 points of feedback, ranked them by impact, and used them to iterate on the design.
 
 <GalleryBlock
   items={[
@@ -168,32 +158,75 @@ In front of the test subjects was a realistic interactive prototype on a touch s
       type: 'image',
       astroImage: userTestsImage,
       alt: 'Physical analyser prototype, lab equipment and laptop on a table.',
-      caption: 'The desk setup during user tests.',
     },
   ]}
 />
 
-# Result
+# The result
 
-The result is a well-structured, straight-to-the-point UI that guides lab staff through a plethora of routine tasks. The visual language is simple, crisp, and communicates clearly through consistent use of colour.
-
-Interactive charts and clear graphics take advantage of the large touch screen for quick scannability in the lab. Step-by-step instructions, video guides and clear warnings help prevent mistakes, and the status indicator in the bottom left always shows what the analyser is doing.
+The result is a well-structured, tangible UI that supports lab technicians through a plethora of routine tasks. The visuals are simple, crisp, and communicate clearly with consistent use of colour. It's a precise blend of data, pedagogy, and aesthetics.
 
 <GalleryBlock
   items={[
     {
-      astroImage: showcase1Image,
-      alt: 'Animated GIF showing interaction with three UI screens.',
+      type: 'image',
+      astroImage: showcaseGraphicsImage,
+      alt: 'UI screens showing ongoing analysis, calibration, and history',
     },
-    { type: 'image', astroImage: showcaseResultsImage, alt: '' },
-    { type: 'image', astroImage: showcaseQueueImage, alt: '' },
-    { type: 'image', astroImage: showcaseSmartphoneImage, alt: '' },
+  ]}
+/>
+
+Interactive charts and clear graphics take advantage of the large touch screen for quick scannability in the lab. During analysis, on-screen elements are visually connected to the physical sample slots for an intuitive workflow. Step-by-step instructions, visual cues, and warnings help prevent mistakes, and the top-left status indicator always shows what's happening.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'video',
+      src: '/videos/coagulation-analyser/showcase-animations.mp4',
+    },
+    {
+      type: 'image',
+      astroImage: showcaseResultsImage,
+      alt: 'UI screens showing analysis results and consumable inventory.',
+    },
+    {
+      type: 'image',
+      astroImage: showcaseQueueImage,
+      alt: 'UI screens showing queued samples being listed and selected for analysis.',
+      caption:
+        'Queued samples can be accessed from a sidebar or a floating tray.',
+    },
+    {
+      type: 'image',
+      astroImage: showcaseSmartphoneImage,
+      alt: 'UI screens showing settings, a smartphone-style control centre, and a PIN keypad.',
+      caption:
+        'I borrowed smartphone interaction patterns, such as notification banners and quick settings when swiping on the status bar.',
+    },
+  ]}
+/>
+
+Together with the engineering team, we created a comprehensive design system that formalised typography, colour, spacing, component anatomy, and more using design tokens. This formed a framework for aligning design and code, with Figma as the source of truth.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: showcaseDesignSystemImage,
+      alt: 'Excerpts from design system documentation, including colour, typography, and component usage.',
+    },
+  ]}
 />
 
 # Conclusion
 
-The company was more than satisfied by my UI proposal, which was in line with their vision for the product. Although the UI isn't ready for customer release, **the company now has a base from which they can develop robust software and make future design decisions.**
+While the team and decision makers were satisfied with the UI, the strongest validation came from lab technicians I tested with. Even those with hospital lab backgrounds consistently praised the interface as being way ahead of any other semi-automatic coagulation analyser they'd used.
 
-This was the largest design project I've worked on. In addition to the actual design work, I also practised my communication, planning and documentation, among several other skills such as aggregating user test data into spreadsheets. In the end, my internship was incredibly rewarding and I learned a ton.
+This was the largest design project I'd worked on. I collaborated with software engineers and laboratory staff, as well as external industrial designers, electronics engineers and branding designers. In addition to the core UX/UI work, I practised skills such as
 
-**It feels fantastic to have played a significant role in the development of a product that will help save lives in the future.** I firmly believe in this device and the impact it can have on healthcare, especially in poorer regions. I look forward to seeing how the analyser is further developed and received around the world.
+- communicating design decisions with engineers and other stakeholders
+- planning and conducting user tests and aggregating data
+- creating and documenting design systems in Figma
+- planning and presenting my design process.
+
+This project was incredibly rewarding. I especially loved working with inspiring colleagues while contributing meaningfully to a product that could save lives. This device has real positive potential for healthcare, particularly in underserved regions, and I'm excited to see how it develops further.
