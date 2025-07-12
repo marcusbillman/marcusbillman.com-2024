@@ -25,7 +25,10 @@ import {
 import LanguageSwitch from '@/components/LanguageSwitch';
 import SocialLinks from '@/components/SocialLinks';
 import ThemeSwitch from '@/components/ThemeSwitch';
-// These images are not optimized because optimization caused problems with loading.
+// These images aren't optimized in order to avoid strange issues. I found that
+// if `getImage()` is called in a React component used in an Astro layout,
+// `astro build` stops outputting any HTML. This completely breaks the build
+// without throwing any error, but the dev server is unaffected.
 import homeBg from '@/images/hero-bg-still.jpg';
 import portfolioPhone1 from '@/images/phone-iphone-15-plus.png';
 import portfolioPhone2 from '@/images/phone-pixel-8.png';

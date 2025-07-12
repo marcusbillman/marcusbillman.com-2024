@@ -3,21 +3,19 @@ import {
   MusicNotesIcon,
   ShapesIcon,
 } from '@phosphor-icons/react/ssr';
-import { getImage } from 'astro:assets';
 
 import DotGrid from '@/components/DotGrid';
 import SocialLinks from '@/components/SocialLinks';
+// This image isn't optimized due to reasons explained in Menu.tsx.
 import toyboxBg from '@/images/footer-toybox-bg.jpg';
 import { t } from '@/utils/i18n';
-
-const optimizedToyboxBg = await getImage({ src: toyboxBg });
 
 export default function FooterSection() {
   return (
     <footer className="relative z-10 -mt-8 bg-black px-4 pb-8 pt-16 text-gray-100 lg:-mt-16 lg:px-16 lg:pb-16 lg:pt-32">
       <div
         className="relative isolate grid h-96 place-items-center overflow-hidden rounded-2xl bg-cover bg-center lg:h-[max(512px,40vw)] lg:rounded-4xl"
-        style={{ backgroundImage: `url(${optimizedToyboxBg.src})` }}
+        style={{ backgroundImage: `url(${toyboxBg.src})` }}
       >
         <a
           className="group block text-center text-3xl text-white/50 lg:cursor-pointer lg:text-4xl 2xl:text-6xl"

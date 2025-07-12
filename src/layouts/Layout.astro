@@ -1,6 +1,6 @@
 ---
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/sections/FooterSection';
+import FooterSection from '@/components/sections/FooterSection';
 import ToasterWrapper from '@/components/ToasterWrapper';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { t } from '@/utils/i18n';
@@ -35,6 +35,6 @@ const { title, noHeader = false } = Astro.props;
       <slot />
     </main>
   </div>
-  <Footer client:visible />
+  <FooterSection />
   <ToasterWrapper client:idle />
 </BaseLayout>
