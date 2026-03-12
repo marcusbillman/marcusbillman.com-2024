@@ -5,7 +5,8 @@
     "fmsine",
     "fmsquare",
     "fmtriangle",
-    "hidpi"
+    "hidpi",
+    "Wijaya"
   ],
   "css.lint.unknownAtRules": "ignore",
   "i18n-ally.localesPaths": ["src/strings"],
