@@ -1,5 +1,4 @@
 import type { CustomIcon } from '@/components/icons';
-import type { SoundcloudTrack } from '@/utils/soundcloud';
 import type { Icon as PhosphorIcon } from '@phosphor-icons/react';
 import type React from 'react';
 
@@ -34,13 +33,7 @@ const optimizedSideProjectsScreen2 = await getImage({
   src: sideProjectsScreen2,
 });
 
-interface MoreThingsSectionProps {
-  soundcloudTracks?: SoundcloudTrack[];
-}
-
-export default function MoreThingsSection({
-  soundcloudTracks,
-}: MoreThingsSectionProps) {
+export default function MoreThingsSection() {
   return (
     <section className="px-4 lg:px-16">
       <h2 className="text-4xl font-medium lg:text-6xl">
@@ -92,24 +85,6 @@ export default function MoreThingsSection({
           style={{ backgroundImage: `url(${optimizedMusicBg.src})` }}
         >
           <div className="absolute inset-0 isolate bg-gradient-to-b from-[#FF5722CC] to-[#FF5722]">
-            {soundcloudTracks && soundcloudTracks?.length >= 2 && (
-              <>
-                <iframe
-                  allow="autoplay"
-                  src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${soundcloudTracks[0].id}&auto_play=false&hide_related=true`}
-                  aria-hidden
-                  tabIndex={-1}
-                  className="absolute left-[35%] top-[45%] z-10 h-40 w-1/2 min-w-96 origin-left -rotate-3 shadow-xl transition-transform group-hover:rotate-6 motion-safe:duration-500 motion-safe:ease-smooth"
-                ></iframe>
-                <iframe
-                  allow="autoplay"
-                  src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${soundcloudTracks[1].id}&auto_play=false&hide_related=true`}
-                  aria-hidden
-                  tabIndex={-1}
-                  className="absolute left-[30%] top-[25%] h-40 w-1/2 min-w-96 origin-left rotate-6 shadow-xl transition-transform group-hover:-rotate-6 motion-safe:duration-500 motion-safe:ease-smooth"
-                ></iframe>
-              </>
-            )}
             <DotGrid />
           </div>
         </BentoCard>
