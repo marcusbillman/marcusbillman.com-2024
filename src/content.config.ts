@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { file, glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 import { fetchDribbbleShots } from './utils/dribbble';
 import { getLocale } from './utils/i18n';
