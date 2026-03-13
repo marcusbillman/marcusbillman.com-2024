@@ -13,7 +13,6 @@
     "@astrojs/check": "^0.9.7",
     "@astrojs/mdx": "^5.0.0",
     "@astrojs/react": "^5.0.0",
-    "@astrojs/tailwind": "^6.0.2",
     "@astrojs/vercel": "^10.0.0",
     "@formspree/react": "^2.5.1",
     "@phosphor-icons/react": "^2.1.6",
@@ -21,6 +20,7 @@
     "@radix-ui/react-slider": "^1.2.0",
     "@radix-ui/react-tooltip": "^1.1.2",
     "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^6.0.4",
@@ -32,7 +32,7 @@
     "react-focus-on": "^3.9.3",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^4.2.1",
     "tone": "^15.0.4",
     "typescript": "^5.4.5",
     "usehooks-ts": "^3.1.0"
@@ -48,7 +48,7 @@
     "eslint-plugin-react": "^7.34.4",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.5",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript-eslint": "^8.35.1"
   }
 }

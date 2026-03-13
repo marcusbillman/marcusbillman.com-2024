@@ -17,7 +17,7 @@ export default function ToasterWrapper() {
         unstyled: true,
         classNames: {
           toast:
-            'flex w-full gap-1 rounded-4xl border bg-default px-6 py-4 font-sans text-lg shadow-xl',
+            'flex w-full gap-1 rounded-4xl border border-default bg-default px-6 py-4 font-sans text-lg shadow-xl',
           success: 'text-primary',
           warning: 'text-orange-500',
           error: 'text-orange-500',

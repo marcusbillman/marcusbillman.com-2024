@@ -68,7 +68,7 @@ export default function PortfolioItemsSection({
         <h2 className="text-4xl font-medium lg:text-6xl">
           {t('portfolio.myWork')}
         </h2>
-        <div className="flex flex-col gap-4 overflow-hidden rounded-2xl lg:flex-row lg:gap-0 lg:divide-x lg:border">
+        <div className="flex flex-col gap-4 overflow-hidden rounded-2xl lg:flex-row lg:gap-0 lg:divide-x lg:divide-default lg:border lg:border-default">
           <FilterOption
             label={t('portfolio.caseStudies')}
             icon={ImagesIcon}
@@ -113,7 +113,7 @@ export default function PortfolioItemsSection({
         ))}
         {filteredPortfolioItems.length === 0 && (
           <motion.div
-            className="flex flex-col items-center gap-4 rounded-2xl border px-4 py-16 lg:col-span-2 lg:gap-8"
+            className="flex flex-col items-center gap-4 rounded-2xl border border-default px-4 py-16 lg:col-span-2 lg:gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -281,7 +281,7 @@ function PortfolioItemCard({ portfolioItem }: PortfolioItemCardProps) {
               'items-center',
             )}
           >
-            <div className="flex flex-grow items-center gap-4">
+            <div className="flex grow items-center gap-4">
               {name() && (
                 <h3 className="font-serif text-xl font-medium italic text-primary lg:text-2xl 2xl:text-3xl">
                   {name()}
@@ -320,7 +320,7 @@ function PortfolioItemTag({ label, icon, className }: PortfolioItemTagProps) {
   return (
     <div
       className={twMerge(
-        'flex items-center gap-1 rounded-lg border px-2 py-1 text-subtle 2xl:px-3 2xl:py-2',
+        'flex items-center gap-1 rounded-lg border border-default px-2 py-1 text-subtle 2xl:px-3 2xl:py-2',
         className,
       )}
     >
@@ -350,12 +350,12 @@ function FilterOption({ label, icon, isEnabled, onChange }: FilterOptionProps) {
   return (
     <div
       className={twJoin(
-        'flex flex-grow cursor-pointer items-center gap-4 transition-all active:opacity-50 motion-safe:active:scale-90 lg:p-6',
+        'flex grow cursor-pointer items-center gap-4 transition-all active:opacity-50 motion-safe:active:scale-90 lg:p-6',
         isEnabled ? 'font-bold text-default' : 'text-subtle',
       )}
       onClick={onChange}
     >
-      <div className="flex flex-grow items-center gap-2">
+      <div className="flex grow items-center gap-2">
         <IconComponent size={24} weight={isEnabled ? 'fill' : 'regular'} />
         <label
           htmlFor={id}

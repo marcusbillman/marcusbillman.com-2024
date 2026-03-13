@@ -84,7 +84,7 @@ export default function ContactFormModal({ onClose }: Props) {
               placeholder={t('contact.form.namePlaceholder')}
               required
               disabled={state.submitting}
-              className="peer rounded-lg border bg-default px-4 py-3 text-xl transition-colors placeholder:text-subtle focus:border-primary"
+              className="peer rounded-lg border border-default bg-default px-4 py-3 text-xl transition-colors placeholder:text-subtle focus:border-primary"
             />
             <label
               htmlFor="name"
@@ -102,7 +102,7 @@ export default function ContactFormModal({ onClose }: Props) {
             placeholder={t('contact.form.emailPlaceholder')}
             required
             disabled={state.submitting}
-            className="peer rounded-lg border bg-default px-4 py-3 text-xl transition-colors placeholder:text-subtle focus:border-primary"
+            className="peer rounded-lg border border-default bg-default px-4 py-3 text-xl transition-colors placeholder:text-subtle focus:border-primary"
           />
           <label
             htmlFor="email"
@@ -119,7 +119,7 @@ export default function ContactFormModal({ onClose }: Props) {
             placeholder={t('contact.form.messagePlaceholder')}
             required
             disabled={state.submitting}
-            className="peer rounded-lg border bg-default px-4 py-3 text-xl transition-colors placeholder:text-subtle focus:border-primary"
+            className="peer rounded-lg border border-default bg-default px-4 py-3 text-xl transition-colors placeholder:text-subtle focus:border-primary"
           />
           <label
             htmlFor="message"

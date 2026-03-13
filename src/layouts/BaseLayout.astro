@@ -74,9 +74,8 @@ const locale = getLocale();
   </body>
 </html>
 <style is:global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+  @import 'tailwindcss';
+  @config '@/../tailwind.config.mjs';
 
   @layer base {
     /* Light theme (default) */

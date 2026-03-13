@@ -41,7 +41,7 @@ export default function Switch({
     <div
       className={twJoin(
         'relative inline-block rounded-full transition-colors duration-300 ease-smooth focus-within:ring focus-within:ring-offset-4',
-        size === 'small' ? 'h-8 w-14' : 'h-10 w-[72px]',
+        size === 'small' ? 'h-8 w-14' : 'w-18 h-10',
         isChecked ? 'bg-primary' : 'border border-strong bg-default',
       )}
     >

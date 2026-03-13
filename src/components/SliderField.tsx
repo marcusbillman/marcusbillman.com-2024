@@ -54,7 +54,7 @@ export default function SliderField({
         className="relative flex h-10 cursor-pointer touch-none select-none items-center"
         aria-label={ariaLabel}
       >
-        <Slider.Track className="relative h-px flex-grow rounded-full border-2" />
+        <Slider.Track className="relative h-px grow rounded-full border-2 border-default" />
         <Slider.Thumb className="flex size-10 items-center justify-center rounded-full bg-subtle text-default transition-colors group-focus-within:ring group-active:bg-primary group-active:text-on-primary">
           {IconComponent && (
             <IconComponent size={24} className="pointer-events-none" />

@@ -34,19 +34,16 @@ import portfolioPhone1 from '@/images/phone-iphone-15-plus.png';
 import portfolioPhone2 from '@/images/phone-pixel-8.png';
 import aboutPortrait from '@/images/portrait-1.png';
 import { t } from '@/utils/i18n';
-import { TIMING_FUNCTIONS, useTailwindConfig } from '@/utils/tailwind';
+import { TIMING_FUNCTIONS } from '@/utils/tailwind';
 
 interface MenuProps {
   onClose?: () => void;
 }
 
 export default function Menu({ onClose }: MenuProps) {
-  const resolvedTailwindConfig = useTailwindConfig();
   const shouldReduceMotion = useReducedMotion();
 
-  const isDesktop = useMediaQuery(
-    `(min-width: ${resolvedTailwindConfig.theme.screens.lg})`,
-  );
+  const isDesktop = useMediaQuery(`(min-width: 64rem)`); // TODO: use theme breakpoints
 
   const outProperties = {
     y: shouldReduceMotion ? 0 : isDesktop ? '-100%' : '100%',
@@ -75,8 +72,8 @@ export default function Menu({ onClose }: MenuProps) {
             onClick={onClose}
           />
         </div>
-        <div className="flex flex-grow flex-col gap-4 overflow-y-auto lg:flex-row lg:gap-8">
-          <ul className="flex flex-col flex-wrap gap-2 lg:flex-[1] lg:flex-row lg:gap-4 2xl:flex-[3]">
+        <div className="flex grow flex-col gap-4 overflow-y-auto lg:flex-row lg:gap-8">
+          <ul className="2xl:flex-3 flex flex-col flex-wrap gap-2 lg:flex-1 lg:flex-row lg:gap-4">
             <MenuLink text={t('navigation.home')} url="/" icon={HouseIcon}>
               <div
                 className="absolute inset-0 -z-10 bg-cover bg-center"
@@ -102,7 +99,7 @@ export default function Menu({ onClose }: MenuProps) {
               <img
                 src={portfolioPhone1.src}
                 alt={t('navigation.alt.portfolioPhone1')}
-                className="absolute right-[30%] top-[30%] h-[80%] min-h-64 rotate-[15deg]"
+                className="rotate-15 absolute right-[30%] top-[30%] h-[80%] min-h-64"
               />
               <img
                 src={portfolioPhone2.src}
@@ -134,8 +131,8 @@ export default function Menu({ onClose }: MenuProps) {
               <ChatIllustration className="absolute right-0 top-[35%] lg:right-[10%]" />
             </MenuLink>
           </ul>
-          <div className="flex flex-1 flex-col gap-4 xl:flex-[1]">
-            <div className="grid flex-grow items-end lg:items-start">
+          <div className="flex flex-1 flex-col gap-4 xl:flex-1">
+            <div className="grid grow items-end lg:items-start">
               <SocialLinks compactOnMobile />
             </div>
             <div className="flex items-center justify-between">
@@ -175,7 +172,7 @@ function MenuLink({ text, url, icon, children }: MenuLinkProps) {
   return (
     <li
       className={twJoin(
-        'group relative isolate block min-w-64 flex-1 overflow-clip rounded-2xl border px-5 py-4 transition-all active:opacity-50 group-hover:border-primary motion-safe:active:scale-90',
+        'group relative isolate block min-w-64 flex-1 overflow-clip rounded-2xl border border-default px-5 py-4 transition-all active:opacity-50 group-hover:border-primary motion-safe:active:scale-90',
         isActive && 'border-primary',
       )}
     >

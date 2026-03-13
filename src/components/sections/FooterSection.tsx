@@ -23,7 +23,7 @@ export default function FooterSection() {
         >
           <span className="block translate-x-[-10%] transition-colors lg:group-hover:text-white/20">
             {t('footer.slogan.word1') + ' '}
-            <span className="font-serif italic text-white lg:group-hover:text-[inherit]">
+            <span className="font-serif italic text-white lg:group-hover:text-inherit">
               {t('footer.slogan.word2') + ' '}
               <LinkIcon size={32} className="inline 2xl:hidden" />
               <LinkIcon size={64} className="hidden 2xl:inline" />{' '}
@@ -31,7 +31,7 @@ export default function FooterSection() {
           </span>
           <span className="block translate-x-[25%] transition-colors lg:group-hover:text-white/20">
             {t('footer.slogan.word3') + ' '}
-            <span className="font-serif italic text-white lg:group-hover:text-[inherit]">
+            <span className="font-serif italic text-white lg:group-hover:text-inherit">
               {t('footer.slogan.word4') + ' '}
               <ShapesIcon size={32} className="inline 2xl:hidden" />
               <ShapesIcon size={64} className="hidden 2xl:inline" />{' '}

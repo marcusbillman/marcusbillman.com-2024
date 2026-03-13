@@ -16,10 +16,10 @@ export default function NotFoundSection({ bgSrc }: NotFoundSectionProps) {
       {/* Decoration */}
       <Sandbox
         randomize={false}
-        className="relative z-10 flex-grow text-4xl transition-opacity md:text-6xl lg:absolute lg:inset-4 lg:text-8xl"
+        className="relative z-10 grow text-4xl transition-opacity md:text-6xl lg:absolute lg:inset-4 lg:text-8xl"
       >
         <motion.span
-          className="left-[-10%] top-[10%] bg-cover bg-clip-text bg-left-top text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent lg:left-[20%]"
+          className="left-[-10%] top-[10%] bg-cover bg-clip-text bg-top-left text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent lg:left-[20%]"
           style={{ backgroundImage: `url(${bgSrc})`, rotate: 15 }}
         >
           4
@@ -31,7 +31,7 @@ export default function NotFoundSection({ bgSrc }: NotFoundSectionProps) {
           0
         </motion.span>
         <motion.span
-          className="left-[70%] top-[20%] bg-cover bg-clip-text bg-right-top text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent"
+          className="left-[70%] top-[20%] bg-cover bg-clip-text bg-top-right text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent"
           style={{ backgroundImage: `url(${bgSrc})`, rotate: -20 }}
         >
           4
@@ -81,14 +81,14 @@ export default function NotFoundSection({ bgSrc }: NotFoundSectionProps) {
               icon={HouseIcon}
               iconSide="left"
               href="/"
-              className="flex-shrink-0"
+              className="shrink-0"
             />
           </div>
         </div>
       </div>
 
       {/* Backgrounds */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/0 to-black/20" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/0 to-black/20" />
       <DotGrid />
     </section>
   );

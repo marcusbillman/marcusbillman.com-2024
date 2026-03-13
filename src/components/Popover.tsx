@@ -22,7 +22,7 @@ export default function Popover({
         align="start"
         collisionBoundary={collisionBoundary?.current}
         collisionPadding={24}
-        className="animate-popover-in data-[state=closed]:animate-popover-out z-50 w-96 rounded-2xl border bg-default p-6 text-default shadow-lg ease-smooth"
+        className="z-50 w-96 animate-popover-in rounded-2xl border border-default bg-default p-6 text-default shadow-lg ease-smooth data-[state=closed]:animate-popover-out"
       >
         {children}
       </RadixPopover.Content>

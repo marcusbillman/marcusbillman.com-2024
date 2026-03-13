@@ -7,7 +7,7 @@ import { useMediaQuery } from 'usehooks-ts';
 
 import Button from '@/components/Button';
 import { t } from '@/utils/i18n';
-import { TIMING_FUNCTIONS, useTailwindConfig } from '@/utils/tailwind';
+import { TIMING_FUNCTIONS } from '@/utils/tailwind';
 
 interface Props {
   title: string;
@@ -17,12 +17,9 @@ interface Props {
 
 export default function Modal({ title, onClose, children }: Props) {
   const childrenRef = createRef<HTMLDivElement>();
-  const resolvedTailwindConfig = useTailwindConfig();
   const shouldReduceMotion = useReducedMotion();
 
-  const isDesktop = useMediaQuery(
-    `(min-width: ${resolvedTailwindConfig.theme.screens.lg})`,
-  );
+  const isDesktop = useMediaQuery(`(min-width: 64rem)`); // TODO: use theme breakpoints
 
   function outProperties() {
     if (isDesktop)
@@ -41,7 +38,7 @@ export default function Modal({ title, onClose, children }: Props) {
     <FocusOn>
       <div>
         <motion.div
-          className="pointer-events-none fixed inset-0 z-[60] flex items-center justify-center"
+          className="z-60 pointer-events-none fixed inset-0 flex items-center justify-center"
           initial={outProperties()}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={outProperties()}
@@ -50,7 +47,7 @@ export default function Modal({ title, onClose, children }: Props) {
             if (e.key === 'Escape') onClose();
           }}
         >
-          <div className="pointer-events-auto fixed bottom-0 z-[60] flex h-fit max-h-[95vh] w-full flex-col overflow-hidden rounded-t-4xl bg-default lg:bottom-auto lg:max-w-3xl lg:rounded-4xl">
+          <div className="z-60 pointer-events-auto fixed bottom-0 flex h-fit max-h-[95vh] w-full flex-col overflow-hidden rounded-t-4xl bg-default lg:bottom-auto lg:max-w-3xl lg:rounded-4xl">
             <div className="flex items-center justify-between p-4 lg:border-b lg:border-b-default lg:p-6">
               <h2 className="font-serif text-xl font-medium italic">{title}</h2>
               <Button

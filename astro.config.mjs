@@ -1,11 +1,11 @@
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
 import vercel from '@astrojs/vercel';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  integrations: [react(), tailwind(), mdx()],
+  integrations: [react(), mdx()],
   output: 'static',
   adapter: vercel({
     webAnalytics: {
@@ -14,5 +14,8 @@ export default defineConfig({
   }),
   devToolbar: {
     enabled: false,
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });

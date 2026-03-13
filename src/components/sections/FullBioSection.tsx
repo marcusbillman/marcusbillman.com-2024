@@ -28,7 +28,7 @@ export default function FullBioSection() {
 
 function Portrait() {
   return (
-    <div className="group relative isolate my-6 aspect-[3/4] overflow-hidden rounded-2xl bg-subtle md:col-start-[-2] md:row-span-full md:my-0 lg:rounded-4xl 2xl:row-span-full 2xl:self-center">
+    <div className="group relative isolate my-6 aspect-3/4 overflow-hidden rounded-2xl bg-subtle md:-col-start-2 md:row-span-full md:my-0 lg:rounded-4xl 2xl:row-span-full 2xl:self-center">
       <img
         src={optimizedPortrait1.src}
         alt={t('about.alt.portrait1')}

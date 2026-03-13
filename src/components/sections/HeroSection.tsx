@@ -165,73 +165,73 @@ export default function HeroSection({
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[56%] top-[-2%] z-10 rotate-[10deg]">
+            <div className="rotate-10 absolute left-[56%] top-[-2%] z-10">
               <AudioFileIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[70%] top-[4%] z-10 rotate-[25deg]">
+            <div className="rotate-25 absolute left-[70%] top-[4%] z-10">
               <SwitchIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[80%] top-[8%] z-10 rotate-[40deg]">
+            <div className="rotate-40 absolute left-[80%] top-[8%] z-10">
               <PhoneIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[86%] top-[22%] z-10 rotate-[60deg]">
+            <div className="rotate-60 absolute left-[86%] top-[22%] z-10">
               <DawIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[98%] top-[40%] z-10 rotate-[80deg]">
+            <div className="rotate-80 absolute left-[98%] top-[40%] z-10">
               <MetronomeIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[96%] top-[54%] z-10 rotate-[105deg]">
+            <div className="rotate-105 absolute left-[96%] top-[54%] z-10">
               <BezierCurveIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[87%] top-[70%] z-10 rotate-[120deg]">
+            <div className="rotate-120 absolute left-[87%] top-[70%] z-10">
               <BrowserIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[81%] top-[85%] z-10 rotate-[140deg]">
+            <div className="rotate-140 absolute left-[81%] top-[85%] z-10">
               <AudioFileIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[70%] top-[94%] z-10 rotate-[155deg]">
+            <div className="rotate-155 absolute left-[70%] top-[94%] z-10">
               <SwitchIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[55%] top-[95%] z-10 rotate-[172deg]">
+            <div className="rotate-172 absolute left-[55%] top-[95%] z-10">
               <PhoneIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[35%] top-[95%] z-10 rotate-[180deg]">
+            <div className="absolute left-[35%] top-[95%] z-10 rotate-180">
               <CableIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[14%] top-[86%] z-10 rotate-[215deg]">
+            <div className="rotate-215 absolute left-[14%] top-[86%] z-10">
               <DawIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
@@ -261,7 +261,7 @@ export default function HeroSection({
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[13%] top-[8%] z-10 rotate-[-45deg]">
+            <div className="absolute left-[13%] top-[8%] z-10 -rotate-45">
               <CableIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
@@ -274,43 +274,43 @@ export default function HeroSection({
             style={animationPlayStateStyle}
           >
             <div className="absolute inset-0 rounded-full border-4 border-primary opacity-10"></div>
-            <div className="absolute left-[38%] top-[-4%] z-10 rotate-[-3deg]">
+            <div className="absolute left-[38%] top-[-4%] z-10 -rotate-3">
               <PianoIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[68%] top-[5%] z-10 rotate-[25deg]">
+            <div className="rotate-25 absolute left-[68%] top-[5%] z-10">
               <ButtonClickIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[85%] top-[20%] z-10 rotate-[50deg]">
+            <div className="rotate-50 absolute left-[85%] top-[20%] z-10">
               <DropdownIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[96%] top-[37%] z-10 rotate-[75deg]">
+            <div className="rotate-75 absolute left-[96%] top-[37%] z-10">
               <KnobIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[88%] top-[55%] z-10 rotate-[100deg]">
+            <div className="rotate-100 absolute left-[88%] top-[55%] z-10">
               <CodeBlockIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[79%] top-[78%] z-10 rotate-[135deg]">
+            <div className="rotate-135 absolute left-[79%] top-[78%] z-10">
               <PianoIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
               />
             </div>
-            <div className="absolute left-[58%] top-[93%] z-10 rotate-[160deg]">
+            <div className="rotate-160 absolute left-[58%] top-[93%] z-10">
               <ButtonClickIllustration
                 className="motion-safe:animate-float"
                 style={animationPlayStateStyle}
@@ -416,28 +416,28 @@ function HeroBanner({ text, href }: HeroBannerProps) {
       target={isExternalUrl(href || '') ? '_blank' : '_self'}
       aria-label="News banner"
       className={twJoin(
-        'group flex w-fit max-w-full items-center gap-2 rounded-full bg-default px-4 py-3 shadow-lg transition-all hover:bg-primary hover:text-on-primary active:opacity-50 motion-safe:active:scale-75 lg:px-6 lg:py-4 dark:border',
+        'group flex w-fit max-w-full items-center gap-2 rounded-full bg-default px-4 py-3 shadow-lg transition-all hover:bg-primary hover:text-on-primary active:opacity-50 motion-safe:active:scale-75 lg:px-6 lg:py-4 dark:border dark:border-default',
         !href && 'pointer-events-none',
       )}
     >
       <BellRingingIcon
         size={16}
-        className="flex-shrink-0 text-primary transition-colors group-hover:text-on-primary lg:hidden"
+        className="shrink-0 text-primary transition-colors group-hover:text-on-primary lg:hidden"
       />
       <BellRingingIcon
         size={20}
-        className="hidden flex-shrink-0 text-primary transition-colors group-hover:text-on-primary lg:inline"
+        className="hidden shrink-0 text-primary transition-colors group-hover:text-on-primary lg:inline"
       />
       <span className="font-medium lg:text-xl">{text}</span>
       {ArrowIconComponent && (
         <>
           <ArrowIconComponent
             size={16}
-            className="flex-shrink-0 text-subtle transition-colors group-hover:text-on-primary lg:hidden"
+            className="shrink-0 text-subtle transition-colors group-hover:text-on-primary lg:hidden"
           />
           <ArrowIconComponent
             size={20}
-            className="hidden flex-shrink-0 text-subtle transition-colors group-hover:text-on-primary lg:inline"
+            className="hidden shrink-0 text-subtle transition-colors group-hover:text-on-primary lg:inline"
           />
         </>
       )}

@@ -36,7 +36,7 @@ export default function FullContactSection() {
       </AnimatePresence>
       <span className="mt-6 text-xl text-subtle">{t('contact.or')}</span>
       <div className="mt-6 flex w-full max-w-5xl flex-col gap-4 md:flex-row lg:gap-8">
-        <div className="flex flex-col gap-4 rounded-2xl border bg-default p-4 md:flex-1 lg:p-6">
+        <div className="flex flex-col gap-4 rounded-2xl border border-default bg-default p-4 md:flex-1 lg:p-6">
           <div className="flex items-center gap-2">
             <EnvelopeSimpleIcon size={24} className="lg:hidden" />
             <EnvelopeSimpleIcon size={32} className="hidden lg:block" />
@@ -75,7 +75,7 @@ export default function FullContactSection() {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-4 rounded-2xl border bg-default p-4 md:flex-1 lg:p-6">
+        <div className="flex flex-col gap-4 rounded-2xl border border-default bg-default p-4 md:flex-1 lg:p-6">
           <div className="flex items-center gap-2">
             <LinkedIn size={24} className="lg:hidden" />
             <LinkedIn size={32} className="hidden lg:block" />

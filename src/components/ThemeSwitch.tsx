@@ -12,13 +12,11 @@ import { twJoin } from 'tailwind-merge';
 import { useLocalStorage, useMediaQuery } from 'usehooks-ts';
 
 import { t } from '@/utils/i18n';
-import { useTailwindConfig } from '@/utils/tailwind';
 
 export type Theme = 'light' | 'dark' | 'system';
 
 export default function ThemeSwitch() {
   const [value, setValue] = useLocalStorage<Theme>('theme', 'system');
-  const resolvedTailwindConfig = useTailwindConfig();
 
   useEffect(() => {
     if (value === 'light') {
@@ -32,9 +30,7 @@ export default function ThemeSwitch() {
     }
   }, [value]);
 
-  const isDesktop = useMediaQuery(
-    `(min-width: ${resolvedTailwindConfig.theme.screens.lg})`,
-  );
+  const isDesktop = useMediaQuery(`(min-width: 64rem)`); // TODO: use theme breakpoints
 
   const toastOptions: ExternalToast = isDesktop
     ? {}

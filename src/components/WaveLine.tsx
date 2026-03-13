@@ -41,7 +41,7 @@ export default function WaveLine({
       `}</style>
       <div
         className={twMerge(
-          "bg-current [mask-image:url('/images/wave-tile.svg')] [mask-size:contain]",
+          "bg-current mask-[url('/images/wave-tile.svg')] mask-contain",
           className,
         )}
         style={{

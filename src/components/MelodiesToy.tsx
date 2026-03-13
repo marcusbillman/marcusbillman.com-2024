@@ -603,16 +603,16 @@ export default function MelodiesToy() {
         </div>
 
         {/* Sequencer section */}
-        <div className="relative flex-grow px-6">
+        <div className="relative grow px-6">
           {/* Melody sequencer */}
           {activeTab === 'melody' && (
             <div className="relative flex h-full flex-col-reverse gap-1 lg:gap-2">
               {scaleTones.map((_, toneIndex) => (
                 <div
                   key={toneIndex}
-                  className="flex flex-grow items-center justify-stretch"
+                  className="flex grow items-center justify-stretch"
                 >
-                  <p className="mr-6 hidden w-16 flex-shrink-0 opacity-50 md:block">
+                  <p className="mr-6 hidden w-16 shrink-0 opacity-50 md:block">
                     {scaleTones[toneIndex].toNote().slice(0, -1)}
                   </p>
                   {stepTimes.map((_, stepIndex) => {
@@ -652,9 +652,9 @@ export default function MelodiesToy() {
               {DRUM_SAMPLES.map((sample, toneIndex) => (
                 <div
                   key={sample.tone}
-                  className="flex flex-grow items-center justify-stretch"
+                  className="flex grow items-center justify-stretch"
                 >
-                  <p className="mr-6 hidden w-16 flex-shrink-0 opacity-50 md:block">
+                  <p className="mr-6 hidden w-16 shrink-0 opacity-50 md:block">
                     {sample.name}
                   </p>
                   {stepTimes.map((_, stepIndex) => {
@@ -702,12 +702,12 @@ export default function MelodiesToy() {
 
         {/* Bottom bar */}
         <div className="flex gap-6 p-6">
-          <div className="hidden flex-[1] gap-4 md:flex">
+          <div className="hidden flex-1 gap-4 md:flex">
             {/* Tempo popover */}
             <Popover
               collisionBoundary={boundaryRef}
               trigger={
-                <button className="flex flex-shrink-0 items-center gap-1 rounded-full bg-white/20 p-4">
+                <button className="flex shrink-0 items-center gap-1 rounded-full bg-white/20 p-4">
                   <MetronomeIcon
                     size={24}
                     className={
@@ -761,7 +761,7 @@ export default function MelodiesToy() {
               <Popover
                 collisionBoundary={boundaryRef}
                 trigger={
-                  <button className="flex flex-shrink-0 items-center gap-1 rounded-full bg-white/20 p-4">
+                  <button className="flex shrink-0 items-center gap-1 rounded-full bg-white/20 p-4">
                     <MusicNoteIcon size={24} className="opacity-50" />
                     <span className="hidden font-serif italic xl:block">{`${scaleRoot.label} ${scaleType.shortLabel}`}</span>
                   </button>
@@ -804,7 +804,7 @@ export default function MelodiesToy() {
               </Popover>
             )}
           </div>
-          <div className="flex flex-[2] items-center gap-6 md:justify-center">
+          <div className="flex flex-2 items-center gap-6 md:justify-center">
             {/* Shape slider */}
             {activeTab === 'melody' && (
               <Tooltip text={t('melodiesToy.toolbar.shape')}>
@@ -852,11 +852,11 @@ export default function MelodiesToy() {
               </Tooltip>
             )}
           </div>
-          <div className="flex flex-[1] justify-end gap-4">
+          <div className="flex flex-1 justify-end gap-4">
             {activeTab === 'melody' && (
               <Tooltip text={t('melodiesToy.toolbar.scramblePitch')}>
                 <button
-                  className="hidden flex-shrink-0 rounded-2xl bg-white/20 p-4 xl:block"
+                  className="hidden shrink-0 rounded-2xl bg-white/20 p-4 xl:block"
                   onClick={() => scrambleMelody('pitch')}
                   aria-label={t('melodiesToy.toolbar.scramblePitch')}
                 >
@@ -867,7 +867,7 @@ export default function MelodiesToy() {
             {activeTab === 'melody' && (
               <Tooltip text={t('melodiesToy.toolbar.scrambleRhythm')}>
                 <button
-                  className="hidden flex-shrink-0 rounded-2xl bg-white/20 p-4 xl:block"
+                  className="hidden shrink-0 rounded-2xl bg-white/20 p-4 xl:block"
                   onClick={() => scrambleMelody('rhythm')}
                   aria-label={t('melodiesToy.toolbar.scrambleRhythm')}
                 >
@@ -877,7 +877,7 @@ export default function MelodiesToy() {
             )}
             <Tooltip text={t('melodiesToy.toolbar.generate')}>
               <button
-                className="flex-shrink-0 rounded-2xl bg-white/20 p-4"
+                className="shrink-0 rounded-2xl bg-white/20 p-4"
                 onClick={
                   activeTab === 'melody' ? generateMelody : generateDrums
                 }
@@ -888,7 +888,7 @@ export default function MelodiesToy() {
             </Tooltip>
             <Tooltip text={t('melodiesToy.toolbar.clear')}>
               <button
-                className="flex-shrink-0 rounded-2xl bg-white/20 p-4"
+                className="shrink-0 rounded-2xl bg-white/20 p-4"
                 onClick={activeTab === 'melody' ? clearMelody : clearDrums}
                 aria-label={t('melodiesToy.toolbar.clear')}
               >

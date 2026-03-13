@@ -45,25 +45,25 @@ export default function MoreThingsSection() {
           description={t('home.moreThings.sideProjectsDescription')}
           icon={FlaskIcon}
           href="portfolio?type=SIDE_PROJECT"
-          className="h-[50vh] bg-gradient-to-b from-[#bfcaf1] to-[#889ef1] text-black md:col-span-3 md:row-span-2 md:h-auto xl:col-span-4"
+          className="h-[50vh] bg-linear-to-b from-[#bfcaf1] to-[#889ef1] text-black md:col-span-3 md:row-span-2 md:h-auto xl:col-span-4"
         >
           <img
             src={optimizedSideProjectsScreen1.src}
             alt={t('home.alt.sideProjectsScreen1')}
             loading="lazy"
-            className="absolute left-[20%] top-[0%] h-48 rotate-[30deg] rounded-2xl shadow-xl"
+            className="absolute left-[20%] top-[0%] h-48 rotate-30 rounded-2xl shadow-xl"
             aria-hidden
           />
           <img
             src={optimizedSideProjectsScreen2.src}
             alt={t('home.alt.sideProjectsScreen2')}
             loading="lazy"
-            className="absolute bottom-[0%] left-[35%] h-48 rotate-[30deg] rounded-2xl shadow-xl"
+            className="absolute bottom-[0%] left-[35%] h-48 rotate-30 rounded-2xl shadow-xl"
             aria-hidden
           />
-          <ButtonClickIllustration className="absolute left-[90%] top-[0%] rotate-[30deg] drop-shadow-xl" />
-          <PhoneIllustration className="absolute left-[80%] top-[15%] rotate-[30deg] drop-shadow-xl" />
-          <CodeBlockIllustration className="absolute left-[90%] top-[60%] rotate-[30deg] drop-shadow-xl" />
+          <ButtonClickIllustration className="absolute left-[90%] top-[0%] rotate-30 drop-shadow-xl" />
+          <PhoneIllustration className="absolute left-[80%] top-[15%] rotate-30 drop-shadow-xl" />
+          <CodeBlockIllustration className="absolute left-[90%] top-[60%] rotate-30 drop-shadow-xl" />
           <DotGrid />
         </BentoCard>
         <BentoCard
@@ -84,7 +84,7 @@ export default function MoreThingsSection() {
           className="h-[50vh] bg-cover bg-center text-gray-100 md:col-span-3 md:row-span-2 md:h-auto"
           style={{ backgroundImage: `url(${optimizedMusicBg.src})` }}
         >
-          <div className="absolute inset-0 isolate bg-gradient-to-b from-[#FF5722CC] to-[#FF5722]">
+          <div className="absolute inset-0 isolate bg-linear-to-b from-[#FF5722CC] to-[#FF5722]">
             <DotGrid />
           </div>
         </BentoCard>

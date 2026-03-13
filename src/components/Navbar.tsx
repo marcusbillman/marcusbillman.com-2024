@@ -40,7 +40,7 @@ export default function Navbar({ isMenuOpen, onClickMenuButton }: NavbarProps) {
       <a
         href="/"
         className={twJoin(
-          'pointer-events-auto flex items-center gap-1 rounded-full bg-default px-4 font-medium transition-all hover:bg-primary hover:text-on-primary active:opacity-50 motion-safe:active:scale-75 lg:px-6 dark:border',
+          'pointer-events-auto flex items-center gap-1 rounded-full bg-default px-4 font-medium transition-all hover:bg-primary hover:text-on-primary active:opacity-50 motion-safe:active:scale-75 lg:px-6 dark:border dark:border-default',
           !isMenuOpen && 'shadow-lg',
         )}
       >
@@ -52,7 +52,7 @@ export default function Navbar({ isMenuOpen, onClickMenuButton }: NavbarProps) {
         layout={shouldReduceMotion ? false : 'position'}
         className={twJoin(
           'pointer-events-auto flex items-center gap-6 rounded-full bg-default lg:p-2',
-          !isMenuOpen && 'shadow-lg lg:pl-6 dark:border',
+          !isMenuOpen && 'shadow-lg lg:pl-6 dark:border dark:border-default',
         )}
       >
         {!isMenuOpen && (
