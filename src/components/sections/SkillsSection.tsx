@@ -23,7 +23,7 @@ export default function SkillsSection() {
       </h1>
       <p className="max-w-prose text-xl">{t('about.skills.text')}</p>
       <ul className="grid gap-6 lg:grid-cols-2 lg:gap-8 2xl:grid-cols-4">
-        <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
+        <li className="relative isolate flex h-48 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:h-96 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
             <CubeFocusIcon size={24} className="lg:hidden" />
             <CubeFocusIcon size={32} className="hidden lg:inline" />
@@ -40,7 +40,7 @@ export default function SkillsSection() {
             className="left-0 top-0 h-[250%] -translate-x-1/2 -translate-y-1/2"
           />
         </li>
-        <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
+        <li className="relative isolate flex h-48 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:h-96 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
             <LightningIcon size={24} className="lg:hidden" />
             <LightningIcon size={32} className="hidden lg:inline" />
@@ -57,7 +57,7 @@ export default function SkillsSection() {
             className="bottom-0 right-0 h-[250%] translate-x-1/2 translate-y-1/2"
           />
         </li>
-        <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
+        <li className="relative isolate flex h-48 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:h-96 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
             <ChatsCircleIcon size={24} className="lg:hidden" />
             <ChatsCircleIcon size={32} className="hidden lg:inline" />
@@ -74,7 +74,7 @@ export default function SkillsSection() {
             className="bottom-0 left-0 h-[250%] -translate-x-1/2 translate-y-1/2"
           />
         </li>
-        <li className="relative isolate flex h-96 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:p-6">
+        <li className="relative isolate flex h-48 flex-col justify-between gap-4 overflow-hidden rounded-2xl border bg-subtle p-4 lg:h-96 lg:p-6">
           <div className="w-fit rounded-full border bg-default p-3">
             <HeartIcon size={24} className="lg:hidden" />
             <HeartIcon size={32} className="hidden lg:inline" />
