@@ -5,7 +5,6 @@ import {
   GraphIcon,
   PenNibIcon,
 } from '@phosphor-icons/react/ssr';
-import { getImage } from 'astro:assets';
 import {
   motion,
   useReducedMotion,
@@ -14,26 +13,27 @@ import {
 } from 'framer-motion';
 
 import DotGrid from '@/components/DotGrid';
-import developerBg from '@/images/code-dim.jpg';
-import codeEasterEgg from '@/images/code-easter-egg.png';
-import colourCardBlueberry from '@/images/colour-card-blueberry.png';
-import colourCardSalmon from '@/images/colour-card-salmon.png';
-import figmaTools from '@/images/figma-tools.png';
-import techLogos from '@/images/tech-logos.png';
-import designerBg from '@/images/wireframe-sketch.jpg';
 import { t } from '@/utils/i18n';
 
-const optimizedDesignerBg = await getImage({ src: designerBg });
-const optimizedDeveloperBg = await getImage({ src: developerBg });
-const optimizedColourCardBlueberry = await getImage({
-  src: colourCardBlueberry,
-});
-const optimizedColourCardSalmon = await getImage({ src: colourCardSalmon });
-const optimizedFigmaTools = await getImage({ src: figmaTools });
-const optimizedTechLogos = await getImage({ src: techLogos });
-const optimizedCodeEasterEgg = await getImage({ src: codeEasterEgg });
+interface DesignerDeveloperSectionProps {
+  designerBgSrc: string;
+  developerBgSrc: string;
+  colourCardBlueberrySrc: string;
+  colourCardSalmonSrc: string;
+  figmaToolsSrc: string;
+  techLogosSrc: string;
+  codeEasterEggSrc: string;
+}
 
-export default function DesignerDeveloperSection() {
+export default function DesignerDeveloperSection({
+  designerBgSrc,
+  developerBgSrc,
+  colourCardBlueberrySrc,
+  colourCardSalmonSrc,
+  figmaToolsSrc,
+  techLogosSrc,
+  codeEasterEggSrc,
+}: DesignerDeveloperSectionProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -65,7 +65,7 @@ export default function DesignerDeveloperSection() {
       {/* Designer */}
       <div
         className="sticky top-0 isolate flex h-screen flex-col items-center justify-center overflow-hidden rounded-4xl bg-subtle bg-cover bg-center p-16 lg:rounded-6xl"
-        style={{ backgroundImage: `url(${optimizedDesignerBg.src})` }}
+        style={{ backgroundImage: `url(${designerBgSrc})` }}
       >
         {/* Text */}
         <div className="flex flex-wrap justify-center lg:absolute lg:inset-16 lg:top-32 lg:w-auto">
@@ -93,21 +93,21 @@ export default function DesignerDeveloperSection() {
         {/* Illustrations */}
         <div className="group absolute right-0 top-0 size-[25vw] min-w-64 opacity-50 transition-opacity duration-500 hover:opacity-100">
           <img
-            src={optimizedColourCardBlueberry.src}
+            src={colourCardBlueberrySrc}
             alt={t('about.alt.colourCardBlueberry')}
             loading="lazy"
             className="absolute right-[15%] top-[-10%] block origin-bottom rotate-[5deg] transition-transform duration-500 ease-smooth group-hover:rotate-[-5deg]"
             aria-hidden
           />
           <img
-            src={optimizedColourCardSalmon.src}
+            src={colourCardSalmonSrc}
             alt={t('about.alt.colourCardSalmon')}
             className="absolute right-[-5%] top-[10%] block origin-bottom rotate-[15deg] transition-transform duration-500 ease-smooth group-hover:rotate-[20deg]"
             aria-hidden
           />
         </div>
         <img
-          src={optimizedFigmaTools.src}
+          src={figmaToolsSrc}
           alt={t('about.alt.figmaTools')}
           className="absolute -bottom-64 -left-32 opacity-50"
           aria-hidden
@@ -119,7 +119,7 @@ export default function DesignerDeveloperSection() {
       <motion.div
         className="sticky top-0 isolate mt-[-100vh] flex h-screen flex-col items-center justify-center overflow-hidden rounded-4xl bg-black bg-cover bg-center p-16 text-gray-100 lg:rounded-6xl"
         style={{
-          backgroundImage: `url(${optimizedDeveloperBg.src})`,
+          backgroundImage: `url(${developerBgSrc})`,
           clipPath: clipPathOutput,
           opacity: opacityOutput,
         }}
@@ -149,13 +149,13 @@ export default function DesignerDeveloperSection() {
 
         {/* Illustrations */}
         <img
-          src={optimizedTechLogos.src}
+          src={techLogosSrc}
           alt={t('about.alt.techLogos')}
           className="absolute left-[-25%] top-[-15%] rotate-[-30deg] opacity-50"
           aria-hidden
         />
         <img
-          src={optimizedCodeEasterEgg.src}
+          src={codeEasterEggSrc}
           alt={t('about.alt.codeEasterEgg')}
           className="absolute -bottom-32 -right-32 w-[800px] rotate-[-15deg] opacity-50 transition-opacity hover:opacity-100"
           aria-hidden

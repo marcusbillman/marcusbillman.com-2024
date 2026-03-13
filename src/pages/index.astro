@@ -1,19 +1,32 @@
 ---
+import { getImage } from 'astro:assets';
+
 import BioSection from '@/components/sections/BioSection';
 import ContactSection from '@/components/sections/ContactSection';
 import FeaturedProjectsSection from '@/components/sections/FeaturedProjectsSection';
 import HeroSection from '@/components/sections/HeroSection';
 import MoreThingsSection from '@/components/sections/MoreThingsSection';
 import SeparatorSection from '@/components/sections/SeparatorSection';
+import bg from '@/images/hero-bg-still.jpg';
+import profilePicture from '@/images/profile-picture.jpg';
 import Layout from '@/layouts/Layout.astro';
 import { getFeaturedProjects, getHeroBanner } from '@/utils/content';
 
 const featuredProjects = await getFeaturedProjects();
 const heroBanner = await getHeroBanner();
+
+const optimizedBg = await getImage({ src: bg });
+const optimizedProfilePicture = await getImage({ src: profilePicture });
 ---
 
 <Layout>
-  <HeroSection slot="header" heroBanner={heroBanner} client:idle />
+  <HeroSection
+    slot="header"
+    heroBanner={heroBanner}
+    bgSrc={optimizedBg.src}
+    profilePictureSrc={optimizedProfilePicture.src}
+    client:idle
+  />
   <BioSection />
   <SeparatorSection />
   <FeaturedProjectsSection projects={featuredProjects} />

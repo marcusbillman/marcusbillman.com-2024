@@ -1,12 +1,31 @@
 ---
+import { getImage } from 'astro:assets';
+
 import ContactSection from '@/components/sections/ContactSection';
 import DesignerDeveloperSection from '@/components/sections/DesignerDeveloperSection';
 import FullBioSection from '@/components/sections/FullBioSection';
 import HeaderSection from '@/components/sections/HeaderSection';
 import SeparatorSection from '@/components/sections/SeparatorSection';
 import SkillsSection from '@/components/sections/SkillsSection';
+import developerBg from '@/images/code-dim.jpg';
+import codeEasterEgg from '@/images/code-easter-egg.png';
+import colourCardBlueberry from '@/images/colour-card-blueberry.png';
+import colourCardSalmon from '@/images/colour-card-salmon.png';
+import figmaTools from '@/images/figma-tools.png';
+import techLogos from '@/images/tech-logos.png';
+import designerBg from '@/images/wireframe-sketch.jpg';
 import Layout from '@/layouts/Layout.astro';
 import { t } from '@/utils/i18n';
+
+const optimizedDesignerBg = await getImage({ src: designerBg });
+const optimizedDeveloperBg = await getImage({ src: developerBg });
+const optimizedColourCardBlueberry = await getImage({
+  src: colourCardBlueberry,
+});
+const optimizedColourCardSalmon = await getImage({ src: colourCardSalmon });
+const optimizedFigmaTools = await getImage({ src: figmaTools });
+const optimizedTechLogos = await getImage({ src: techLogos });
+const optimizedCodeEasterEgg = await getImage({ src: codeEasterEgg });
 ---
 
 <Layout title={t('about.title')}>
@@ -17,7 +36,16 @@ import { t } from '@/utils/i18n';
     emoji={['🤔', '🧑‍🎨', '💎', '🧠', '🔎']}
   />
   <FullBioSection />
-  <DesignerDeveloperSection client:visible />
+  <DesignerDeveloperSection
+    designerBgSrc={optimizedDesignerBg.src}
+    developerBgSrc={optimizedDeveloperBg.src}
+    colourCardBlueberrySrc={optimizedColourCardBlueberry.src}
+    colourCardSalmonSrc={optimizedColourCardSalmon.src}
+    figmaToolsSrc={optimizedFigmaTools.src}
+    techLogosSrc={optimizedTechLogos.src}
+    codeEasterEggSrc={optimizedCodeEasterEgg.src}
+    client:visible
+  />
   <SkillsSection />
   <SeparatorSection />
   <ContactSection client:visible />

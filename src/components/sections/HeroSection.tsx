@@ -7,7 +7,6 @@ import {
   ArrowUpRightIcon,
   BellRingingIcon,
 } from '@phosphor-icons/react/ssr';
-import { getImage } from 'astro:assets';
 import { motion, useReducedMotion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 
@@ -29,20 +28,21 @@ import {
 } from '@/components/illustrations';
 import WaveLine from '@/components/WaveLine.tsx';
 import { useIntersectionObserverSelector } from '@/hooks';
-import bg from '@/images/hero-bg-still.jpg';
-import profilePicture from '@/images/profile-picture.jpg';
 import { isExternalUrl } from '@/utils';
 import { t } from '@/utils/i18n';
 import { TIMING_FUNCTIONS } from '@/utils/tailwind';
 
-const optimizedBg = await getImage({ src: bg });
-const optimizedProfilePicture = await getImage({ src: profilePicture });
-
 interface HeroSectionProps {
   heroBanner?: HeroBanner;
+  bgSrc: string;
+  profilePictureSrc: string;
 }
 
-export default function HeroSection({ heroBanner }: HeroSectionProps) {
+export default function HeroSection({
+  heroBanner,
+  bgSrc,
+  profilePictureSrc,
+}: HeroSectionProps) {
   // Observe when the hero has been covered by the main container being scrolled to the top of the viewport
   const isCovered = useIntersectionObserverSelector('#main', {
     rootMargin: '0% 0% -100% 0%',
@@ -131,7 +131,7 @@ export default function HeroSection({ heroBanner }: HeroSectionProps) {
           </span>
           <span className="drop-shadow-md">
             <motion.img
-              src={optimizedProfilePicture.src}
+              src={profilePictureSrc}
               alt={t('home.alt.profilePicture')}
               className="size-12 rounded-full md:size-20 lg:size-32"
               aria-hidden
@@ -376,7 +376,7 @@ export default function HeroSection({ heroBanner }: HeroSectionProps) {
       <DotGrid dim="default" />
       <motion.div
         className="absolute left-0 top-0 -z-20 h-full w-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${optimizedBg.src})` }}
+        style={{ backgroundImage: `url(${bgSrc})` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}

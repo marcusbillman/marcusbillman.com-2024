@@ -1,16 +1,16 @@
 import { HouseIcon } from '@phosphor-icons/react/ssr';
-import { getImage } from 'astro:assets';
 import { motion } from 'framer-motion';
 
 import Button from '@/components/Button';
 import DotGrid from '@/components/DotGrid';
 import Sandbox from '@/components/Sandbox';
-import bg from '@/images/hero-bg-still.jpg';
 import { t } from '@/utils/i18n';
 
-const optimizedBg = await getImage({ src: bg });
+interface NotFoundSectionProps {
+  bgSrc: string;
+}
 
-export default function NotFoundSection() {
+export default function NotFoundSection({ bgSrc }: NotFoundSectionProps) {
   return (
     <section className="relative isolate flex min-h-screen flex-col bg-primary lg:block">
       {/* Decoration */}
@@ -20,19 +20,19 @@ export default function NotFoundSection() {
       >
         <motion.span
           className="left-[-10%] top-[10%] bg-cover bg-clip-text bg-left-top text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent lg:left-[20%]"
-          style={{ backgroundImage: `url(${optimizedBg.src})`, rotate: 15 }}
+          style={{ backgroundImage: `url(${bgSrc})`, rotate: 15 }}
         >
           4
         </motion.span>
         <motion.span
           className="left-[25%] top-[45%] bg-cover bg-clip-text bg-bottom text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent lg:left-[35%]"
-          style={{ backgroundImage: `url(${optimizedBg.src})`, rotate: -8 }}
+          style={{ backgroundImage: `url(${bgSrc})`, rotate: -8 }}
         >
           0
         </motion.span>
         <motion.span
           className="left-[70%] top-[20%] bg-cover bg-clip-text bg-right-top text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent"
-          style={{ backgroundImage: `url(${optimizedBg.src})`, rotate: -20 }}
+          style={{ backgroundImage: `url(${bgSrc})`, rotate: -20 }}
         >
           4
         </motion.span>

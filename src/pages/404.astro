@@ -1,9 +1,14 @@
 ---
+import { getImage } from 'astro:assets';
+
 import NotFoundSection from '@/components/sections/NotFoundSection';
+import bg from '@/images/hero-bg-still.jpg';
 import Layout from '@/layouts/Layout.astro';
 import { t } from '@/utils/i18n';
+
+const optimizedBg = await getImage({ src: bg });
 ---
 
 <Layout title={t('404.title')} noHeader>
-  <NotFoundSection client:load />
+  <NotFoundSection bgSrc={optimizedBg.src} client:load />
 </Layout>
