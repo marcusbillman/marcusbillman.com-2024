@@ -117,7 +117,7 @@ export default function Menu({ onClose }: MenuProps) {
               <img
                 src={aboutPortrait.src}
                 alt={t('navigation.alt.aboutPortrait')}
-                className="absolute bottom-[-30%] right-0 h-[80%] min-h-24 max-w-fit lg:bottom-0"
+                className="absolute right-0 h-[150%] max-w-fit object-contain max-lg:top-[-10%] lg:bottom-0 lg:h-[80%]"
               />
             </MenuLink>
             <MenuLink
