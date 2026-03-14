@@ -6,16 +6,18 @@ import {
 
 import DotGrid from '@/components/DotGrid';
 import SocialLinks from '@/components/SocialLinks';
-// This image isn't optimized due to reasons explained in Menu.tsx.
-import toyboxBg from '@/images/footer-toybox-bg.jpg';
 import { t } from '@/utils/i18n';
 
-export default function FooterSection() {
+interface FooterSectionProps {
+  toyboxBgSrc?: string;
+}
+
+export default function FooterSection({ toyboxBgSrc }: FooterSectionProps) {
   return (
     <footer className="relative z-10 -mt-8 bg-black px-4 pb-8 pt-16 text-gray-100 lg:-mt-16 lg:px-16 lg:pb-16 lg:pt-32">
       <div
         className="relative isolate grid h-96 place-items-center overflow-hidden rounded-2xl bg-cover bg-center lg:h-[max(512px,40vw)] lg:rounded-4xl"
-        style={{ backgroundImage: `url(${toyboxBg.src})` }}
+        style={{ backgroundImage: `url(${toyboxBgSrc})` }}
       >
         <a
           className="group block text-center text-3xl text-white/50 lg:cursor-pointer lg:text-4xl 2xl:text-6xl"
@@ -23,7 +25,7 @@ export default function FooterSection() {
         >
           <span className="block translate-x-[-10%] transition-colors lg:group-hover:text-white/20">
             {t('footer.slogan.word1') + ' '}
-            <span className="font-serif italic text-white lg:group-hover:text-inherit">
+            <span className="lg:group-hover:text-inherit font-serif italic text-white">
               {t('footer.slogan.word2') + ' '}
               <LinkIcon size={32} className="inline 2xl:hidden" />
               <LinkIcon size={64} className="hidden 2xl:inline" />{' '}
@@ -31,7 +33,7 @@ export default function FooterSection() {
           </span>
           <span className="block translate-x-[25%] transition-colors lg:group-hover:text-white/20">
             {t('footer.slogan.word3') + ' '}
-            <span className="font-serif italic text-white lg:group-hover:text-inherit">
+            <span className="lg:group-hover:text-inherit font-serif italic text-white">
               {t('footer.slogan.word4') + ' '}
               <ShapesIcon size={32} className="inline 2xl:hidden" />
               <ShapesIcon size={64} className="hidden 2xl:inline" />{' '}

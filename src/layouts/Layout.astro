@@ -1,7 +1,10 @@
 ---
+import { getImage } from 'astro:assets';
+
 import Navigation from '@/components/Navigation';
 import FooterSection from '@/components/sections/FooterSection';
 import ToasterWrapper from '@/components/ToasterWrapper';
+import toyboxBg from '@/images/footer-toybox-bg.jpg';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { t } from '@/utils/i18n';
 
@@ -11,12 +14,14 @@ interface Props {
 }
 
 const { title, noHeader = false } = Astro.props;
+
+const optimizedToyboxBg = await getImage({ src: toyboxBg });
 ---
 
 <BaseLayout title={title}>
   <a
     href="#main"
-    class="absolute left-8 top-4 z-60 w-44 origin-center rounded-full bg-primary p-4 text-center font-medium text-on-primary opacity-0 transition-all focus:opacity-100 motion-safe:scale-0 motion-safe:focus:scale-100"
+    class="z-60 absolute left-8 top-4 w-44 origin-center rounded-full bg-primary p-4 text-center font-medium text-on-primary opacity-0 transition-all focus:opacity-100 motion-safe:scale-0 motion-safe:focus:scale-100"
   >
     {t('navigation.skipToContent')}
   </a>
@@ -35,6 +40,6 @@ const { title, noHeader = false } = Astro.props;
       <slot />
     </main>
   </div>
-  <FooterSection />
+  <FooterSection toyboxBgSrc={optimizedToyboxBg.src} client:visible />
   <ToasterWrapper client:idle />
 </BaseLayout>
