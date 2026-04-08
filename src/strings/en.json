@@ -21,8 +21,8 @@
       "githubDescription": "Code",
       "dribbble": "Dribbble",
       "dribbbleDescription": "Design",
-      "soundcloud": "SoundCloud",
-      "soundcloudDescription": "Music",
+      "music": "xfoxx",
+      "musicDescription": "Music",
       "emailAddress": "hello@marcusbillman.com",
       "emailDescription": "Email"
     }
@@ -101,8 +101,8 @@
       "sideProjectsDescription": "Web apps and experiments",
       "dribbble": "Dribbble",
       "dribbbleDescription": "Design explorations",
-      "soundcloud": "SoundCloud",
-      "soundcloudDescription": "Music",
+      "music": "xfoxx",
+      "musicDescription": "Music",
       "github": "GitHub",
       "githubDescription": "Code",
       "linkedin": "LinkedIn",

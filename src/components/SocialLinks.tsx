@@ -44,9 +44,9 @@ export default function SocialLinks({
         compactOnMobile={compactOnMobile}
       />
       <SocialLink
-        primaryText={t('common.socials.soundcloud')}
-        secondaryText={t('common.socials.soundcloudDescription')}
-        url="https://m-b.me/soundcloud"
+        primaryText={t('common.socials.music')}
+        secondaryText={t('common.socials.musicDescription')}
+        url="https://xfoxx.com"
         forceDark={forceDark}
         compactOnMobile={compactOnMobile}
       />
@@ -93,9 +93,9 @@ export default function SocialLinks({
 }
 
 interface SocialLinkProps {
-  /** Main link text, e.g. 'SoundCloud' */
+  /** Main link text, e.g. 'GitHub' */
   primaryText: string;
-  /** Descriptive label text, e.g. 'Music' */
+  /** Descriptive label text, e.g. 'Code' */
   secondaryText: string;
   url: string;
   forceDark: boolean;

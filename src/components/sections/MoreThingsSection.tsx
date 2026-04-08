@@ -6,19 +6,20 @@ import {
   ArrowRightIcon,
   ArrowUpRightIcon,
   FlaskIcon,
+  MusicNotesIcon,
 } from '@phosphor-icons/react/ssr';
 import { getImage } from 'astro:assets';
 import { twMerge } from 'tailwind-merge';
 
 import DotGrid from '@/components/DotGrid';
-import { Dribbble, GitHub, LinkedIn, SoundCloud } from '@/components/icons';
+import { Dribbble, GitHub, LinkedIn } from '@/components/icons';
 import {
   ButtonClickIllustration,
   CodeBlockIllustration,
   PhoneIllustration,
 } from '@/components/illustrations';
 import designBg from '@/images/designer-desk.jpg';
-import musicBg from '@/images/music-flatlay.jpg';
+import musicBg from '@/images/music-daw.jpg';
 import sideProjectsScreen2 from '@/images/screenshot-cooldownload.jpg';
 import sideProjectsScreen1 from '@/images/screenshot-soundboard.jpg';
 import { isExternalUrl } from '@/utils';
@@ -45,25 +46,25 @@ export default function MoreThingsSection() {
           description={t('home.moreThings.sideProjectsDescription')}
           icon={FlaskIcon}
           href="portfolio?type=SIDE_PROJECT"
-          className="h-[50vh] bg-linear-to-b from-[#bfcaf1] to-[#889ef1] text-black md:col-span-3 md:row-span-2 md:h-auto xl:col-span-4"
+          className="bg-linear-to-b h-[50vh] from-[#bfcaf1] to-[#889ef1] text-black md:col-span-3 md:row-span-2 md:h-auto xl:col-span-4"
         >
           <img
             src={optimizedSideProjectsScreen1.src}
             alt={t('home.alt.sideProjectsScreen1')}
             loading="lazy"
-            className="absolute left-[20%] top-[0%] h-48 rotate-30 rounded-2xl shadow-xl"
+            className="rotate-30 absolute left-[20%] top-[0%] h-48 rounded-2xl shadow-xl"
             aria-hidden
           />
           <img
             src={optimizedSideProjectsScreen2.src}
             alt={t('home.alt.sideProjectsScreen2')}
             loading="lazy"
-            className="absolute bottom-[0%] left-[35%] h-48 rotate-30 rounded-2xl shadow-xl"
+            className="rotate-30 absolute bottom-[0%] left-[35%] h-48 rounded-2xl shadow-xl"
             aria-hidden
           />
-          <ButtonClickIllustration className="absolute left-[90%] top-[0%] rotate-30 drop-shadow-xl" />
-          <PhoneIllustration className="absolute left-[80%] top-[15%] rotate-30 drop-shadow-xl" />
-          <CodeBlockIllustration className="absolute left-[90%] top-[60%] rotate-30 drop-shadow-xl" />
+          <ButtonClickIllustration className="rotate-30 absolute left-[90%] top-[0%] drop-shadow-xl" />
+          <PhoneIllustration className="rotate-30 absolute left-[80%] top-[15%] drop-shadow-xl" />
+          <CodeBlockIllustration className="rotate-30 absolute left-[90%] top-[60%] drop-shadow-xl" />
           <DotGrid />
         </BentoCard>
         <BentoCard
@@ -77,16 +78,14 @@ export default function MoreThingsSection() {
           <DotGrid dim="strong" />
         </BentoCard>
         <BentoCard
-          title={t('home.moreThings.soundcloud')}
-          description={t('home.moreThings.soundcloudDescription')}
-          icon={SoundCloud}
-          href="https://m-b.me/soundcloud"
+          title={t('home.moreThings.music')}
+          description={t('home.moreThings.musicDescription')}
+          icon={MusicNotesIcon}
+          href="https://xfoxx.com"
           className="h-[50vh] bg-cover bg-center text-gray-100 md:col-span-3 md:row-span-2 md:h-auto"
           style={{ backgroundImage: `url(${optimizedMusicBg.src})` }}
         >
-          <div className="absolute inset-0 isolate bg-linear-to-b from-[#FF5722CC] to-[#FF5722]">
-            <DotGrid />
-          </div>
+          <DotGrid forceDark />
         </BentoCard>
         <BentoCard
           title={t('home.moreThings.github')}
@@ -144,7 +143,7 @@ function BentoCard({
       >
         <div className="flex w-fit origin-top-left items-center gap-2 rounded-2xl bg-default p-4 transition-all duration-500 ease-smooth motion-safe:group-hover:scale-95">
           {LeftIconComponent && <LeftIconComponent className="text-primary" />}
-          <h3 className="text-default">{title}</h3>
+          <h3 className="translate-y-[-0.05em] text-default">{title}</h3>
           <RightIconComponent className="text-subtle" />
         </div>
         <div className="-z-10">{children}</div>
