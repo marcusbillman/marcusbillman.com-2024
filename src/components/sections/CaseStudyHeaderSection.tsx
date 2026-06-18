@@ -13,8 +13,8 @@ interface Props {
 
 export default function CaseStudyHeaderSection({ caseStudy }: Props) {
   return (
-    <header className="sticky top-0 flex flex-col overflow-hidden px-4 py-32 lg:min-h-[75vh] lg:px-16 lg:py-64">
-      <div className="mx-auto w-full max-w-7xl space-y-6 lg:space-y-12">
+    <header className="sticky top-0 flex flex-col overflow-hidden px-4 py-32 lg:px-16 lg:py-64">
+      <div className="mx-auto mb-8 w-full max-w-7xl space-y-6 lg:mb-16 lg:space-y-12">
         <div className="flex items-center gap-4">
           <Button
             text={t('caseStudy.back')}
