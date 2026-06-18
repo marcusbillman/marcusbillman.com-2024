@@ -1,0 +1,278 @@
+---
+slug: exam-experience
+name: Den nya tentaupplevelsen
+headline: Lugnare, tydligare och mer inkluderande tentor
+date: '2025'
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: 'Till vänster: mobiltelefon som visar ett boardingkort med markerad plats i skrivsalen. Till höger: student som skriver en tenta.'
+locale: sv
+featured: true
+orderRank: 15
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import appMarketingImage from './images/app-marketing.jpg';
+import appMockupImage from './images/app-mockup.jpg';
+import appScreensImage from './images/app-screens.png';
+import appWireframeImage from './images/app-wireframe.jpg';
+import auroraDesksImage from './images/aurora-desks.jpg';
+import auroraOutsideImage from './images/aurora-outside.jpg';
+import examProcessConfusingImage from './images/exam-process-confusing.png';
+import examProcessDiagramImage from './images/exam-process-diagram.png';
+import ideationImage from './images/ideation.jpg';
+import interviewDrawingsImage from './images/interview-drawings.png';
+import moodboardImage from './images/moodboard.jpg';
+import proctorCheckinImage from './images/proctor-checkin.jpg';
+import proctorWireframeImage from './images/proctor-wireframe.jpg';
+import signageMockupImage from './images/signage-mockup.jpg';
+import signageTestImage from './images/signage-test.jpg';
+import whiteboardResearchImage from './images/whiteboard-research.png';
+
+<MetadataBlock
+  date={frontmatter.date}
+  fields={[
+    {
+      key: 'Intressenter',
+      values: [
+        'Tentamensservice vid Umeå universitet',
+        'Designhögskolan vid Umeå universitet',
+      ],
+    },
+    {
+      key: 'Färdigheter',
+      values: [
+        'UX-research',
+        'Intervjuteknik',
+        'UI-design',
+        'Fysisk interaktionsdesign',
+        'Designsystem',
+        'Talande inför publik',
+      ],
+    },
+  ]}
+/>
+
+Våren 2025 invigde Umeå universitet sitt nya tentamenshus Aurora. Byggnaden är utrustad med fokus på digitala tentor och lokalerna är fräschare, mer flexibla och mer tillgänglighetsanpassade än tidigare. I samband med detta skifte ville man även undersöka hur man kan utveckla de digitala systemen kring tentor för att bättre möta studenters behov.
+
+Under en kurs vid Designhögskolan deltog jag i ett projekt för att utforska detta tillsammans med tre kurskamrater på civilingenjörsprogrammet i interaktion och design ([Albin Everdin](https://www.linkedin.com/in/albin-everdin/), [Lovisa Landberg](https://www.linkedin.com/in/lovisa-landberg-7207512b4/) och [Nils Sjölund](https://www.linkedin.com/in/nilssjolund/)). Projektet genomfördes i samarbete med Tentamensservice, avdelningen som ansvarar för tentor.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'video',
+      src: 'https://cloud.marcusbillman.com/public.php/dav/files/cz6tbSKxttQA4go/',
+      caption: 'Showcase-video för vårt färdiga koncept.',
+      fullPlayer: true,
+    },
+  ]}
+/>
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: auroraOutsideImage,
+      alt: 'Utsidan av Aurora på sommaren.',
+    },
+    {
+      type: 'image',
+      astroImage: auroraDesksImage,
+      alt: 'Inuti en skrivsal i Aurora.',
+    },
+  ]}
+/>
+
+Tentor är för många studenter förenade med stress och oro, dels över själva prestationen, men också kring det logistiska – särskilt för studenter som behöver stöd på grund av exempelvis funktionsvariationer.
+
+_Hur kan vi skapa en sömlös och integrerad tentaupplevelse för alla studenter?_ Vår lösning skulle ta bort friktionspunkter och skarvar i tentaprocessen, integrera tjänster och rutiner under ett tak och fungera för studenter med varierande erfarenhet och stödbehov.
+
+# Tentor kan kännas invecklade...
+
+Gruppen hade redan gott om personlig erfarenhet av tentor och frustrationen därtill. Ett väsentligt problem är att hålla reda på alla tjänster och rutiner som hör till tentan:
+
+- Läraren informerar via lärplattformen Canvas.
+- Anmälan sker i det nationella systemet Ladok.
+- Resultatet syns på examinationsplattformen Inspera.
+- Studenter som vill utnyttja stöd måste mejla rätt person vid rätt tillfälle före varje tenta.
+
+Tentamensservice fyllde i några luckor genom att förklara tentaprocessen från deras perspektiv – från att läraren bokar tentan, till att värdar kallas in, till själva skrivtillfället. Vi fick även veta vad som händer när en student ansöker om stöd och sedan utnyttjar beviljat stöd. Detta kompletterade vi genom att fråga kurskamrater som brukar använda stöd. Vi samlade vår bild av hela tentaprocessen i ett flödesschema att utgå från.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: examProcessConfusingImage,
+      alt: 'Överlappande skärmdumpar av olika webbsidor och appar, med pilar kors och tvärs.',
+      caption: 'Något dramatiserad version av tentaprocessen.',
+    },
+    {
+      type: 'image',
+      astroImage: examProcessDiagramImage,
+      alt: 'Upptill: lappar med delar av processen utlagda på papper. Nedtill: flödesschema över processen',
+      caption: 'Flödesschema över tentaprocessen.',
+    },
+  ]}
+/>
+
+# ...även på andra lärosäten
+
+Tentor kan däremot gå annorlunda till på andra ställen i landet. Vi intervjuade därför 7 studenter fördelade över olika svenska lärosäten. Under 30-minuters semistrukturerade intervjuer bad vi dem berätta om sin tentaprocess från start till slut medan de ritade på en digital whiteboard.
+
+Gruppen tog sedan fram de viktigaste temana. Vi börjar med det negativa.
+
+- **Opersonlig upplevelse:** Många lärosäten använder anonyma koder i stället för namn på tentor. Denna typ av system kändes enligt vissa som om man "bara är en siffra i systemet".
+- **Fritextproblemet:** På grund av tekniska begränsningar lägger lärare viktig information i kommentarsfält och "övrigt", vilket gör att systemen inte kan lyfta fram den för studenterna. Det kan handla om skrivplats eller tillåtna hjälpmedel.
+- **Utspridd information:** Information är utspridd mellan olika tjänster, vilket upplevs rörigt och krångligt.
+
+Mycket av detta matchade våra erfarenheter, men det fanns också positiva saker att ta med oss.
+
+- **LiU-appen:** Studenter vid Linköpings universitet behöver inte titta i andra system även om de används i bakgrunden. Ett exempel på ett uppskattat, integrerat system.
+- **Effektivt insläpp:** Vi såg exempel på hur insläppet till tentasalen kunde effektiviseras – till exempel när och hur ID-kontroller utförs. Bättre flöde ger en mer avspänd känsla.
+- **Påminnelser:** Alla intervjupersoner uppskattade påminnelser och bekräftelser, både före och efter tentor.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: interviewDrawingsImage,
+      alt: 'Slappt ritade bilder, gjorda av våra intervjupersoner medan de berättade.',
+      caption:
+        'Ritandet gjorde det lättare att komma på saker och gjorde intervjuerna roligare.',
+    },
+  ]}
+/>
+
+# Idégenerering och testning
+
+Vår önskade tentaprocess skulle kräva både förtroende, transparens och mänsklighet. Därför hämtade vi inspiration från många sorters tjänster: kollektivtrafik, evenemangsbokning, logistik, ekonomi, informationstavlor med mera. Vi utgick även från UMU:s grafiska profil, språkliga ton och värdegrund.
+
+För att generera idéer på lösningar till frågeställningen använde vi oss av brainwriting. Vi skrev ner så många idéer som möjligt på lappar som vi sedan skickade runt för att låta de andra bygga vidare. I slutet kategoriserade vi idéerna genom affinity diagramming, diskuterade deras rimlighet och effektivitet och valde ut de bästa spåren med dot voting.
+
+Många idéer sållades bort, bland annat pekskärmar på varje skrivplats (för kostsamt) och självbetjäningsstationer för incheckning (skapar flaskhals och extra steg för studenterna).
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: moodboardImage,
+      alt: 'Skärmdumpar av existerande produkter inom utbildning, kollektivtrafik, evenemang, ekonomi och mer.',
+      caption: 'Moodboard med inspiration från relevanta produkter.',
+    },
+    {
+      type: 'image',
+      astroImage: whiteboardResearchImage,
+      alt: 'Välfylld whiteboard med anteckningar, skisser och bilder.',
+      caption: 'Insikter om konkurrenter, statistik, UMU:s varumärke och mer.',
+    },
+    {
+      type: 'image',
+      astroImage: ideationImage,
+      alt: 'Gruppmedlemmar som lutar sig över ett bord täckt av färgade lappar och papper.',
+      caption: 'Brainstorming och affinity diagramming.',
+    },
+  ]}
+/>
+
+Vi landade i att vårt koncept skulle innefatta tre huvudsakliga touchpoints:
+
+- En integrerad app för studenter
+- Digitala informationstavlor på skärmar i byggnaden
+- Ett gränssnitt för tentavärdar där de kan checka in/ut och assistera studenter under tentan
+
+För appen ritade vi pappersprototyper som vi lät 5 kurskamrater testa genom think-aloud. Efter revideringar utvecklades dessa stegvis till en interaktiv hi-fi-prototyp.
+
+- Det uppskattades att kontextuell information lyftes fram högst upp på startskärmen. Notiser och statusmarkörer kan lätt missas – en tanke som vi behöll i slutprodukten.
+- Den visuella representationen av tentaprocessen förenklade tolkningen. Vi behöll ikoner och tidslinjer, inspirerade av paketspårningsappar.
+- Vissa kände sig osäkra kring utnyttjande av stöd eftersom det inte framgick att appen skulle fråga om det. Vi förtydligade detta genom att nämna den informationen tidigare.
+
+Vi tog även fram två koncept för informationstavlor och utvärderade dessa genom att be kurskamrater använda dem för att hitta till en påhittad tenta medan vi tog tid. Testpersonerna föredrog en isometrisk 3D-kartvy och avgjorde vilken layout av schematabellen vi skulle behålla.
+
+Värdvyn fick också pappersprototyper, men eftersom projektets fokus var på studenternas upplevelse testade vi inte dessa.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: proctorWireframeImage,
+      alt: 'Tre pappersprototyper av värdvyn. En visar en pågående incheckning. En visar en karta över skrivsalarna och vilka studenter som behöver hjälp.',
+      caption: 'Pappersprototyper av värdvyn.',
+    },
+    {
+      type: 'image',
+      astroImage: signageTestImage,
+      alt: 'En student tittar på en TV-skärm som visar en mockup av två informationstavlor i bredd. Projektgruppen tittar på.',
+      caption: 'Användartest av informationstavlor.',
+    },
+    {
+      type: 'image',
+      astroImage: appWireframeImage,
+      alt: 'Ett rutnät av wireframes ritade av olika gruppmedlemmar.',
+      caption: 'Två olika pappersprototyper av appen.',
+    },
+  ]}
+/>
+
+# Resultatet
+
+_Den nya tentaupplevelsen_ består av tre delar:
+
+- **UMU-appen** samlar tentor, scheman, resultat och mer på ett smidigt ställe för studenterna.
+- **Informationstavlor** i byggnaden hjälper studenterna att hitta rätt.
+- **Värdvyn** effektiviserar in-/utcheckning och ID-kontroll för tentavärdar.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: appMockupImage,
+      alt: 'Mobiltelefon med UMU-appen.',
+      caption: 'UMU-appen',
+    },
+    {
+      type: 'image',
+      astroImage: signageMockupImage,
+      alt: 'Två stora skärmar på en vägg. Den vänstra visar ett schema för dagens tentor. Den högra visar en 3D-karta över byggnadens skrivsalar.',
+      caption: 'Informationstavlor',
+    },
+    {
+      type: 'image',
+      astroImage: proctorCheckinImage,
+      alt: 'En tentavärd skannar en students legitimation med sin mobiltelefon.',
+      caption: 'Värdvyn',
+    },
+  ]}
+/>
+
+**UMU-appen** följer studenten genom hela processen. På startsidan visas aktuella tentor – öppna för anmälan, kommande och återlämnade. Vid anmälan syns relevant information om tentan, såsom tillåtna hjälpmedel och sista anmälningsdag. Studenter med beviljat stöd kan direkt välja vilka de vill utnyttja, utan mejl som kan komma bort.
+
+När tentadagen närmar sig dyker det upp ett boardingkort med salsplacering och tider. I appen finns även ett hjälpavsnitt med guider. Nya studenter hittar till exempel en genomgång av hur en hel tenta går till, med illustrationer och lättläst text.
+
+**Informationstavlorna** tar vid när studenten kliver in i Aurora. Där visas dagens tentor sorterade per våning, en karta över salar och trappor, samt eventuell driftinformation. Studenten checkar in i salen genom att visa legitimation för tentavärden som snabbt skannar den med **värdvyn.**
+
+Efter skrivtillfället kan studenten följa tentans status i appen och när tentan är rättad skickas en notis. Resultatet visas direkt i appen tillsammans med information om eventuella stöd och datum.
+
+Under huven drivs appen av externa tjänster såsom Ladok och Inspera, men dessa kan även nås direkt genom menyn. Detta projekt har fokuserat på tentor, men appen är utformad för att kunna utvecklas med mer funktionalitet för att matcha Umeå universitets studentwebb.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: appMarketingImage,
+      alt: 'Marknadsföringsbild som visar mobiltelefoner med UMU-appen och en illustration av olika tjänsters logotyper som samlas i appens ikon.',
+      caption: 'UMU-appen är alla studenters app för hela sin utbildning.',
+    },
+    {
+      type: 'image',
+      astroImage: appScreensImage,
+      alt: 'Rutnät av skärmdumpar från UMU-appen.',
+      caption: 'Några av skärmarna från UMU-appen.',
+    },
+  ]}
+/>
+
+_En sömlös och integrerad tentaupplevelse för alla studenter._ Appen, informationstavlorna och den smidiga incheckningen skapar en mjuk övergång mellan tentaprocessens faser. Studenter behöver inte längre hoppa mellan system för att hantera sin tenta. Det är lättare att använda stöd, det finns guider för nya studenter och känslan är mer personlig och konsis.
+
+Projektet lärde mig mycket om designprocessen, hur man skiljer på divergent och konvergent tänkande, tillämpar intervjumetoder för att förstå användare och kommunicerar designidéer. Jag vill tacka de otroliga lärarna på Designhögskolan och min fantastiska grupp. Vi har haft kul, tänkt i takt och bidragit med olika perspektiv för ett riktigt bra resultat!
