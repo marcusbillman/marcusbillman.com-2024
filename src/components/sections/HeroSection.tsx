@@ -86,8 +86,8 @@ export default function HeroSection({
   return (
     <header className="sticky top-0 min-h-screen overflow-hidden px-4 pt-32 lg:px-16">
       {/* Content */}
-      <div className="z-10 max-w-7xl">
-        <h1 className="flex flex-wrap justify-center gap-x-[0.33ch] text-5xl md:text-7xl lg:justify-start lg:text-left lg:text-9xl">
+      <div className="z-10">
+        <h1 className="mx-auto mt-[8vh] flex max-w-7xl flex-wrap justify-center gap-x-[0.33ch] text-5xl md:text-7xl lg:text-9xl">
           <motion.span {...cropSlideWithDelay(0)}>
             {t('home.hero.word1')}
           </motion.span>
