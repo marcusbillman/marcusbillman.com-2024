@@ -40,12 +40,14 @@ export default function Navbar({ isMenuOpen, onClickMenuButton }: NavbarProps) {
       <a
         href="/"
         className={twJoin(
-          'pointer-events-auto flex items-center gap-1 rounded-full bg-default px-4 font-medium transition-all hover:bg-primary hover:text-on-primary active:opacity-50 motion-safe:active:scale-75 lg:px-6 dark:border dark:border-default',
+          'pointer-events-auto flex items-center rounded-full bg-default px-4 font-medium transition-all hover:bg-primary hover:text-on-primary active:opacity-50 motion-safe:active:scale-75 lg:px-6 dark:border dark:border-default',
           !isMenuOpen && 'shadow-lg',
         )}
       >
-        <span>{t('common.firstName')}</span>
-        <span className="font-serif italic">{t('common.lastName')}</span>
+        <span className="flex items-baseline gap-1">
+          <span>{t('common.firstName')}</span>
+          <span className="font-serif italic">{t('common.lastName')}</span>
+        </span>
       </a>
       <motion.div
         // Animation for hiding or showing navbar links as the menu is opened or closed
