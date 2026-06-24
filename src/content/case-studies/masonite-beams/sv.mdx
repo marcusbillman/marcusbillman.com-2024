@@ -1,0 +1,282 @@
+---
+slug: masonite-beams
+name: Masonite Beams teknikhandbok
+headline: Ett lättare val för konstruktörer, entreprenörer och arkitekter
+date: '2026'
+cover:
+  type: image
+  astroImage: './images/cover.png'
+  alt: ''
+locale: sv
+featured: true
+orderRank: 13
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import competitorAnalysisImage from './images/competitor-analysis.png';
+import currentMockupsImage from './images/current-mockups.png';
+import featureContextImage from './images/feature-context.png';
+import featureExploreImage from './images/feature-explore.png';
+import featureFilterImage from './images/feature-filter.png';
+import featureSelectImage from './images/feature-select.png';
+import featureSolutionImage from './images/feature-solution.png';
+import featureSpecsImage from './images/feature-specs.png';
+import hifiPrototypeImage from './images/hifi-prototype.png';
+import lofiPrototypeImage from './images/lofi-prototype.png';
+import masoniteBeamsImage from './images/masonite-beams.jpg';
+import navbarBeforeAfterImage from './images/navbar-before-after.png';
+import presentationGroupImage from './images/presentation-group.jpg';
+import presentationMeImage from './images/presentation-me.jpg';
+import sitemapAfterImage from './images/sitemap-after.png';
+import sitemapBeforeImage from './images/sitemap-before.png';
+import timelineImage from './images/timeline.png';
+import whiteboardImage from './images/whiteboard.png';
+import wireframesImage from './images/wireframes.jpg';
+
+<MetadataBlock
+  date={frontmatter.date}
+  fields={[
+    {
+      key: 'Intressenter',
+      values: ['Masonite Beams'],
+    },
+    {
+      key: 'Färdigheter',
+      values: [
+        'UX-research',
+        'Intervjuteknik',
+        'UI-design',
+        'Designsystem',
+        'Talande inför publik',
+      ],
+    },
+  ]}
+/>
+
+Våren 2026 doppade jag tårna i byggbranschen med ett UX-projekt i samarbete med Masonite Beams. Jag och min grupp omarbetade företagets webbaserade teknikhandbok för att hjälpa kunder att förstå och välja Masonite Beams lösningar. Projektet var del av en universitetskurs och i gruppen fanns fyra andra studenter på civilingenjörsprogrammet i interaktion och design ([Sebastian Gabrielsson](https://www.linkedin.com/in/sebastian-gabrielsson-352827384/), [Lovisa Nordström](https://www.linkedin.com/in/lovisa-nordstr%C3%B6m-607b92291/), [Thilde Persson](https://www.linkedin.com/in/thilde-persson-1383b9292/) och [Maja Sjöblom](https://www.linkedin.com/in/maja-sj%C3%B6blom-4248282aa/)).
+
+# Uppdraget
+
+Masonite Beams tillverkar träbaserade lättbalkar för användning i många typer av byggnader. De uppskattas bland annat för sin låga vikt, höga prestanda och låga klimatpåverkan. På sin webbplats erbjuder Masonite Beams en teknikhandbok med ett filtreringsverktyg där kunder kan hitta lösningar, specifikationer och tillhörande dokument. Kunder har däremot uttryckt att teknikhandboken är i behov av förbättringar vad gäller användbarhet och UX.
+
+Vårt uppdrag var att utvärdera huruvida den nuvarande teknikhandboken möter kundernas behov och erbjuder rätt teknisk djupnivå för olika yrkesroller. Vi skulle bedöma om navigeringen och sökfunktionen är intuitiv samt om lösningar presenteras på ett önskvärt sätt. Utifrån våra fynd tog vi fram ett koncept på en förbättrad teknikhandbok.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: masoniteBeamsImage,
+      alt: 'Temabilder som visar Masonite Beams logotyp, tvärsnitt av balkar och arbetande byggnadsentreprenörer.',
+      caption:
+        'Masonite Beams är Sveriges största tillverkare av träbaserad lättbalk.',
+    },
+    {
+      type: 'image',
+      astroImage: currentMockupsImage,
+      alt: 'Skärmdumpar av den nuvarande teknikhandbokens filtreringsverktyg.',
+      caption: 'I teknikhandboken kan kunder slå upp konstruktionslösningar.',
+    },
+    {
+      type: 'image',
+      astroImage: timelineImage,
+      alt: 'Tidslinje med fem faser: Discover i februari; Define och Develop i april; Deliver och Document i maj.',
+      caption:
+        'Projektet pågick i fyra månader och utgick från modellen Double Diamond.',
+    },
+  ]}
+/>
+
+# Vad tycker kunderna?
+
+Vi intervjuade 4 konstruktörer, 2 byggentreprenörer och 1 arkitekt. Alla rekryterades från Masonite Beams nätverk av kunder och partners. Under 30-minuters semistrukturerade intervjuer med mig och en av mina gruppmedlemmar fick vi svar på frågor om personernas yrkesroll, arbetsflöde och relation till Masonite Beams. Personerna testade även den nuvarande teknikhandboken under observation så att vi kunde hitta friktionspunkter och problem.
+
+Efter transkribering och tematisk analys kunde vi identifiera fyra huvudteman:
+
+- **Utspridd information:** Informationen kunderna letade efter var utspridd mellan teknikhandboken, ordinarie webbplats och fysiska handböcker. Kunder kände sig osäkra kring tanken bakom separationen och ville hellre ha informationen samlad.
+- **Inkonsekventa och inkompletta lösningar:** Lösningar hade olika stil på bilder, beskrivningar och innehåll. Efter filtrering visades inte heller alla lösningar kunderna förväntade sig hitta.
+- **Bristande vägledning:** Relationerna mellan byggkoncept, lösningar och byggdetaljer kunde upplevas otydlig. Frågor kvarstod – _"Hur kopplar jag det här bjälklaget till resten av byggnaden?"_
+- **Varierande arbetssätt och preferenser:** Kunderna föredrog olika sätt att inhämta information om lösningar och dela den med kollegor. Vi behöver alltså erbjuda flexibilitet.
+
+# Hur gör konkurrenterna?
+
+Vi granskade hur 13 andra företag inom byggbranschen presenterar sortiment och lösningar på sina webbplatser. Detta för att få en egen uppfattning av hur liknande verktyg kan fungera och förväntas fungera – många av företagen nämndes upprepade gånger under intervjuerna, så kunder är redan bekanta med deras tankesätt.
+
+Dessa är några av insikterna vi tog med oss:
+
+- **Tydliga bilder med informativa texter:** Flera konkurrenter visade illustrationer som tydliggjorde vilka komponenter som levererades av företaget respektive andra aktörer. Det fanns även möjligheten att klicka på delar i en lösning för att få en mer detaljerad beskrivning.
+- **Navigering genom 3D-modell:** Vissa konkurrenter presenterade innehåll i en klickbar 3D-modell av en byggnad i stället för traditionella listor. Detta kommunicerade på ett sätt som kändes intuitivt och konkret för en oerfaren användare.
+- **Delning och nedladdning av lösningar:** Hos vissa konkurrenter kunde man markera flera lösningar/produkter för att hämta länkar och filer för alla på en gång.
+- **Stegvis fördjupande vägledning:** Vissa konkurrenter visade först en översikt av innehållet (exempelvis olika kategorier) och ledde användaren till att navigera djupare.
+
+Flera av dessa idéer hade potential för att lösa problemen i Masonite Beams teknikhandbok.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: competitorAnalysisImage,
+      alt: 'De fyra ovan nämnda insikterna med skärmdumpar av konkurrenters webbplatser till vardera punkt.',
+    },
+  ]}
+/>
+
+# Idégenerering
+
+Gruppen gick tillsammans igenom insikterna från intervjuerna och konkurrentanalysen, diskuterade och brainstormade lösningsidéer till varje punkt. Utifrån det ritade varje gruppmedlem individuella skisser av hela sidor och specifika funktioner. Vi presenterade skisserna för varandra och valde tillsammans ut några koncept att utveckla och kombinera till en lo-fi-prototyp, som efter genomarbetning blev en interaktiv hi-fi-prototyp.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: whiteboardImage,
+      alt: 'Digital whiteboard med lappar indelade i teman, diagram över navigationen och skärmdumpar från konkurrenter.',
+      caption:
+        'På whiteboarden samlade vi insikter från intervjuer och konkurrentanalys.',
+    },
+    {
+      type: 'image',
+      astroImage: wireframesImage,
+      alt: 'Flertalet pappersskisser utlagda i ett rutnät.',
+      caption: 'Vi skissade för att testa olika funktioner och layouter.',
+    },
+    {
+      type: 'image',
+      astroImage: lofiPrototypeImage,
+      alt: 'Skärmdump från Figma där man ser odetaljerade skärmar i gråskala.',
+      caption: 'Lo-fi-prototypen visar enbart struktur och layout.',
+    },
+    {
+      type: 'image',
+      astroImage: hifiPrototypeImage,
+      alt: 'Skärmdump från Figma där man ser en verklighetstrogen prototyp med ett virrvarr av anslutningar.',
+      caption: 'Hi-fi-prototypen är interaktiv med verkligt innehåll.',
+    },
+  ]}
+/>
+
+# Resultatet
+
+Den nya teknikhandboken är snyggare, lättare att navigera i och lyfter fram den viktigaste informationen. Stort fokus har lagts på att presentera information visuellt, med ritningar och modeller i centrum.
+
+## Förenklad navigation
+
+Det största problemet vi upptäckte under intervjuerna var att kunderna hade svårt att hitta till teknikhandboken. Den var separerad från den ordinarie webbplatsen och det var inte uppenbart när man länkades mellan de två. Vi reviderade hela webbplatsens sidstruktur för att slå ihop allt till en webbplats och i processen förenklade vi även navigationsfältet.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: sitemapBeforeImage,
+      alt: 'Sajtkarta före ändringar. Två olika träd med förvirrande kopplingar sinsemellan.',
+    },
+    {
+      type: 'image',
+      astroImage: sitemapAfterImage,
+      alt: 'Sajtkarta efter ändringar. Endast ett träd med enklare struktur.',
+    },
+    {
+      type: 'image',
+      astroImage: navbarBeforeAfterImage,
+      alt: 'Navigationsfältet före och efter ändringar.',
+      caption:
+        'Det nya navigationsfältet har färre länkar, är mer enhetligt och ryms bättre på skärmen.',
+    },
+  ]}
+/>
+
+## Flexibel filtrering
+
+Den nuvarande filtreringssidan har en uppsättning filter för alla lösningar och byggdetaljer, trots att vissa filter inte påverkar vissa objekt. Under intervjuerna såg vi många fall där kunder ändrade filtreringen och sedan blev fundersamma när inget verkade hända. Problemet förvärrades av att byggdetaljer doldes under alla lösningar.
+
+För att lösa detta flyttade vi byggdetaljer till en separat sida med egna filter. Filtreringssidan för lösningar fick även undersidor för bjälklag, innervägg och så vidare. Dessa förseddes med särskilda, efterfrågade filter – till exempel fick bjälklag ett filter för spännvidd.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureFilterImage,
+      alt: 'Skärmdumpar av den nya filtreringssidan. Bredvid står det "Filter framhävs" och "Filter per konstruktionstyp".',
+    },
+  ]}
+/>
+
+## Strukturerad lösningssida
+
+Innehållet på lösningssidan strukturerades om i utfällbara avsnitt så att kunden kan välja vad hen vill fokusera på i stunden. Avsnittet _Uppbyggnad_ förfinades med en tydligare komponentlista och i ritningen lade vi till möjligheten att växla mellan en traditionell svartvit och en mer nybörjarvänlig färgsatt variant.
+
+I specifikationstabellerna lade vi till saknade parametrar och en ny spännviddstabell hämtad ur Masonite Beams fysiska handböcker. Vi lade även till ett nytt avsnitt som visar relevanta byggdetaljer utlagda på en 3D-modell, samt ett avsnitt med relevanta knutpunkter för att koppla lösningen till resten av byggnaden.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureSolutionImage,
+      alt: 'Skärmdump av den nya lösningssidan. Bredvid står det "Tydliga bilder och beskrivningar" och "Hopfällbara avsnitt".',
+    },
+    {
+      type: 'image',
+      astroImage: featureSpecsImage,
+      alt: 'Skärmdump av den nya specifikationstabellen. Bredvid står det "Saknade uppgifter diskret markerade", "Egenvikt tillagd i tabellen" och "Spännvidd, ny tabell".',
+    },
+    {
+      type: 'image',
+      astroImage: featureContextImage,
+      alt: 'Skärmdump av byggdetaljer och knutpunkter på den nya lösningssidan. Bredvid står det "Visualiserade byggdetaljer" och "Knutpunkter".',
+    },
+  ]}
+/>
+
+## Spara till senare
+
+För att tillgodose fler arbetssätt lade vi till funktionen _Markerat_ som låter kunden tillfälligt spara lösningar och byggdetaljer för att sedan kunna ladda ner, dela eller kontakta Masonite Beams för alla markerade objekt på en gång.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureSelectImage,
+      alt: 'Skärmdumpar av "markera"-knappar och det svävande fältet. Bredvid står det "Markera lösningar och byggdetaljer", "Visas i svävande fält" och "Agera på allt samtidigt".',
+    },
+  ]}
+/>
+
+## Utforska byggkoncept
+
+För att locka och inspirera nya kunder lade vi till sidan _Utforska byggkoncept_ som en avslappnad ingång till lösningarna. Här kan kunden klicka i 3D-ritningar för att få ett smakprov av vad som går att bygga med Masonite Beams. Detta hjälper även att introducera centrala begrepp såsom _byggsystem_, _byggkoncept_ och _lösning_.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureExploreImage,
+      alt: 'Skärmdump av den nya sidan "Utforska byggkoncept". Bredvid står det "Ny ingångspunkt" och "3D-visualisering".',
+    },
+  ]}
+/>
+
+# Slutsats
+
+Vår nya teknikhandbok förfinar innehåll, struktur, interaktion och estetik för att bättre tillgodose kunders behov samtidigt som den stolt bär Masonite Beams varumärkesidentitet.
+
+De två kontaktpersonerna från Masonite Beams som närvarade under slutpresentationen var mycket nöjda och inspirerade att ta förslaget vidare. Vi hoppas att se några av våra förslag implementerade snart!
+
+Projektet har varit väldigt roligt och lärorikt. Det har varit en särskilt nyttig övning i intervjuteknik, att ha flera nya användargrupper att förhålla sig till och att snabbt sätta sig in i en ny domän. Stort tack till både Masonite Beams och min projektgrupp!
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: presentationMeImage,
+      alt: 'Marcus talar vid en projektorduk som visar prototypen medan gruppmedlemmar står bredvid.',
+      caption: 'Jag demonstrerade prototypen under slutpresentationen.',
+    },
+    {
+      type: 'image',
+      astroImage: presentationGroupImage,
+      alt: 'Sebastian talar vid podiet med resten av gruppen omkring sig. Presentationens titelsida visas.',
+      caption:
+        'Presentationen skedde inför klassen och representanter från några av företagen som medverkat i kursen.',
+    },
+  ]}
+/>
