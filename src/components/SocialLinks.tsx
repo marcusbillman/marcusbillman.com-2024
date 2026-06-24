@@ -61,7 +61,7 @@ export default function SocialLinks({
           {t('common.socials.emailDescription')}
         </span>
         <CopyToClipboard text={t('common.socials.emailAddress')}>
-          <button className="group mt-1 flex cursor-pointer items-center gap-1">
+          <button className="group mt-1 flex items-center gap-1">
             <span className={compactOnMobile ? 'lg:text-xl' : 'text-xl'}>
               {t('common.socials.emailAddress')}
             </span>

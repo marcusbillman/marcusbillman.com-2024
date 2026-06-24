@@ -161,18 +161,21 @@ const locale = getLocale();
   }
 
   @layer components {
-    a:hover,
-    button:hover {
-      @apply cursor-pointer;
+    a,
+    button {
+      /* Custom cursor-pointer utility doesn't work here */
+      @apply cursor-pointer-light dark:cursor-pointer-dark;
     }
 
     label {
-      @apply cursor-default;
+      /* Custom cursor-default utility doesn't work here */
+      @apply cursor-default-light dark:cursor-default-dark;
     }
 
     input,
     textarea {
-      @apply cursor-text;
+      /* Custom cursor-text utility doesn't work here */
+      @apply cursor-text-light dark:cursor-text-dark;
     }
 
     ::selection {

@@ -86,7 +86,7 @@ export default function Button({
     <Element
       className={twMerge(
         outerElementClass(),
-        'group relative isolate block w-fit cursor-pointer overflow-hidden rounded-full border border-transparent transition-all focus:outline-none focus:ring focus:ring-blueberry-500 focus:ring-offset-4 active:opacity-50 motion-safe:duration-500 motion-safe:ease-smooth motion-safe:active:scale-75 motion-reduce:hover:text-default',
+        'group relative isolate block w-fit overflow-hidden rounded-full border border-transparent transition-all focus:outline-none focus:ring focus:ring-blueberry-500 focus:ring-offset-4 active:opacity-50 motion-safe:duration-500 motion-safe:ease-smooth motion-safe:active:scale-75 motion-reduce:hover:text-default',
         className,
       )}
       href={href}

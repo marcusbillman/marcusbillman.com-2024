@@ -20,7 +20,7 @@ export default function FooterSection({ toyboxBgSrc }: FooterSectionProps) {
         style={{ backgroundImage: `url(${toyboxBgSrc})` }}
       >
         <a
-          className="group block text-center text-3xl text-white/50 lg:cursor-pointer lg:text-4xl 2xl:text-6xl"
+          className="group block text-center text-3xl text-white/50 lg:text-4xl 2xl:text-6xl"
           href="/melodies"
         >
           <span className="block translate-x-[-10%] transition-colors lg:group-hover:text-white/20">
