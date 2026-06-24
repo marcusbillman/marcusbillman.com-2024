@@ -27,29 +27,33 @@ export interface MediaBlockProps {
 const { media, className = '' } = Astro.props as MediaBlockProps;
 ---
 
-<figure class={twMerge('my-16 flex flex-col gap-4 lg:my-24', className)}>
+<figure class={twMerge('my-16 flex flex-col gap-3 lg:my-24', className)}>
   {
     media.type === 'video' ? (
-      <video
-        src={media.src}
-        autoplay
-        muted
-        loop
-        playsinline
-        class="w-full rounded-2xl lg:rounded-4xl"
-      />
+      <a href={media.src} target="_blank" rel="noopener noreferrer">
+        <video
+          src={media.src}
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-full rounded-2xl border border-default"
+        />
+      </a>
     ) : (
-      <Image
-        src={media.astroImage}
-        alt={media.alt}
-        loading="lazy"
-        class="w-full rounded-2xl lg:rounded-4xl"
-      />
+      <a href={media.astroImage.src} target="_blank" rel="noopener noreferrer">
+        <Image
+          src={media.astroImage}
+          alt={media.alt}
+          loading="lazy"
+          class="w-full rounded-2xl border border-default"
+        />
+      </a>
     )
   }
   {
     media.caption && (
-      <figcaption class="text-subtle lg:px-8">{media.caption}</figcaption>
+      <figcaption class="text-subtle">{media.caption}</figcaption>
     )
   }
 </figure>
