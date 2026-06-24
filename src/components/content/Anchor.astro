@@ -1,0 +1,11 @@
+---
+import { isExternalUrl } from '@/utils';
+
+const props = Astro.props;
+---
+
+<a
+  {...props}
+  class="text-primary underline underline-offset-1 transition-all hover:text-default hover:underline-offset-4"
+  target={isExternalUrl(props.href || '') ? '_blank' : '_self'}><slot /></a
+>
