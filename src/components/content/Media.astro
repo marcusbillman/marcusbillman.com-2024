@@ -15,6 +15,7 @@ type VideoMedia = {
   type: 'video';
   src: string;
   caption?: string;
+  fullPlayer?: boolean;
 };
 
 export type MediaType = ImageMedia | VideoMedia;
@@ -30,16 +31,25 @@ const { media, className = '' } = Astro.props as MediaBlockProps;
 <figure class={twMerge('my-16 flex flex-col gap-3 lg:my-24', className)}>
   {
     media.type === 'video' ? (
-      <a href={media.src} target="_blank">
+      media.fullPlayer ? (
         <video
           src={media.src}
-          autoplay
-          muted
-          loop
+          controls
           playsinline
           class="w-full rounded-2xl border border-default"
         />
-      </a>
+      ) : (
+        <a href={media.fullPlayer ? '' : media.src} target="_blank">
+          <video
+            src={media.src}
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full rounded-2xl border border-default"
+          />
+        </a>
+      )
     ) : (
       <a href={media.astroImage.src} target="_blank">
         <Image
