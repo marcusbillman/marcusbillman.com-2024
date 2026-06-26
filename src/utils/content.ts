@@ -6,23 +6,21 @@ import { getLocale } from './i18n';
 
 export type CaseStudy = CollectionEntry<'caseStudies'>;
 export type SideProject = CollectionEntry<'sideProjects'>;
-export type DribbbleShot = CollectionEntry<'dribbbleShots'>;
 export type HeroBanner = CollectionEntry<'heroBanners'>;
-export type Project = CaseStudy | SideProject;
-export type PortfolioItem = CaseStudy | SideProject | DribbbleShot;
 
-export async function getAllProjects() {
+export async function getAllCaseStudies() {
   const caseStudies = await getCollection('caseStudies');
-  const sideProjects = await getCollection('sideProjects');
-
-  return [...caseStudies, ...sideProjects].sort(
-    (a, b) => a.data.orderRank - b.data.orderRank,
-  );
+  return caseStudies.sort((a, b) => a.data.orderRank - b.data.orderRank);
 }
 
-export async function getFeaturedProjects() {
-  const allProjects = await getAllProjects();
-  return allProjects.filter((project) => project.data.featured === true);
+export async function getFeaturedCaseStudies() {
+  const allCaseStudies = await getAllCaseStudies();
+  return allCaseStudies.filter((caseStudy) => caseStudy.data.featured === true);
+}
+
+export async function getAllSideProjects() {
+  const sideProjects = await getCollection('sideProjects');
+  return sideProjects.sort((a, b) => a.data.orderRank - b.data.orderRank);
 }
 
 export async function getDribbbleShots() {
