@@ -1,6 +1,6 @@
 slug: soundboard
 name: Soundboard
-headline: Live, multiplayer soundboard
+description: Live, multiplayer soundboard. Trigger sound effects for the whole group to hear.
 date: '2023'
 cover:
   type: image

@@ -1,0 +1,11 @@
+slug: shnake
+name: Shnake
+description: Mjukt och mysigt Snake-spel gjort av mig och en vän.
+date: '2020'
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: UI-element och spelbräde i ett grönt, mjukt tema
+url: https://elloot.github.io/Shnake
+locale: sv
+orderRank: 70

@@ -1,6 +1,6 @@
 slug: soundboard
 name: Soundboard
-headline: Live-soundboard för flera personer
+description: Live-soundboard för flera personer. Spela ljud som alla i gruppen kan höra.
 date: '2023'
 cover:
   type: image

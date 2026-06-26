@@ -1,6 +1,6 @@
-slug: cooldownload-software
-name: cooldownload.software
-headline: A really sketchy link shortener
+slug: cooldownload
+name: cooldownload
+description: Really sketchy link shortener inspired by ad-ridden file sharing sites.
 date: '2022'
 cover:
   type: image

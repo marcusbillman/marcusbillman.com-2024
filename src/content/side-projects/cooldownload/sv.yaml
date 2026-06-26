@@ -1,6 +1,6 @@
-slug: cooldownload-software
-name: cooldownload.software
-headline: En riktigt suspekt länkförkortare
+slug: cooldownload
+name: cooldownload
+description: Riktigt suspekt länkförkortare inspirerad av reklamfyllda fildelningssajter.
 date: '2022'
 cover:
   type: image

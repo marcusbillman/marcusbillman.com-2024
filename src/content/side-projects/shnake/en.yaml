@@ -1,0 +1,11 @@
+slug: shnake
+name: Shnake
+description: Smooth and cozy snake game made by me and a friend.
+date: '2020'
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: Various UI elements and the game board in a green, bubbly theme
+url: https://elloot.github.io/Shnake
+locale: en
+orderRank: 70
