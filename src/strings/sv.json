@@ -98,7 +98,7 @@
     "moreThings": {
       "heading": "Fler saker gjorda av mig 🍱",
       "sideProjects": "Sidoprojekt",
-      "sideProjectsDescription": "Webbappar och laborationer",
+      "sideProjectsDescription": "Appar och hemsidor",
       "dribbble": "Dribbble",
       "dribbbleDescription": "Designexperiment",
       "music": "xfoxx",
@@ -117,17 +117,11 @@
   "portfolio": {
     "title": "Portfolio",
     "heading": "Portfolio",
-    "myWork": "Mitt arbete",
     "caseStudy": "Case",
     "caseStudies": "Case",
     "sideProject": "Sidoprojekt",
     "sideProjects": "Sidoprojekt",
-    "dribbbleShot": "Dribbble-inlägg",
-    "dribbbleShots": "Dribbble-inlägg",
-    "emptyState": {
-      "heading": "Alla har gömt sig!",
-      "text": "Använd filtren ovan för att se mitt arbete."
-    }
+    "sideProjectsDescription": "Appar och hemsidor jag gjort för att ha kul och lära mig. Vissa kanske inte längre fungerar eftersom jag inte underhåller dem, men prova gärna!"
   },
   "about": {
     "title": "Om mig",

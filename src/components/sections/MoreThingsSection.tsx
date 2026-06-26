@@ -45,7 +45,7 @@ export default function MoreThingsSection() {
           title={t('home.moreThings.sideProjects')}
           description={t('home.moreThings.sideProjectsDescription')}
           icon={FlaskIcon}
-          href="portfolio?type=SIDE_PROJECT"
+          href="portfolio#side-projects"
           className="bg-linear-to-b h-[50vh] from-[#bfcaf1] to-[#889ef1] text-black md:col-span-3 md:row-span-2 md:h-auto xl:col-span-4"
         >
           <img
@@ -147,7 +147,7 @@ function BentoCard({
           <RightIconComponent className="text-subtle" />
         </div>
         <div className="-z-10">{children}</div>
-        <p className="max-w-[15ch] origin-bottom-left text-3xl transition-transform duration-500 ease-smooth motion-safe:group-hover:scale-95 lg:mb-3 lg:ml-3 lg:text-5xl">
+        <p className="origin-bottom-left text-3xl transition-transform duration-500 ease-smooth motion-safe:group-hover:scale-95 lg:mb-3 lg:ml-3 lg:text-5xl">
           {description}
         </p>
       </a>

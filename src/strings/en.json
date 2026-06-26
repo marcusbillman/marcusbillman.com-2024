@@ -98,7 +98,7 @@
     "moreThings": {
       "heading": "More things made by me 🍱",
       "sideProjects": "Side projects",
-      "sideProjectsDescription": "Web apps and experiments",
+      "sideProjectsDescription": "Apps and websites",
       "dribbble": "Dribbble",
       "dribbbleDescription": "Design explorations",
       "music": "xfoxx",
@@ -117,17 +117,11 @@
   "portfolio": {
     "title": "Portfolio",
     "heading": "Portfolio",
-    "myWork": "My work",
     "caseStudy": "Case study",
     "caseStudies": "Case studies",
     "sideProject": "Side project",
     "sideProjects": "Side projects",
-    "dribbbleShot": "Dribbble shot",
-    "dribbbleShots": "Dribbble shots",
-    "emptyState": {
-      "heading": "Everyone's hiding!",
-      "text": "Use the filters above to show my work."
-    }
+    "sideProjectsDescription": "Apps and websites I’ve made for fun and learning. Some may no longer work since I don’t maintain them, but feel free to try them!"
   },
   "about": {
     "title": "About",

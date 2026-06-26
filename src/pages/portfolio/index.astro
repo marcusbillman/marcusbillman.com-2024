@@ -3,11 +3,13 @@ import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 import ContactSection from '@/components/sections/ContactSection';
 import HeaderSection from '@/components/sections/HeaderSection';
 import SeparatorSection from '@/components/sections/SeparatorSection';
+import SideProjectsSection from '@/components/sections/SideProjectsSection';
 import Layout from '@/layouts/Layout.astro';
-import { getAllCaseStudies } from '@/utils/content';
+import { getAllCaseStudies, getAllSideProjects } from '@/utils/content';
 import { t } from '@/utils/i18n';
 
 const caseStudies = await getAllCaseStudies();
+const sideProjects = await getAllSideProjects();
 ---
 
 <Layout title={t('portfolio.title')}>
@@ -18,6 +20,8 @@ const caseStudies = await getAllCaseStudies();
     emoji={['✨', '🎨', '📄', '🖋️', '🗃️']}
   />
   <CaseStudiesSection client:idle caseStudies={caseStudies} />
+  <SeparatorSection />
+  <SideProjectsSection client:idle sideProjects={sideProjects} />
   <SeparatorSection />
   <ContactSection client:visible />
 </Layout>

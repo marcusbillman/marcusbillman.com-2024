@@ -20,7 +20,7 @@ export default function CaseStudiesSection({
           {t('portfolio.caseStudies')}
         </h2>
       </div>
-      <ul className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-y-32">
+      <ul className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
         {caseStudies.map((caseStudy) => (
           <CaseStudyCard key={caseStudy.id} caseStudy={caseStudy} />
         ))}
@@ -64,7 +64,7 @@ function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
           src={caseStudy.data.cover.astroImage.src}
           alt={caseStudy.data.name}
           loading="lazy"
-          className="aspect-photo w-full rounded-2xl object-cover transition-all group-focus-within:shadow-lg group-hover:shadow-lg motion-safe:duration-500 motion-safe:ease-smooth motion-safe:group-focus-within:scale-105 motion-safe:group-hover:rotate-3 motion-safe:group-hover:scale-105 2xl:rounded-4xl motion-safe:2xl:group-hover:rotate-1"
+          className="aspect-photo w-full rounded-2xl border border-default object-cover transition-all group-focus-within:shadow-lg group-hover:shadow-lg motion-safe:duration-500 motion-safe:ease-smooth motion-safe:group-focus-within:scale-105 motion-safe:group-hover:rotate-3 motion-safe:group-hover:scale-105 2xl:rounded-4xl motion-safe:2xl:group-hover:rotate-1"
         />
         <div className="mt-6 flex flex-col gap-3">
           <div className="flex items-center">

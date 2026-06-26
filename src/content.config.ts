@@ -39,7 +39,7 @@ const sideProjects = defineCollection({
     z.object({
       slug: z.string(),
       name: z.string(),
-      headline: z.string(),
+      description: z.string(),
       date: z.string(),
       // cover mirrors the ImageMedia type
       cover: z.object({
@@ -50,7 +50,6 @@ const sideProjects = defineCollection({
       }),
       url: z.string().optional(),
       locale: z.enum(['en', 'sv']),
-      featured: z.boolean().optional(),
       orderRank: z.number(),
     }),
 });
