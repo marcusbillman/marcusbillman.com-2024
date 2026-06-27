@@ -1,10 +1,11 @@
 ---
-import { ArrowLeftIcon, InfoIcon } from '@phosphor-icons/react/ssr';
+import { ArrowLeftIcon } from '@phosphor-icons/react/ssr';
 import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 
 import Button from '@/components/Button';
 import Anchor from '@/components/content/Anchor.astro';
+import CalloutBlock from '@/components/content/CalloutBlock.astro';
 import Emphasis from '@/components/content/Emphasis.astro';
 import Heading1 from '@/components/content/Heading1.astro';
 import Heading2 from '@/components/content/Heading2.astro';
@@ -50,15 +51,9 @@ const { Content } = await render(caseStudy);
     <div class="px-4 lg:px-16">
       {
         caseStudy.data.locale !== locale && (
-          <div class="mb-6 px-4 lg:mb-8">
-            <div class="mx-auto flex max-w-4xl gap-2 rounded-2xl bg-subtle p-4">
-              <InfoIcon
-                size={20}
-                className="mt-[0.25em] shrink-0 text-primary"
-              />
-              <p class="text-xl">{t('caseStudy.missingTranslation')}</p>
-            </div>
-          </div>
+          <CalloutBlock icon="info" class="mt-16 lg:mt-24">
+            <span>{t('caseStudy.missingTranslation')}</span>
+          </CalloutBlock>
         )
       }
       <Content
