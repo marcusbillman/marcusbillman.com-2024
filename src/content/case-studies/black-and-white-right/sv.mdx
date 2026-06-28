@@ -11,15 +11,17 @@ locale: sv
 orderRank: 50
 ---
 
+import CalloutBlock from '@/components/content/CalloutBlock.astro';
 import GalleryBlock from '@/components/content/GalleryBlock.astro';
 import MetadataBlock from '@/components/content/MetadataBlock.astro';
 import reportImage from './images/report.jpg';
 import surveyImage from './images/survey.jpg';
 import websiteImage from './images/website.jpg';
 
-_Det här är en sammanfattning av mitt gymnasiearbete. Den fullständiga rapporten finns längst ner på sidan._
-
-# Inledning
+<CalloutBlock
+  text="Det här är en sammanfattning av mitt gymnasiearbete. Den fullständiga rapporten finns längst ner på sidan."
+  icon="info"
+/>
 
 Allt fler moderna användargränssnitt erbjuder ett mörkt tema med mörk text på ljus bakgrund, tvärtemot det traditionella. Många tycker att det är bekvämare att använda och det ger också praktiska fördelar som lägre strömförbrukning på OLED-skärmar. Bland min generation är det till och med vanligt att användare av mörka teman aktivt ogillar ljusa teman. Eftersom jag gick på gymnasiet vid den här tiden fick det mig att fundera – kan jag mäta en skillnad i användbarhet mellan färgteman bland mina studiekamrater?
 

@@ -11,15 +11,17 @@ locale: en
 orderRank: 50
 ---
 
+import CalloutBlock from '@/components/content/CalloutBlock.astro';
 import GalleryBlock from '@/components/content/GalleryBlock.astro';
 import MetadataBlock from '@/components/content/MetadataBlock.astro';
 import reportImage from './images/report.jpg';
 import surveyImage from './images/survey.jpg';
 import websiteImage from './images/website.jpg';
 
-_This is a summary of my upper secondary school graduation project. The full report in Swedish is available at the bottom of this page._
-
-# Introduction
+<CalloutBlock
+  text="This is a summary of my upper secondary school graduation project. The full report in Swedish is available at the bottom of this page."
+  icon="info"
+/>
 
 More and more modern user interfaces feature a dark theme with dark text on a light background, opposite of the traditional approach. Many people find this more comfortable to use and it also brings practical benefits such as lower power consumption on OLED displays. Among my generation, it is even common for dark theme users to actively dislike light themes. Being in upper secondary school at the time, this got me thinking—can I measure a difference in usability due to the colour theme among my fellow students?
 
