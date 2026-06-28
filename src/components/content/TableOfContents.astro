@@ -1,0 +1,114 @@
+---
+// This component builds a nested table of contents from a flat list of markdown headings.
+// Based on https://kld.dev/building-table-of-contents/#building-a-nested-table-of-contents-array
+
+import type { MarkdownHeading } from 'astro';
+
+import { XIcon } from '@phosphor-icons/react/ssr';
+
+import TableOfContentsHeading from '@/components/content/TableOfContentsHeading.astro';
+import { t } from '@/utils/i18n';
+
+export interface NestedHeading extends MarkdownHeading {
+  subheadings: NestedHeading[];
+}
+
+interface TableOfContentsProps {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props as TableOfContentsProps;
+const toc = buildToc(headings);
+
+function buildToc(headings: MarkdownHeading[]): NestedHeading[] {
+  const toc: NestedHeading[] = [];
+  const parentHeadings = new Map();
+
+  headings.forEach((h) => {
+    const ROOT_LEVEL = 1;
+    const heading = { ...h, subheadings: [] };
+    parentHeadings.set(heading.depth, heading);
+
+    if (heading.depth === ROOT_LEVEL) {
+      toc.push(heading);
+    } else {
+      parentHeadings.get(heading.depth - 1).subheadings.push(heading);
+    }
+  });
+
+  return toc;
+}
+---
+
+<nav
+  id="toc"
+  class="group sticky top-32 mt-24 hidden h-fit max-h-[75vh] w-64 shrink-0 flex-col gap-2 overflow-y-auto rounded-xl border border-default p-3 text-subtle transition-colors hover:border-transparent hover:bg-subtle lg:flex"
+>
+  <div class="flex gap-2">
+    <h2
+      class="grow font-serif font-medium italic transition-colors group-hover:text-default"
+    >
+      {t('caseStudy.toc')}
+    </h2>
+    <button
+      class="cursor-pointer text-subtle opacity-0 transition-all hover:text-default group-focus-within:opacity-100 group-hover:opacity-100"
+      aria-label="Close table of contents"
+    >
+      <XIcon size={20} />
+    </button>
+  </div>
+  <ul class="flex flex-col gap-2">
+    <a
+      href="#article"
+      class="transition-all hover:text-default aria-[current]:font-bold aria-[current]:text-default"
+    >
+      {t('caseStudy.tocIntroduction')}
+    </a>
+    {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
+  </ul>
+</nav>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      // Get the entry for the first element that intersects the viewport
+      const entry = entries[0];
+      if (!entry || !entry.isIntersecting) return;
+
+      // Find the nearest preceding heading
+      let heading: Element | null = entry.target;
+      while (heading && !isHeading(heading)) {
+        heading = heading.previousElementSibling;
+      }
+
+      // Mark only the current link as aria-current
+      document
+        .querySelectorAll('#toc a')
+        .forEach((link) => link.removeAttribute('aria-current'));
+      getLinkToHeading(heading)?.setAttribute('aria-current', 'true');
+    },
+    {
+      // Trigger when an element is in the middle of the viewport
+      rootMargin: '-50% 0px -50% 0px',
+    },
+  );
+
+  document.querySelectorAll('article > *').forEach((element) => {
+    observer.observe(element);
+  });
+
+  document.querySelector('#toc button')?.addEventListener('click', () => {
+    document.querySelector('#toc')?.remove();
+  });
+
+  function isHeading(element: Element): element is HTMLHeadingElement {
+    return element.nodeName.match(/^H[2-6]$/) !== null;
+  }
+
+  function getLinkToHeading(heading: HTMLHeadingElement | null) {
+    const id = heading ? heading.getAttribute('id') : 'article';
+    return document.querySelector(
+      `#toc a[href="#${id}"]`,
+    ) as HTMLAnchorElement | null;
+  }
+</script>

@@ -218,7 +218,9 @@
   "caseStudy": {
     "back": "Alla projekt",
     "missingTranslation": "Detta case finns tyvärr bara på engelska.",
-    "date": "Datum"
+    "date": "Datum",
+    "toc": "Innehåll",
+    "tocIntroduction": "Inledning"
   },
   "melodiesToy": {
     "tab": {

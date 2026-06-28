@@ -1,0 +1,30 @@
+---
+// This component renders a table of contents by recursively including itself for subheadings.
+// Based on https://kld.dev/building-table-of-contents/#the-table-of-contents-heading-component
+
+import type { NestedHeading } from '@/components/content/TableOfContents.astro';
+
+interface TableOfContentsHeadingProps {
+  heading: NestedHeading;
+}
+
+const { heading } = Astro.props as TableOfContentsHeadingProps;
+---
+
+<li class="flex flex-col gap-2">
+  <a
+    href={'#' + heading.slug}
+    class="transition-all hover:text-default aria-[current]:font-bold aria-[current]:text-default"
+  >
+    {heading.text}
+  </a>
+  {
+    heading.subheadings.length > 0 && (
+      <ul class="flex flex-col gap-2 pl-4">
+        {heading.subheadings.map((subheading) => (
+          <Astro.self heading={subheading} />
+        ))}
+      </ul>
+    )
+  }
+</li>

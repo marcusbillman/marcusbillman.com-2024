@@ -218,7 +218,9 @@
   "caseStudy": {
     "back": "All projects",
     "missingTranslation": "This case study is unfortunately only available in Swedish.",
-    "date": "Date"
+    "date": "Date",
+    "toc": "Contents",
+    "tocIntroduction": "Introduction"
   },
   "melodiesToy": {
     "tab": {

@@ -10,6 +10,7 @@ import Emphasis from '@/components/content/Emphasis.astro';
 import Heading1 from '@/components/content/Heading1.astro';
 import Heading2 from '@/components/content/Heading2.astro';
 import Paragraph from '@/components/content/Paragraph.astro';
+import TableOfContents from '@/components/content/TableOfContents.astro';
 import UnorderedList from '@/components/content/UnorderedList.astro';
 import CaseStudyHeaderSection from '@/components/sections/CaseStudyHeaderSection';
 import ContactSection from '@/components/sections/ContactSection';
@@ -36,19 +37,20 @@ export async function getStaticPaths() {
 
 const { caseStudy } = Astro.props;
 
-const { Content } = await render(caseStudy);
+const { Content, headings } = await render(caseStudy);
 ---
 
 <Layout title={caseStudy.data.name}>
   <CaseStudyHeaderSection client:load caseStudy={caseStudy} slot="header" />
-  <article lang={caseStudy.data.locale}>
-    <Image
-      src={caseStudy.data.cover.astroImage}
-      alt=""
-      loading="lazy"
-      class="mt-0 overflow-hidden rounded-2xl lg:mt-0 lg:rounded-6xl"
-    />
-    <div class="px-4 lg:px-16">
+  <Image
+    src={caseStudy.data.cover.astroImage}
+    alt=""
+    loading="lazy"
+    class="mt-0 overflow-hidden rounded-2xl lg:mt-0 lg:rounded-6xl"
+  />
+  <div class="flex flex-row-reverse justify-center gap-16 px-4 lg:px-16">
+    {headings.length > 0 && <TableOfContents headings={headings} />}
+    <article id="article" lang={caseStudy.data.locale}>
       {
         caseStudy.data.locale !== locale && (
           <CalloutBlock icon="info" class="mt-16 lg:mt-24">
@@ -66,19 +68,19 @@ const { Content } = await render(caseStudy);
           h2: Heading2,
         }}
       />
-    </div>
-    <div
-      lang={locale}
-      class="mt-16 flex flex-col items-center px-4 lg:mt-24 lg:px-16"
-    >
-      <Button
-        text={t('caseStudy.back')}
-        icon={ArrowLeftIcon}
-        iconSide="left"
-        href="/portfolio"
-      />
-    </div>
-  </article>
+      <div
+        lang={locale}
+        class="mt-16 flex flex-col items-center px-4 lg:mt-24 lg:px-16"
+      >
+        <Button
+          text={t('caseStudy.back')}
+          icon={ArrowLeftIcon}
+          iconSide="left"
+          href="/portfolio"
+        />
+      </div>
+    </article>
+  </div>
   <SeparatorSection />
   <ContactSection client:visible />
 </Layout>
