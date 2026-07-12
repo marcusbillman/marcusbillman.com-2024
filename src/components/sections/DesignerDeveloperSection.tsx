@@ -10,7 +10,7 @@ import {
   useReducedMotion,
   useScroll,
   useTransform,
-} from 'framer-motion';
+} from 'motion/react';
 
 import DotGrid from '@/components/DotGrid';
 import { t } from '@/utils/i18n';
@@ -102,7 +102,7 @@ export default function DesignerDeveloperSection({
           <img
             src={colourCardSalmonSrc}
             alt={t('about.alt.colourCardSalmon')}
-            className="absolute right-[-5%] top-[10%] block origin-bottom rotate-15 transition-transform duration-500 ease-smooth group-hover:rotate-20"
+            className="rotate-15 group-hover:rotate-20 absolute right-[-5%] top-[10%] block origin-bottom transition-transform duration-500 ease-smooth"
             aria-hidden
           />
         </div>

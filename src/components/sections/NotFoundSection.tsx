@@ -1,5 +1,5 @@
 import { HouseIcon } from '@phosphor-icons/react/ssr';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import Button from '@/components/Button';
 import DotGrid from '@/components/DotGrid';
@@ -19,7 +19,7 @@ export default function NotFoundSection({ bgSrc }: NotFoundSectionProps) {
         className="relative z-10 grow text-4xl transition-opacity md:text-6xl lg:absolute lg:inset-4 lg:text-8xl"
       >
         <motion.span
-          className="left-[-10%] top-[10%] bg-cover bg-clip-text bg-top-left text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent lg:left-[20%]"
+          className="bg-top-left left-[-10%] top-[10%] bg-cover bg-clip-text text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent lg:left-[20%]"
           style={{ backgroundImage: `url(${bgSrc})`, rotate: 15 }}
         >
           4
@@ -31,7 +31,7 @@ export default function NotFoundSection({ bgSrc }: NotFoundSectionProps) {
           0
         </motion.span>
         <motion.span
-          className="left-[70%] top-[20%] bg-cover bg-clip-text bg-top-right text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent"
+          className="bg-top-right left-[70%] top-[20%] bg-cover bg-clip-text text-[40vh] font-bold leading-[0.8] tracking-tighter text-transparent"
           style={{ backgroundImage: `url(${bgSrc})`, rotate: -20 }}
         >
           4
@@ -88,7 +88,7 @@ export default function NotFoundSection({ bgSrc }: NotFoundSectionProps) {
       </div>
 
       {/* Backgrounds */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/0 to-black/20" />
+      <div className="bg-linear-to-b absolute inset-0 -z-10 from-black/0 to-black/20" />
       <DotGrid />
     </section>
   );

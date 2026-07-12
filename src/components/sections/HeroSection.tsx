@@ -1,5 +1,5 @@
 import type { HeroBanner } from '@/utils/content';
-import type { AnimationProps } from 'framer-motion';
+import type { MotionProps } from 'motion/react';
 
 import { useEffect, useRef } from 'react';
 import {
@@ -7,7 +7,7 @@ import {
   ArrowUpRightIcon,
   BellRingingIcon,
 } from '@phosphor-icons/react/ssr';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { twJoin } from 'tailwind-merge';
 
 import DotGrid from '@/components/DotGrid';
@@ -61,7 +61,7 @@ export default function HeroSection({
 
   const shouldReduceMotion = useReducedMotion();
 
-  function cropSlideWithDelay(delay: number): AnimationProps {
+  function cropSlideWithDelay(delay: number): MotionProps {
     return {
       initial: {
         opacity: shouldReduceMotion ? 0 : 1,

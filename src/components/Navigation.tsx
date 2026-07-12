@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 import { FocusOn } from 'react-focus-on';
 import { useMediaQuery } from 'usehooks-ts';
 

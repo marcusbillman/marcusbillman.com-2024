@@ -1,6 +1,6 @@
 import type { CaseStudy } from '@/utils/content';
 
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 
 import { isExternalUrl } from '@/utils';
 import { t } from '@/utils/i18n';

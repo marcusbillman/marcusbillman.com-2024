@@ -1,8 +1,8 @@
-import type { MotionProps } from 'framer-motion';
+import type { MotionProps } from 'motion/react';
 import type { ReactElement } from 'react';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { useReducedMotion, useSpring, useTransform } from 'framer-motion';
+import { useReducedMotion, useSpring, useTransform } from 'motion/react';
 import { twMerge } from 'tailwind-merge';
 
 import { randomInt } from '@/utils';

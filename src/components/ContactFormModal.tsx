@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from '@formspree/react';
 import { CircleNotchIcon, PaperPlaneTiltIcon } from '@phosphor-icons/react/ssr';
 import confetti from 'canvas-confetti';
-import { motion, useAnimate } from 'framer-motion';
+import { motion, useAnimate } from 'motion/react';
 import { AutoFocusInside } from 'react-focus-on';
 import { toast } from 'sonner';
 

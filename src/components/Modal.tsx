@@ -1,6 +1,6 @@
 import { createRef } from 'react';
 import { XIcon } from '@phosphor-icons/react/ssr';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { FocusOn } from 'react-focus-on';
 import { useMediaQuery } from 'usehooks-ts';

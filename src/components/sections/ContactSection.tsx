@@ -4,7 +4,7 @@ import {
   CopyIcon,
   EnvelopeSimpleIcon,
 } from '@phosphor-icons/react/ssr';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 
 import Button from '@/components/Button';
 import ContactFormModal from '@/components/ContactFormModal';
