@@ -1,0 +1,283 @@
+---
+slug: masonite-beams
+name: Masonite Beams
+headline: Light work for engineers, contractors and architects
+date: '2026'
+cover:
+  type: image
+  astroImage: './images/cover.png'
+  alt: ''
+locale: en
+featured: true
+orderRank: 13
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import competitorAnalysisImage from './images/competitor-analysis.png';
+import currentMockupsImage from './images/current-mockups.png';
+import featureContextImage from './images/feature-context.png';
+import featureExploreImage from './images/feature-explore.png';
+import featureFilterImage from './images/feature-filter.png';
+import featureSelectImage from './images/feature-select.png';
+import featureSolutionImage from './images/feature-solution.png';
+import featureSpecsImage from './images/feature-specs.png';
+import hifiPrototypeImage from './images/hifi-prototype.png';
+import lofiPrototypeImage from './images/lofi-prototype.png';
+import masoniteBeamsImage from './images/masonite-beams.jpg';
+import navbarBeforeAfterImage from './images/navbar-before-after.png';
+import presentationGroupImage from './images/presentation-group.jpg';
+import presentationMeImage from './images/presentation-me.jpg';
+import sitemapAfterImage from './images/sitemap-after.png';
+import sitemapBeforeImage from './images/sitemap-before.png';
+import timelineImage from './images/timeline.png';
+import whiteboardImage from './images/whiteboard.png';
+import wireframesImage from './images/wireframes.jpg';
+
+<MetadataBlock
+  date={frontmatter.date}
+  fields={[
+    {
+      key: 'Stakeholder',
+      values: ['Masonite Beams'],
+    },
+    {
+      key: 'Skills used',
+      values: [
+        'UX research',
+        'Interviewing',
+        'UI design',
+        'Design systems',
+        'Public speaking',
+      ],
+    },
+  ]}
+/>
+
+In spring 2026, I got a taste of the construction industry through a UX project in collaboration with Masonite Beams. My group and I redesigned the company's web-based technical handbook to help customers understand and choose Masonite Beams solutions. The project was part of a university course, and the group included four other students on the Master of Science Programme in Interaction Technology and Design ([Sebastian Gabrielsson](https://www.linkedin.com/in/sebastian-gabrielsson-352827384/), [Lovisa Nordström](https://www.linkedin.com/in/lovisa-nordstr%C3%B6m-607b92291/), [Thilde Persson](https://www.linkedin.com/in/thilde-persson-1383b9292/) and [Maja Sjöblom](https://www.linkedin.com/in/maja-sj%C3%B6blom-4248282aa/)).
+
+# The mission
+
+Masonite Beams manufactures lightweight wood-based beams for use in many types of buildings. They are especially popular for their low weight, high performance and low environmental impact. On its website, Masonite Beams offers a technical handbook with a filtering tool that allows customers to find solutions, specifications and related documents. However, customers have indicated that the technical handbook needs improvement in terms of usability and UX.
+
+Our brief was to assess whether the current technical handbook meets customers' needs and offers the right level of technical detail for different professional roles. We were to evaluate whether navigation and search felt intuitive, and whether solutions were presented in a desirable manner. Based on our findings, we created a concept for an improved technical handbook.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: masoniteBeamsImage,
+      alt: 'The Masonite Beams logo, cross-sections of beams and construction workers at work.',
+      caption:
+        "Masonite Beams is Sweden's largest manufacturer of lightweight wood-based beams.",
+    },
+    {
+      type: 'image',
+      astroImage: currentMockupsImage,
+      alt: 'Screenshots of the filtering tools in the current technical handbook.',
+      caption:
+        'Customers can look up construction solutions in the technical handbook.',
+    },
+    {
+      type: 'image',
+      astroImage: timelineImage,
+      alt: 'A five-phase timeline: Discover in February; Define and Develop in April; Deliver and Document in May.',
+      caption:
+        'The project ran for four months and was based on the Double Diamond model.',
+    },
+  ]}
+/>
+
+# What do customers think?
+
+We interviewed 4 structural engineers, 2 building contractors and 1 architect. All were recruited from Masonite Beams' network of clients and partners. During 30-minute semi-structured interviews conducted by myself and one of my team members, we asked about professional roles, workflows and relationships with Masonite Beams. The participants also tested the current technical handbook whilst being observed, enabling us to identify friction points and issues.
+
+Following transcription and thematic analysis, we identified four main themes:
+
+- **Scattered information:** The information customers were looking for was scattered across the technical handbook, main website and physical manuals. Customers were unsure about the rationale behind this separation and would have preferred the information to be consolidated.
+- **Inconsistent and incomplete solutions:** Solutions varied in terms of image style, descriptions and content. After filtering, not all the solutions customers expected to find were displayed.
+- **Lack of guidance:** The relationship between _building concepts_, _solutions_ and _construction details_ was unclear to some. Questions remained – _“How do I connect this floor structure to the rest of the building?”_
+- **Varying working methods and preferences:** Customers preferred different ways of gathering information about solutions and sharing it with colleagues. We therefore needed to offer flexibility.
+
+# What are competitors doing?
+
+We examined how 13 other companies in the construction industry present their product ranges and solutions on their websites. We did this to form our own view of how similar tools might work and are expected to work – many of these companies were mentioned repeatedly during the interviews, so customers are already familiar with their approach.
+
+These are some of the insights we gained:
+
+- **Clear images with informative text:** Several competitors displayed illustrations that made it clear which components were supplied by them versus other providers. It was also possible to click on parts of a solution to see a more detailed description.
+- **3D navigation:** Some competitors presented content in a clickable 3D model of a building rather than traditional lists. This communicated information in a way that felt intuitive and concrete to the inexperienced user.
+- **Sharing and downloading solutions:** With some competitors, users could select multiple solutions or products to get links and files for all of them at once.
+- **Step-by-step guidance:** Some competitors first displayed an overview of the content (such as solution categories) and guided the user to explore further.
+
+Several of these had potential to solve problems for Masonite Beams.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: competitorAnalysisImage,
+      alt: 'The four insights mentioned above, with screenshots of competitor websites for each point.',
+    },
+  ]}
+/>
+
+# Ideation
+
+The group went through the insights from the interviews and the competitor analysis, discussing and brainstorming solutions for each point. Each group member then drew individual sketches of entire pages and specific features. We presented the sketches to one another and selected a few concepts to develop and combine into prototypes.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: whiteboardImage,
+      alt: 'Digital whiteboard with notes organised by theme, diagrams of the navigation and screenshots from competitors.',
+      caption:
+        'We gathered insights from interviews and competitor analysis on a whiteboard.',
+    },
+    {
+      type: 'image',
+      astroImage: wireframesImage,
+      alt: 'Several paper sketches laid out on a grid.',
+      caption: 'We drew sketches to test different features and layouts.',
+    },
+    {
+      type: 'image',
+      astroImage: lofiPrototypeImage,
+      alt: 'A screenshot of Figma showing lo-fi screens in greyscale.',
+      caption: 'The lo-fi prototype shows only structure and layout.',
+    },
+    {
+      type: 'image',
+      astroImage: hifiPrototypeImage,
+      alt: 'A screenshot of Figma showing a realistic prototype with a jumble of connections.',
+      caption: 'The hi-fi prototype is interactive and features real content.',
+    },
+  ]}
+/>
+
+# The result
+
+The new technical handbook looks better, is easier to navigate and highlights the most important information. Great emphasis has been placed on presenting information visually, with drawings and models taking centre stage.
+
+## Simplified navigation
+
+The main problem identified during interviews was that customers found it difficult to locate the technical handbook. It was separate from the main website and it was not clear when users were being redirected between the two. We revised the entire information architecture to merge everything into a single website, also simplifying the navbar.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: sitemapBeforeImage,
+      alt: 'Site map before changes. Two different trees with confusing links between them.',
+    },
+    {
+      type: 'image',
+      astroImage: sitemapAfterImage,
+      alt: 'Site map following changes. Just one tree with a simpler structure.',
+    },
+    {
+      type: 'image',
+      astroImage: navbarBeforeAfterImage,
+      alt: 'Navbar before and after changes.',
+      caption:
+        'The new navbar has fewer links, is more consistent and fits better on the screen.',
+    },
+  ]}
+/>
+
+## Flexible filtering
+
+The current filtering page features one set of filters for all solutions and documents, even though certain filters don't apply to all items. During interviews, we saw many cases where customers changed filters and were then puzzled when nothing seemed to happen. This problem was further exacerbated by documents being hidden below the list of solutions.
+
+To resolve this, we moved documents to a separate page with its own filters. The solution filtering page was also given subpages for floor structures, internal walls and so on. These were equipped with specific, requested filters – for example, floor structures got a span filter.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureFilterImage,
+      alt: 'Screenshots of the new filtering page. Next to them are annotations: "Filters highlighted" and "Filter by construction type".',
+    },
+  ]}
+/>
+
+## Structured solution page
+
+The content on the solution page was reorganised into expandable sections so that customers can choose what they wish to focus on at any given moment. The _Structure_ section was refined with a clearer list of components, and in the diagram we added the option to switch between a traditional black-and-white version and a more beginner-friendly colour version.
+
+In the specification tables, we added missing parameters and a new span table taken from Masonite Beams' physical handbooks. We also added a new section showing relevant documents overlaid on a 3D model, as well as a section with relevant connection points for linking the solution to the rest of the building.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureSolutionImage,
+      alt: 'Screenshot of the new solution page. Next to it are annotations: "Clear images and descriptions" and "Collapsible sections".',
+    },
+    {
+      type: 'image',
+      astroImage: featureSpecsImage,
+      alt: 'Screenshot of the new specification table. Next to it are annotations: "Missing data marked discreetly", "Net weight added to the table" and "Wingspan, new table".',
+    },
+    {
+      type: 'image',
+      astroImage: featureContextImage,
+      alt: 'Screenshot of documents and connection points on the new solution page. Next to them are annotations: "Visualised documents" and "Connection points".',
+    },
+  ]}
+/>
+
+## Save for later
+
+To accommodate more workflows, we added the _Selected_ feature, which allows customers to temporarily save solutions and documents so that they can then download, share or contact Masonite Beams regarding all selected items at once.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureSelectImage,
+      alt: 'Screenshots of "Select" buttons and the related floating panel. Next to them are annotations: "Select solutions and documents", "Shown in floating panel" and "Act on all at once".',
+    },
+  ]}
+/>
+
+## Explore building concepts
+
+To attract and inspire new customers, we added the _Explore building concepts_ page as a casual introduction to the solutions. Here, customers can click through 3D models to get a taste of what can be built using Masonite Beams. This also helps to introduce key concepts such as _construction systems_, _building concepts_ and _solutions_.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: featureExploreImage,
+      alt: 'Screenshot of the new "Explore building concepts" page. Beside it are annotations: "New entry point" and "3D visualisation".',
+    },
+  ]}
+/>
+
+# Conclusion
+
+Our new technical handbook refines the content, structure, interaction and aesthetics to better meet customer needs, whilst proudly embodying the Masonite Beams brand identity.
+
+The two representatives from Masonite Beams who attended the final presentation were very pleased and inspired to take the proposal forward. We hope to see some of our suggestions implemented soon!
+
+The project has been great fun and very educational. It has been a particularly useful exercise in interview techniques, dealing with several new user groups and quickly familiarising myself with a new domain. A big thank you to both Masonite Beams and my project group!
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: presentationMeImage,
+      alt: 'Marcus speaking in front of a projector screen showing the prototype, whilst group members stand beside him.',
+      caption: 'I demonstrated the prototype during the final presentation.',
+    },
+    {
+      type: 'image',
+      astroImage: presentationGroupImage,
+      alt: 'Sebastian speaking at the lectern with the rest of the group gathered around him. The title page of the presentation is displayed.',
+      caption:
+        'The presentation was given to the class and to representatives from some of the companies that had taken part in the course.',
+    },
+  ]}
+/>

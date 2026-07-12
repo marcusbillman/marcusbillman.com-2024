@@ -1,0 +1,276 @@
+---
+slug: exam-experience
+name: The new exam experience
+headline: Calmer, clearer and more inclusive exams
+date: '2025'
+cover:
+  type: image
+  astroImage: './images/cover.jpg'
+  alt: 'Left: a mobile phone displaying a boarding pass with a seat marked in the exam hall. Right: a student sitting an exam.'
+locale: en
+featured: true
+orderRank: 15
+---
+
+import GalleryBlock from '@/components/content/GalleryBlock.astro';
+import MetadataBlock from '@/components/content/MetadataBlock.astro';
+import appMarketingImage from './images/app-marketing.jpg';
+import appMockupImage from './images/app-mockup.jpg';
+import appScreensImage from './images/app-screens.png';
+import appWireframeImage from './images/app-wireframe.jpg';
+import auroraDesksImage from './images/aurora-desks.jpg';
+import auroraOutsideImage from './images/aurora-outside.jpg';
+import examProcessConfusingImage from './images/exam-process-confusing.png';
+import examProcessDiagramImage from './images/exam-process-diagram.png';
+import ideationImage from './images/ideation.jpg';
+import interviewDrawingsImage from './images/interview-drawings.png';
+import moodboardImage from './images/moodboard.jpg';
+import proctorCheckinImage from './images/proctor-checkin.jpg';
+import proctorWireframeImage from './images/proctor-wireframe.jpg';
+import signageMockupImage from './images/signage-mockup.jpg';
+import signageTestImage from './images/signage-test.jpg';
+import whiteboardResearchImage from './images/whiteboard-research.png';
+
+<MetadataBlock
+  date={frontmatter.date}
+  fields={[
+    {
+      key: 'Stakeholders',
+      values: ['Exam Services at Umeå University', 'Umeå Institute of Design'],
+    },
+    {
+      key: 'Skills used',
+      values: [
+        'UX research',
+        'Interviewing',
+        'UI design',
+        'Physical interaction design',
+        'Design systems',
+        'Public speaking',
+      ],
+    },
+  ]}
+/>
+
+In spring 2025, Umeå University opened its new exam centre, Aurora. The building has been designed with a focus on digital exams, and the facilities are more modern, flexible and accessible than before. In conjunction with this change, the university also sought to improve the digital systems surrounding exams to better meet students’ needs.
+
+During a course at Umeå Institute of Design, I took part in a project to explore this together with three fellow students on the Master of Science Programme in Interaction Technology and Design ([Albin Everdin](https://www.linkedin.com/in/albin-everdin/), [Lovisa Landberg](https://www.linkedin.com/in/lovisa-landberg-7207512b4/) and [Nils Sjölund](https://www.linkedin.com/in/nilssjolund/)). The project was done in collaboration with Exam Services at Umeå University.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'video',
+      src: 'https://cloud.marcusbillman.com/public.php/dav/files/cz6tbSKxttQA4go/',
+      caption: 'Showcase video for our finalised concept.',
+      fullPlayer: true,
+    },
+  ]}
+/>
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: auroraOutsideImage,
+      alt: 'The exterior of Aurora in summer.',
+    },
+    {
+      type: 'image',
+      astroImage: auroraDesksImage,
+      alt: 'Inside an exam hall in Aurora.',
+    },
+  ]}
+/>
+
+For many students, exams are associated with stress and anxiety, partly about the performance itself, but also about the practicalities – particularly for students who need support due to disabilities, for example.
+
+_How can we create a seamless and integrated exam experience for all students?_ Our solution would remove friction points and disconnects in the exam process, integrate services and procedures under one roof, and cater for students with varying levels of experience and support needs.
+
+# Exams might feel complicated...
+
+The group already had plenty of personal experience of exams and the frustration that comes with them. A key problem is keeping track of all the services and procedures involved in the exam:
+
+- The teacher provides information through the Canvas learning management system.
+- Students register via the national Ladok system.
+- Results are returned on the Inspera exam platform.
+- Students who wish to access granted support must email the right person at the right time before each exam.
+
+The Exam Services team filled in some gaps by explaining the exam process from their perspective – from the teacher booking the exam, to inviting supervisors, to the exam itself. We also learnt what happens when a student applies for support and then accesses that support. We supplemented this by asking fellow students who regularly use support. We compiled our understanding of the entire exam process into a flowchart to use as a starting point.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: examProcessConfusingImage,
+      alt: 'Overlapping screenshots of various web pages and apps, with arrows criss-crossing them.',
+      caption: 'Slightly dramatised version of the exam process.',
+    },
+    {
+      type: 'image',
+      astroImage: examProcessDiagramImage,
+      alt: 'Top: notes detailing parts of the process laid out on paper. Bottom: a flowchart of the process.',
+      caption: 'Flowchart of the exam process.',
+    },
+  ]}
+/>
+
+# ...even at other universities
+
+Exams may work differently in other parts of the country. Therefore, we interviewed 7 students from various Swedish universities. During 30-minute semi-structured interviews, we asked them to describe their exam experience from start to finish whilst drawing on a digital whiteboard.
+
+The group then identified some key themes. We’ll start with the negative aspects.
+
+- **Impersonal experience:** Many universities use anonymous codes instead of names on exam papers. According to some, this type of system made them feel like they were "just a number in the system".
+- **The free-text problem:** Due to technical limitations, teachers enter important information into note and comment fields, which limits how well the systems can present it to students. This might include location or permitted aids.
+- **Scattered information:** Information is spread out across different services, which is feels confusing and complicated.
+
+Much of this matched our own experiences, but there were also positive aspects to take away.
+
+- **The LiU app:** Students at Linköping University don't need to check other systems, even though these are used in the background. This is an example of a well-received, integrated system.
+- **Efficient entry:** We saw examples of how entry to the exam hall could be made more efficient – for instance, how and when ID checks are performed. A smoother flow creates a more relaxed atmosphere.
+- **Reminders:** All interviewees appreciated reminders and confirmations, both before and after exams.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: interviewDrawingsImage,
+      alt: 'Casual sketches drawn by our interviewees whilst they were speaking.',
+      caption:
+        'Drawing made it easier to recall things and made the interviews more enjoyable.',
+    },
+  ]}
+/>
+
+# Ideation and testing
+
+Our ideal exam process would require trust, transparency and humanity. We therefore drew inspiration from a wide range of services: public transport, event booking, logistics, finance, digital signage and more. We also used UMU's visual identity, tone of voice and core values as our starting point.
+
+To generate ideas for solutions, we used brainwriting. We jotted down as many ideas as possible on pieces of paper, which we then passed round to allow others to build on them. Finally, we categorised the ideas using affinity diagramming, discussed their feasibility and effectiveness, and selected the best approaches using dot voting.
+
+Many ideas were discarded, including touch screens at every desk (too costly) and self-service check-in stations (creating bottlenecks and extra steps for students).
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: moodboardImage,
+      alt: 'Screenshots of existing products in education, public transport, events, finance and more.',
+      caption: 'Moodboard with inspiration from relevant products.',
+    },
+    {
+      type: 'image',
+      astroImage: whiteboardResearchImage,
+      alt: 'Whiteboard covered with notes, sketches and pictures.',
+      caption: 'Insights into competitors, statistics, the UMU brand and more.',
+    },
+    {
+      type: 'image',
+      astroImage: ideationImage,
+      alt: 'Group members leaning over a table covered with coloured pieces of paper and cards.',
+      caption: 'Brainstorming and affinity diagramming.',
+    },
+  ]}
+/>
+
+We decided that our concept would comprise three main touchpoints:
+
+- An integrated app for students
+- Digital signage inside the building
+- An interface where supervisors can check students in and out and assist them during exams
+
+For the app, we drew paper prototypes which we had five fellow students test using the think-aloud method. After revisions, these were gradually developed into an interactive high-fidelity prototype.
+
+- Contextual information being highlighted at the top of the home screen was appreciated. Notifications and status indicators can easily be missed – an idea we retained in the final product.
+- The visual representation of the exam process made it easier to understand. We retained icons and timelines, inspired by parcel tracking apps.
+- Some felt uncertain about accessing support as it wasn't clear that the app would ask about it. We clarified this by mentioning it earlier in the flow.
+
+We also developed two concepts for digital signage and evaluated them by having fellow students use them to find their way to a fictional exam whilst we timed them. The test subjects preferred an isometric 3D map view and helped us decide which layout of the timetable to keep.
+
+Paper prototypes were also produced for the supervisor view, but as the project focused on the students experience, we didn't test these.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: proctorWireframeImage,
+      alt: 'Three paper prototypes of the supervisor view. One shows an ongoing check-in. One shows a map of the exam rooms and which students need help.',
+      caption: 'Paper prototypes of the supervisor view.',
+    },
+    {
+      type: 'image',
+      astroImage: signageTestImage,
+      alt: 'A student is looking at a TV screen showing a mockup of two digital signs placed side by side. The project group is monitoring.',
+      caption: 'User test of digital signage.',
+    },
+    {
+      type: 'image',
+      astroImage: appWireframeImage,
+      alt: 'A grid of wireframes drawn by various group members.',
+      caption: 'Two different paper prototypes of the app.',
+    },
+  ]}
+/>
+
+# The result
+
+_The new exam experience_ consists of three parts:
+
+- **The UMU app** brings together exams, timetables, results and more in one convenient place for students.
+- **Digital signs** in the building help students find their way around.
+- **The supervisor view** streamlines check-in, check-out and ID checks for supervisors.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: appMockupImage,
+      alt: 'Phone with the UMU app.',
+      caption: 'The UMU app',
+    },
+    {
+      type: 'image',
+      astroImage: signageMockupImage,
+      alt: "Two large screens on a wall. The left one displays a timetable of today's exams. The right one displays a 3D map of the building's exam rooms.",
+      caption: 'Digital signage',
+    },
+    {
+      type: 'image',
+      astroImage: proctorCheckinImage,
+      alt: "A supervisor scans a student's ID card with their phone.",
+      caption: 'The supervisor view',
+    },
+  ]}
+/>
+
+The **UMU app** guides students through the entire process. The home screen displays current exams – open for registration, upcoming and returned. When registering, students can see relevant information such as permitted aids and registration deadline. Students who have been granted support can select which ones to use without sending emails that might get lost.
+
+As the exam day approaches, a boarding pass appears showing the time and the student's seat in the exam hall. The app also features a help section with tutorials. New students will find a walkthrough of how exams work, complete with illustrations and easy-to-read text.
+
+**The digital signage** comes into play as soon as the student steps into Aurora. Screens display today's exams sorted by floor, a map of exam halls and staircases, and any operational updates. Students check in to the exam hall by showing their ID to the supervisor, who swiftly scans it using the **supervisor view.**
+
+After the exam, students can track its status in the app, and a notification is sent once the exam has been marked. The result is displayed immediately in the app, along with information on relevant dates and support used.
+
+Behind the scenes, the app is powered by external services such as Ladok and Inspera, but these can also be accessed directly via the menu. This project has focused on exams, but the app is designed to be extended with additional functionality to align with Umeå University’s student portal.
+
+<GalleryBlock
+  items={[
+    {
+      type: 'image',
+      astroImage: appMarketingImage,
+      alt: 'A marketing image showing phones with the UMU app and various services being combined into the app icon.',
+      caption:
+        'The UMU app is the app for all students throughout their studies.',
+    },
+    {
+      type: 'image',
+      astroImage: appScreensImage,
+      alt: 'A grid of screenshots from the UMU app.',
+      caption: 'Some screens from the UMU app.',
+    },
+  ]}
+/>
+
+_A seamless and integrated exam experience for all students._ The app, digital signage and quick check-in process create a smooth transition between the stages of the exam process. Students no longer need to switch between systems to manage their exams. Support is easier to access, there are guides for new students, and the experience feels more personal and concise.
+
+The project taught me a great deal about the design process, how to separate divergent and convergent thinking, how to apply interview methods to understand users, and how to communicate design ideas. I'd like to thank the incredible teachers at Umeå Institute of Design and my fantastic group. We've had fun and contributed different perspectives to achieve a really great result!
